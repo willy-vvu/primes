@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>Grader</title>
+		<style>
+			body{
+				font-family:sans-serif;
+				font-size:14pt;
+			}
+			textarea{
+				font-family:inherit;
+				font-size:inherit;
+				width:100%;
+				max-width:100%;
+				min-width:100%;
+				height:200px;
+			}
+		</style>
+	</head>
+	<body ng-controller="MainCtrl">
+		<section id="submission">
+			<h2>Question</h2>
+			<div>Is there enough privacy on the internet?</div>
+			<hr>
+			<h2>Your answer</h2>
+			<textarea ng-model="response" ng-disabled="responded"></textarea>
+			<input type="button" ng-click="respond()" value="Submit" ng-disabled="responded">
+		</section>
+		<section id="grades" ng-show="responded">
+			<div>Save this url to return to your sumbission later.</div>
+			<hr>
+			<h2>Grade others</h2>
+			<h2>View your grade</h2>
+		</section>
+		<script src="js/socket.io.min.js"></script>
+		<script src="js/jquery-1.8.1.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
