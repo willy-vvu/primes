@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find the errors</title>
+		<style>
+			body{
+				font-family:sans-serif;
+				font-size:41px;
+				overflow:hidden;
+			}
+			#everything div{
+				float:left;
+				padding:3px;
+				cursor:pointer;
+				-webkit-user-select:none;
+				width:32px;
+				text-align:center;
+			}
+			br{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="everything"></div>
+		<br>
+		<script>
+			everything=document.getElementById('everything')
+			tofind=[]
+			startTime=new Date().valueOf()
+			performance={total:0,found:[{number:0,time:0}]}
+			colors=[
+				{name:'R',css:'red'},
+				{name:'O',css:'orange'},
+				{name:'Y',css:'yellow'},
+				{name:'G',css:'#00FF00'},
+				{name:'B',css:'blue'},
+				{name:'C',css:'cyan'},
+				{name:'P',css:'#AA00AA'}
+			]
+			for(var c=0;c<490;c++){
+				var elem=document.createElement('div')
+				var color=colors[Math.floor(Math.random()*colors.length)]
+				elem.innerText=color.name
+				if(Math.random()<0.1){//Error
+					elem.style.color=color.css
+					tofind.push(elem)
+					performance.total++
+				}
+				else{
+					do{
+						var errorcolor=colors[Math.floor(Math.random()*colors.length)].css
+					}
+					while(errorcolor==color.css)
+					elem.style.color=errorcolor
+				}
+				elem.addEventListener('mouseover',function(ev){
+					this.style.backgroundColor='#EEEEEE'
+				})
+				elem.addEventListener('mouseout',function(ev){
+					this.style.backgroundColor=''
+				})
+				elem.addEventListener('mousedown',function(ev){
+					this.style.backgroundColor='#CCCCCC'
+				})
+				elem.addEventListener('click',function(ev){
+					this.style.backgroundColor='#EEEEEE'
+					var exists=tofind.indexOf(this)
+					if(exists!=-1){
+						tofind.splice(exists,1)
+						performance.found.push({number:performance.total-tofind.length,time:(new Date().valueOf()-startTime)/1000})
+						//everything.removeChild(this)
+						this.style.visibility='hidden'
+						if(!tofind.length){
+							alert('You found them all! Good job.')
+						}
+					}
+					
+				})
+				everything.appendChild(elem)
+			}
+			function output(){
+				var out=''
+				for(var p in performance.found){
+					out+=performance.found[p].number+'\t'+performance.found[p].time+'\n'
+				}
+				prompt('Data',out)
+				prompt('JSON',JSON.stringify(performance))
+			}
+		</script>
+	</body>
+</html>
