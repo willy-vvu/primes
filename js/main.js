@@ -1,4 +1,8 @@
 function MainCtrl($scope){
+	io.configure(function () { 
+	  io.set("transports", ["xhr-polling"]); 
+	  io.set("polling duration", 10); 
+	});
 	$scope.socket=io.connect()//Used for transferring information efficiently
 	$scope.location=location//The current url
 	$scope.responded=true//Whether or not the person has responded, assume they have until otherwise

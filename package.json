@@ -1,0 +1,14 @@
+{
+	"name":"primes",
+	"version":"0.0.1",
+	"dependencies":{
+		"mime":"1.2.7",
+		"npm":"1.2.11",
+		"mongodb":"1.2.2",
+		"mongojs":"0.4.6",
+		"socket.io":"0.9.10"
+	},
+	"engines":{
+		"node":"0.8.x"
+	}
+}

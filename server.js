@@ -29,6 +29,10 @@ function handler (req, res) {
 		res.end(data);
 	})
 }
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
 io.on('connection',function(socket){
 	socket.on('init',function(id){//When someone tries to get an existing assignment
 		//Find it for them
