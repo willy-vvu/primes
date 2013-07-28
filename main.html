@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html ng-app>
 	<head>
-		<title>Grader</title>
-		<style>
-			body{
-				font-family:sans-serif;
-				font-size:14pt;
-			}
-			textarea{
-				font-family:inherit;
-				font-size:inherit;
-				width:100%;
-				max-width:100%;
-				min-width:100%;
-				height:200px;
-			}
-		</style>
+		<title>PRIMES</title>
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body ng-controller="MainCtrl">
-		<section id="submission">
-			<h2>Question</h2>
-			<div>Is there enough privacy on the internet?</div>
-			<hr>
-			<h2>Your answer</h2>
-			<textarea ng-model="response" ng-disabled="responded"></textarea>
-			<input type="button" ng-click="respond()" value="Submit" ng-disabled="responded">
+		<section class="pane login">
+			<input type="text" placeholder="Username" ng-model="user.username">
+			<input type="password" placeholder="Password" ng-model="user.password">
+			<input type="button" value="Login" ng-click="login()">
 		</section>
-		<section id="grades" ng-show="responded">
-			<div>Save this url to return to your sumbission later.</div>
-			<hr>
-			<h2>Grade others</h2>
-			<h2>View your grade</h2>
+		<section class="pane main" ng-class="{inview:state.loggedin}">
+			<article class="left gray">
+				<h1>Assignments</h1>
+				<ol ng-hide="state.selectedclass==-1">
+					<li class="card"
+						ng-animate="'animate'"
+						ng-repeat="assignment in user.data[state.selectedclass].assignments"
+						ng-click="state.selectedassignment=$index">
+						<figcaption>{{assignment.name}}</figcaption>
+					</li>
+				</ol>
+			</article>
+			<nav class="right">
+				<h1>Me</h1>
+				<ol>
+					<li class="ribbon" ng-repeat="class in user.data"
+						ng-click="state.selectedclass=$index"
+						ng-class="{active:state.selectedclass==$index}">{{class.name}}</li>
+				</ol>
+			</nav>
+		</section>
+		<section class="pane detail" ng-class="{inview:state.selectedassignment!=-1}">
+			<article class="left">
+				<h1 class="back">
+					<span class="back" ng-click="state.selectedassignment=-1">
+						<svg width="60" height="60">
+							<polyline points="35,20 25,30 35,40" style="fill:none;stroke:black;stroke-width:2"></polyline>
+						</svg>
+					</span>
+					{{user.data[state.selectedclass].assignments[state.selectedassignment].name}}</h1>
+			</article>
+			<nav class="right gray">
+				<h1>Grading</h1>
+				<ol>
+				</ol>
+			</nav>
 		</section>
 		<script src="js/socket.io.min.js"></script>
 		<script src="js/jquery-1.8.1.min.js"></script>
-		<script src="js/angular.min.js"></script>
+		<script src="js/angular.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -1,0 +1,147 @@
+@font-face{
+	font-family:Roboto;
+	src:url(../Roboto-Light.ttf);
+}
+body {
+	margin: 0;
+	font-family:Roboto,Arial,sans-serif;
+	font-size:16pt;
+	font-weight:300;
+	-webkit-user-select:none;
+	cursor:default;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow:hidden;
+	-webkit-transition-timing-function:  cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+.pane{
+	position: absolute;
+	left:100%;
+	top: 0;
+	bottom: 0;
+	width:100%;
+	overflow:hidden;
+	background-color:white;
+	-webkit-transition:left 800ms;
+	-webkit-transition-timing-function: inherit;
+}
+.pane.inview{
+	left:0;
+}
+nav,article{
+	position:absolute;
+	top:0;
+	bottom:0;
+	overflow:auto;
+}
+h1{
+	position:relative;
+	font-size:42pt;
+	font-weight:100;
+	margin:0;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:5px;
+	/*border-bottom:1px solid #C0C0C0;*/
+}
+h1.back{
+	padding-left:70px;
+}
+h1.back span.back{
+	position:absolute;
+	width:60px;
+	height:60px;
+	left:10px;
+	top:10px;
+}
+h1.back span.back:hover{
+	background-color:#F8F8F8;
+}
+h1.back span.back:active{
+	background-color:#F0F0F0;
+}
+h1.back span.back svg{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.left{
+	left:0;
+	right:30%;
+}
+.right{
+	right:0;
+	left:70%;
+}
+
+li.ribbon{
+	font-size:24pt;
+	padding-left:20px;
+	padding-right:20px;
+	-webkit-transition:-webkit-transform 200ms;
+	-webkit-transition-timing-function: inherit;
+}
+li.ribbon:hover{
+	background-color:#F8F8F8;
+}
+li.ribbon:active{
+	-webkit-transform: scale(0.96);
+}
+li.ribbon.active{
+	background-color:#F0F0F0;
+}
+
+li.card{
+	width:190px;
+	height:250px;
+	margin-left:20px;
+	margin-bottom:20px;
+	background-color:white;
+	float:left;
+	position:relative;
+	-webkit-transition:-webkit-transform 200ms;
+	-webkit-transition-timing-function: inherit;
+}
+li.card:hover{
+	background-color:#F8F8F8;
+}
+li.card:active{
+	-webkit-transform: scale(0.96);
+}
+li.animate-enter,li.animate-leave{
+	-webkit-transition:left 600ms, opacity 600ms;
+	-webkit-transition-timing-function: inherit;
+}
+.animate-enter {
+    left:80px;
+    opacity: 0;
+}
+.animate-enter.animate-enter-active, 
+.animate-leave {
+	left:0;
+    opacity:1;
+}
+.animate-leave.animate-leave-active{
+	left:-80px;
+    opacity: 0;
+}
+
+figcaption{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	top:70%;
+	padding:10px;
+}
+.gray{
+	background-color:#F0F0F0;
+}
+ol{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}

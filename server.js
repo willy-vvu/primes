@@ -34,27 +34,14 @@ io.configure(function () {
   io.set("polling duration", 10); 
 });
 io.on('connection',function(socket){
-	socket.on('init',function(id){//When someone tries to get an existing assignment
-		//Find it for them
-		try{
-			mongoId=mongo.ObjectId(id)
-		}
-		catch(e){//Id is invalid :(
-			socket.emit('reply',false)
-			return
-		}
+	socket.on('find',function(query){
 		db.assignments.find({_id:mongoId},function(e,r){
-			if(r.length){
-				socket.emit('reply',r[0])
-			}
-			else{
-				socket.emit('reply',false)
-			}
+			socket.emit('find',r)
 		})
-	}).on('responding',function(response){//When someone submits a response
-		//Put it in the database and give 'em a way to get back to it
-		db.assignments.save({response:response},function(e,r){
-			socket.emit('reply',r)
+	})
+	socket.on('set',function(query){
+		db.assignments.find({_id:mongoId},function(e){
+			socket.emit('set',r)
 		})
 	})
 })
