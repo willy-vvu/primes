@@ -5,7 +5,7 @@ function MainCtrl($scope) {
 	});
 	io.connect();*/
 	$scope.state = {
-		loggedin:true,
+		loggedin:false,
 		selectedclass : 0,//-1
 		selectedassignment : -1
 	};
@@ -56,6 +56,6 @@ function MainCtrl($scope) {
 		]
 	};
 	$scope.login=function(){
-		this.state.view='main'
+	    this.state.loggedin=true
 	};
 }

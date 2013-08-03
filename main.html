@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html ng-app>
-	<head>
-<title>PRIMES</title>
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
-	</head>
-	<body ng-controller="MainCtrl">
-		<section class="pane login">
-			<input type="text" placeholder="Username" ng-model="user.username">
-			<input type="password" placeholder="Password" ng-model="user.password">
-			<input type="button" value="Login" ng-click="login()">
-		</section>
-		<section class="pane main" ng-class="{inview:state.loggedin}">
-			<article class="left gray">
-				<h1>Assignments</h1>
-				<ol ng-hide="state.selectedclass==-1">
-					<li class="card"
-						ng-animate="'animate'"
-						ng-repeat="assignment in user.data[state.selectedclass].assignments"
-						ng-click="state.selectedassignment=$index">
-						<figcaption>{{assignment.name}}</figcaption>
-					</li>
-				</ol>
-			</article>
-			<nav class="right">
-				<h1>Me</h1>
-				<ol>
+  <head>
+    <title>PRIMES</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
+  </head>
+  <body ng-controller="MainCtrl">
+    <section class="pane login" ng-class="{inview:!state.loggedin}">
+      <h1>Sign in</h1>
+      <div class="logindiv">
+	<label for="un">Username: </label>
+      <input type="text" id="un" placeholder="Username"
+      ng-model="user.username">
+      <label for="pw">Password: </label>
+      <input type="text" id="pw" placeholder="Password" ng-model="user.password">
+      <input type="button" id="loginbutton" value="Login" ng-click="login()">
+      </div>
+    </section>
+    <section class="pane main" ng-class="{inview:state.loggedin}">
+      <article class="left gray">
+	<h1>Assignments</h1>
+	<ol ng-hide="state.selectedclass==-1">
+	  <li class="card"
+	      ng-animate="'animate'"
+	      ng-repeat="assignment in user.data[state.selectedclass].assignments"
+	      ng-click="state.selectedassignment=$index">
+	    <figcaption>{{assignment.name}}</figcaption>
+	  </li>
+	</ol>
+      </article>
+      <nav class="right">
+	<h1>Me</h1>
+	<ol>
 					<li class="ribbon" ng-repeat="class in user.data"
 						ng-click="state.selectedclass=$index"
 						ng-class="{active:state.selectedclass==$index}">{{class.name}}</li>
