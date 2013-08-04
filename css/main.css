@@ -41,16 +41,20 @@ body {
 	padding-left: 0;
 	opacity: 1;
 }
-#un, #pw {
+input[type=text] {
 	height: 25px;
 	width: 200px;
 	border: none;
 	background-color: white;
-	float: left;
-	font-size: 15px;
-	border: 3px solid transparent;
+	font-size: inherit;
+	font-family:inherit;
+	font-weight:inherit;
+  border: 3px solid transparent;
 }
-#un:focus, #pw:focus {
+#un,#pw{
+	float: left;
+}
+input[type=text]:focus {
 	outline: none;
 	border: 3px solid #F8F8F8;
 }
@@ -67,19 +71,22 @@ label {
 #loginbutton {
 	float: left;
 	clear: left;
+}
+input[type=button]{
 	background-color: white;
 	border: none;
-	font-size: 15px;
-	color: grey;
+	font-size: inherit;
+  font-family:inherit;
+  font-weight:inherit;
 	padding: 10px;
 	-webkit-transition: -webkit-transform 200ms;
 	-webkit-transition-timing-function: inherit;
 }
 
-#loginbutton:hover {
+input[type=button]:hover {
 	background-color: #F8F8F8;
 }
-#loginbutton:active {
+input[type=button]:active {
 	-webkit-transform: scale(0.8);
 }
 nav, article {
@@ -108,20 +115,32 @@ h1 {
 h1.back {
 	padding-left: 70px;
 }
-h1.back span.back {
+span.back {
 	position: absolute;
 	width: 60px;
 	height: 60px;
 	left: 10px;
 	top: 10px;
 }
-h1.back span.back:hover {
+span.back, span.down{
+  -webkit-transition:-webkit-transform 200ms;
+  -webkit-transition-timing-function: inherit;
+}
+span.back:hover, span.down:hover{
 	background-color: #F8F8F8;
 }
-h1.back span.back:active {
-	background-color: #F0F0F0;
+span.back:active, span.down:active{
+	-webkit-transform:scale(0.8);
 }
-h1.back span.back svg {
+span.down{
+  position:absolute;
+  margin-left:10px;
+  top:10px;
+  width:60px;
+  height:60px;
+  background-color:inherit;
+}
+span.back svg,span.down svg{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -201,4 +220,19 @@ ol {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+aside{
+  position:absolute;
+  background-color:white;
+  border:3px solid #F0F0F0;
+  left:10px;
+  -webkit-transform-origin-y:0%;
+  -webkit-transform:rotateX(-90deg);
+  -webkit-transition:-webkit-transform 600ms,opacity 600ms;
+  -webkit-transition-timing-function: inherit;
+  opacity:0;
+}
+aside.inview{
+  -webkit-transform:none;
+  opacity:1;
 }

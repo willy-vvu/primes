@@ -35,8 +35,11 @@
         </ol>
       </article>
       <nav class="right">
-        <h1>Me</h1>
-        <aside>
+        <h1>Me<span class="down" ng-click="state.menuvisible=!state.menuvisible">
+          <svg width="60" height="60">
+            <polyline points="20,25 30,35 40,25" style="fill:none;stroke:black;stroke-width:2"></polyline>
+          </svg> </span></h1>
+        <aside ng-class="{inview:state.menuvisible}">
           <ol>
             <li class="ribbon">
               Account settings
