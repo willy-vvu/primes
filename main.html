@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
   </head>
-  <body ng-controller="MainCtrl">
+  <body ng-controller="MainCtrl" ng-click="hidemenu($event)">
     <section class="pane login" ng-class="{inview:true}">
       <article class="gray">
         <h1>Sign in</h1>
-        <div class="logindiv">
-          <label for="un">Username: </label>
+        <div>
+          <label for="un">Username</label>
           <input type="text" id="un" placeholder="Username"
           ng-model="user.username">
-          <label for="pw">Password: </label>
+          <label for="pw">Password</label>
           <input type="text" id="pw" placeholder="Password" ng-model="user.password">
           <input type="button" id="loginbutton" value="Login" ng-click="login()">
         </div>
@@ -35,11 +35,11 @@
         </ol>
       </article>
       <nav class="right">
-        <h1>Me<span class="down" ng-click="state.menuvisible=!state.menuvisible">
-          <svg width="60" height="60"n>
+        <h1 class="down">Me<span class="button" ng-click="state.menuvisible=!state.menuvisible">
+          <svg width="60" height="60">
             <polyline points="20,25 30,35 40,25" style="fill:none;stroke:black;stroke-width:2"></polyline>
           </svg> </span></h1>
-        <aside ng-class="{inview:state.menuvisible}" ng-mouseleave="state.menuvisible=!state.menuvisible">
+        <aside ng-class="{inview:state.menuvisible}">
           <ol>
             <li class="ribbon">
               Account settings
@@ -63,7 +63,7 @@
     </section>
     <section class="pane detail" ng-class="{inview:state.selectedassignment!=-1}">
       <article class="left">
-        <h1 class="back"><span class="back" ng-click="state.selectedassignment=-1">
+        <h1 class="back"><span class="button" ng-click="state.selectedassignment=-1">
           <svg width="60" height="60">
             <polyline points="35,20 25,30 35,40" style="fill:none;stroke:black;stroke-width:2"></polyline>
           </svg> </span> {{user.data[state.selectedclass].assignments[state.selectedassignment].name}}</h1>

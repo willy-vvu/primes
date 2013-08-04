@@ -47,4 +47,11 @@ function MainCtrl($scope) {
   $scope.logout = function() {
     this.state.loggedin = false
   };
+  $scope.hidemenu = function($event) {
+    console.log($event.target)
+    if (this.state.menuvisible && ($event.target.parentElement && $event.target.parentElement.parentElement && !$event.target.parentElement.parentElement.classList.contains('down'))) {
+      console.log($event.target)
+      this.state.menuvisible = false
+    }
+  };
 }
