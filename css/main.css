@@ -109,6 +109,7 @@ ol {
   padding: 0;
 }
 aside {
+  padding:0;
   position: absolute;
   background-color: white;
   border: 3px solid #F0F0F0;
@@ -135,6 +136,12 @@ aside.inview {
 }
 .down .button {
   margin-left: 10px;
+}
+.down .button.flipped{
+  -webkit-transform:scaleY(-1);
+}
+.down .button.flipped:active{
+  -webkit-transform:scaleY(-0.8) scaleX(0.8);
 }
 .back .button, .down .button {
   position: absolute;
