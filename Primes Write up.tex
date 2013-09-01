@@ -1,7 +1,32 @@
-\documentclass[12 pt]{article}
-
-\usepackage[parfill]{parskip} 
+\documentclass[12pt, Helvetica]{article}   	
+\title{Primes Paper}
+\author{Nick Kaashoek and William Wu}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{15pt}
 \begin{document}
+\maketitle
+\section{Introduction}
+Over the past few years, there has been a tremendous increase in the popularity of MOOCS, also known as massive open online courses, leading to a rise in their importance for educating students around the world as well as a tremendous amount of funding for these courses. Both the MOOCS systems coursera and edX; 370,000 in edX and 1.7 million in coursera, these enormous numbers show that MOOCS are extremely important to the education system. The amount of money poured into them also reveals this, with 60 million dollars put into edX. The huge number of students in these courses also lead to a very high student to professor ratio, 150,000:1 in some courses.
+
+The increase in the number of students assigned to a single proffesor in such courses leads to many problems, not the least of which is the inability of a single professor to grade all the assignments they give out, which can sometimes number in the thousands. To solve this problem, there are two man solutions in use today; automated grading and peer grading. Automated grading relys on having machines grade papers; this is fast, but it may not always be fair to students because machines can only handle a certain number of answers, limiting the types of questions that may be asked. Peer grading, however, has no limit on grading, but a system utilizing it could be "hacked" by the students. In practice, though, both of these systems are unpolished and rather inefficient.
+
+The problem that we have located is important to solve, because without it the MOOCS cannot provide efficient feedback for their students. Without his feedback, students are unable to effectively evaluate what they know and do not know, limiting their learning abilities. As such, it is imperitive that an efficient system is created to allow these students to learn and grow efficiently. This is our goal.
+
+With the importance of such a problem, there have been many attempts at solving it; however all these attempts lack one thing, which we hope to introduce into our solution. In all previous attempts and current designs for grading the papers of students, there is something lacking; a rigourous mathematical proof and analysis of the system. With our system, we hope to introduce a set of criteria that the system must pass, and then analyze it mathematically to prove the efficiency of our solutions. Introducing this to the problem will help to create a concrete system of grading that will consistently and universally produce positive results, both in terms of efficiency, and fairness for the students.
+
+To efficiently prove a mathematical system such as we proposed, we need to lay out some tools first, chief among them being mechanism design and game theory. Without the correct tools, it is impossible to do the neccesary mathematical analysis on human behavior in these systems, so we turn to game theory. Game theory allows us to create a system of rules that have to be followed by everyone in the system. By manipulating these rules, we are able to change the behavior of everyone in the system. By adding basic assumptions about human nature, we are able to predict what will happen with a specific set of rules, and prove it; this will be how we prove and create our mechanism.
+
+Our end goal with this project is to develop a mathematically provable and efficient mechanism to incentivize selfish people to accurately grade the assignments of others. By assuming that all the students in the system care about themselves, we assume that they are selfish. With this in mind, the problem becomes an issue of incentivization; how do we make these selfish people care about others? As such, our goal is to find the perfect incentive for these people. If we are succesful, this will make them grade the papers of others efficienly because they care, and fairly because they are human: this strikes the perfect balance between the two current solutions.
+
+Mathematically provable systems like the one that we are trying to create always lead to good results. For example...
+
+Some people might think that this is a rather simple problem to solve, and could come up with a variety of simple solutions that appear to be correct. Incentivizing people often seems simple at first; for example, why not just say "here, take this paper and grade it. I'll give you bonus points if you do it." Obviously, this will just return garbage because the students will just take the points and not care about the grading. The next step would be to implement some kind of simple checking: "here, you two students, take this paper and grade it. If you match, I'll give you bonus points." This case may seem like it works if the students are isolated, but smart students will just give the paper 100, not grade, match and get the points. Clearly, simple solutions aren't really that effective
+
+As demonstrated by the above examples, this problem's complexity lies in the complex behavior of selfish human beings; as such, there is no simple way to solve it. Because human nature dictates that people will do whatever is in their best interests and will always try to outsmart the system, it quickly becomes apparent that a strict set of rules and assumptions is neccesary to dictate thier behavior. The rules, however, can never be to simple, because they need to anticipate every possible way the players (students) will attempt to outsmart them. This means that although we will try to create a relatively simple solution, it can never be to straightforward.
+
+The complexity of human nature is what makes the problem interesting; this combined with its relevance makes it an interesting research oppurtunity. Although there may not be a simple and beautiful solution to this problem, our use of game theory to predict human nature provides tremendous grounds for interesting research. Not only does predicting human nature make this interesting, but the problem's relevance to modern times also means that this is a neccesary problem to solve, giving us good basis to design our solution on.
+
 \section{The Problem}
 In a given class of \emph{n} students and 1 professor, students must submit assignments, each of which have grades on a scale of 1 to 100. All of these assignments must be graded by someone, and no one can grade their own assignment. Our goal is to come up with a scheme that minimizes the maximum amount of work done by a single person, as well as the maximum deviation between any student's given grade and the grade their assignment deserves.
 
