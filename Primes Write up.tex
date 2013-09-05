@@ -1,5 +1,5 @@
-\documentclass[12pt, Helvetica]{article}   	
-\title{Teaching a Class to Grade Itself}
+\documentclass[12pt, Arial]{article}   	
+\title{Teaching a Class to Grade Itself using Game Theory}
 \author{Nick Kaashoek and William Wu}
 \date{\today}
 \usepackage[margin=1in]{geometry}
@@ -8,26 +8,28 @@
 \begin{document}
 \maketitle
 \section{Introduction}
-Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses), as well the importance of MOOCs to education as a whole. Popular MOOC systems such as Corsera or EdX are well funded, which explains their rapid growth: EdX is funded by 60 million dollars~\cite{canmoocsreducecc}. However, the MOOC's main importance comes from it's scalability. Moocs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofmoocs}: In Coursera alone, there are 1.7 million students~\cite{swotanalysisofmoocs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
+Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses), as well the importance of MOOCs to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started~\cite{canmoocsreducecc}. However, the MOOC's main importance comes from its scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofmoocs}: By the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofmoocs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
 
-High student-professor ratios lead to problems for professors. Professors are unable to grade hundreds of thousands of sumbissions from a single homework assignment: a major problem. Currently, there are two ways to remedy the problem: automated grading and peer grading. Automated grading relies on machines to grade assignments. However, machines can only check certain types of answers, severely limiting the depth of the questions asked~\cite{rightandwrongmoocs}. On the other hand, peer grading can grade any type of question, but a system utilizing it could easily be "hacked" by the students ~\cite{makingsenseofmoocs}. Although both of these systems are interesting concepts, they are unpolished and inefficient in practice.
+High student-professor ratios lead to problems for professors. Professors are simply unable to grade hundreds of thousands of submissions. Currently, two types of solutions are used to remedy the problem: automated grading and peer grading. Automated grading relies on machines to grade assignments. However, machines can only check certain types of answers (i.e. multiple choice), severely limiting the depth of the questions asked~\cite{rightandwrongmoocs}. Even though automated grading for written essays is an active area of research with much recent progress, a usable solution does not yet exist~\cite{automatedsystemssuck}. On the other hand, peer grading can grade any type of question, but a system utilizing it could easily be ``hacked'' by the students~\cite{makingsenseofmoocs}. Although both of these systems are interesting concepts, they are limiting or inaccurate in practice~\cite{howaccurateispeergrading}.
 
-The problem that we have located is important to solve. Without a solid solution, MOOCs cannot provide efficient feedback for their students, rendering them unable to effectively evaluate their knowledge. Because this limits their learning abilities, it is imperative to create an efficient system that enables students to learn efficiently and grow. This is our goal.
+The problem of grading large numbers of submissions is important to solve. Without a solid solution, MOOCs cannot provide efficient feedback for their students, rendering them unable to effectively evaluate their knowledge. Because this limits their learning abilities, it is imperative to create an efficient system that enables students to receive feedback to learn efficiently.
 
-There have been many attempts at solving such an important problem. However, we hope to introduce what all previous attempts lack: a rigourous mathematical proof and analysis of the system. With our system, we hope to introduce a set of criteria that the system must pass, and then analyze it mathematically to prove the efficiency of our solutions. Introducing this to the problem will help to create a concrete system of grading that will consistently and universally produce positive results, both in terms of efficiency, and fairness for the students.
+There have been many attempts at solving such an important problem~\cite{autograding}~\cite{edxsoftware}. However, this work introduces what previous attempts lack: a rigorous mathematical analysis of the system using tools from game theory and mechanism design. This work sets a concrete set of constraints that a grading system must satisfy to mitigate student incentive to cheat, as well as a concrete benchmark to analyze the efficiency of various systems. Together, these create a concrete measure for evaluating peer grading systems in terms of efficiency (how much time the professor and students spend grading) and fairness for the students (how accurate their final scores are). Having this measurement model is a large contribution in itself, because it allows comparison between different systems. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
+%[Note from Matt and Christos: 1) mention that coming up with a model is itself a big contribution, because now we can compare the quality of two different mechanisms. 2) Mention that certainly theory is not a perfect predictor of what will happen in practice, but that game theory and mechanism design (and all the assumptions used in this work) have a history of ``calling good mechanisms good and bad mechanisms bad''. Also, solutions that do not satisfy game theoretic constraints may work for a while, but in the long run if a system can be exploited, eventually it will be. See here for an interesting example of this: http://www.insidehighered.com/news/2013/02/12/students-boycott-final-challenge-professors-grading-policy-and-get]
 
-Without the correct tools, however, it is impossible to do the necessary mathematical analysis on such a system, so we first need to lay out our tools: game theory and mechanism design. Game theory allows us to create a unified system of assumptions that simulate a real classroom; this will tell us how the students behave. Then, we can use mechanism design to create a set of "rules" that the "players", the students, will have to follow; this is known as the mechanism. Using these assumptions and the rules we create, we can predict exactly how students will behave when they play our "game". Being able to predict what students will do allow us to prove the efficiency and effectiveness of our mechanism, allowing us to accomplish our goal.
+Game theory allows the creation of a unified system of assumptions that simulate student behavior in a class. The grading system can be viewed as a ``game'' where the set of ``rules'' are known to everyone and the ``players'' --- the students --- ``play'' the game in order to get the best possible result. Using the assumptions and rules, game theory can predict how students will behave when they ``play''. This way, mechanism efficiency and effectiveness cam be proved, allowing the evaluation of different sets of rules.
 
-Our end goal with this project is to develop a mathematically provable and efficient mechanism wherein people accurately grade the assignments of others. By assuming that all students in the system care about themselves, we assume that they are selfish. With this in mind, the problem becomes an issue of finding the right incentive; how do we make these selfish people care about others? As such, our goal is to find the perfect incentive for these people. If we are successful, this will make them grade the papers of others efficiently because they care, and fairly because they are human: this strikes the perfect balance between the two current solutions.
+In addition to modeling grading systems, this project develops a mechanism in which students accurately grade the assignments of other students. Students are assumed to be self-interested; they care about their own grades, not the grades of their peers. With this, the problem becomes how to find the perfect incentive for students to spend time to grade assignments of others. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e. they will just give every assignment a 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but clever students will still just give all papers 100. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task.
 
-Some people might think that this is a rather simple problem to solve, and could come up with a variety of simple solutions that appear correct. Incentivizing people often seems simple at first; for example, why not just say "here, take this paper and grade it. I'll give you bonus points if you do it." Obviously, this will not return anything useful because the students will just take the points and not care about the grading. The next step would be to implement some kind of simple checking: "here, you two students, take this paper and grade it. If you match, I'll give you bonus points." This case may seem like it works if the students are isolated, but smart students will just give the paper 100, not grade, match and get the points. Clearly, simple solutions aren't really that effective.
+As demonstrated by the above examples, the complexity of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that can't be manipulated.
 
-As demonstrated by the above examples, this problem's complexity lies in the complex behavior of selfish human beings; as such, there is no simple way to solve it. Because human nature dictates that people will do whatever is in their best interests and will always try to outsmart the system, it quickly becomes apparent that a strict set of rules and assumptions are necessary to dictate their behavior. These rules, however, can never be too simple, because they need to anticipate every possible way the players (students) will attempt to outsmart them. This means that although we will try to create a relatively simple solution, it can never be too straightforward.
-
-The complexity of human nature and the relevance that this problem has makes this an interesting research opportunity. Because it is so hard to predict human nature, our strategy for creating a solution provides an extremely interesting research opportunity, especially because it is something that no one else has attempted before. Also, the relevance of the problem we have located also makes this necessary research; thus making our solution even more interesting because it could actually be used in practice.
+This research opportunity is made interesting by the complexity of human nature as well as its necessity for practical use. This paper will cover the thought process of models leading up to the final model of grading, as well as explain the final model and its implications. All models and related calculations will be presented. Section 2 describes the mathematical definition of the problem as well as its rules and assumptions. Section 3
 
 \section{The Problem}
 In a given class of \emph{n} students and 1 professor, students must submit assignments, each of which have grades on a scale of 1 to 100. All of these assignments must be graded by someone, and no one can grade their own assignment. Our goal is to come up with a scheme that minimizes the maximum amount of work done by a single person, as well as the maximum deviation between any student's given grade and the grade their assignment deserves.
+
+
+[Note from Matt and Christos: Add some discussion about the benchmark: why do you care about workload? Why do you care about accurate grades? If you just care about workload, give everyone 100. If you just care about grades, have the professor grade everything. Need to consider both to properly model the problem.]
 
 \subsection{Rules}
 Grading one of the assignments costs 1 unit of effort, and will always find the correct score, \emph{i.e} the \emph{objective score}, and grading is the only way to find this objective score.
@@ -56,14 +58,18 @@ These are the assumptions that we have made in creating this model.
 
 11) \emph{Students cannot communicate with each other}
 
-\section{The First Model}
+\section{The Calibration Model}
+
 This model is quite unrealistic, but not by such a degree that it is unimaginable. We were, however, able to create a perfect solution if the problem took place in this situation.
-\subsection{The Mechanism}
+
+\subsection{Mechanism}
 In our model, we have the professor grade one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
 
-The professor then tells the students that "Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0." The students then go about their business grading the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the graders graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, the get the maximum of {some minimum value, the assigned grade}.
-\subsection{Why it works}
-G is the maximum of {some minimum value, the assigned grade}.
+
+The professor then tells the students that ``Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0.'' The students then go about their business grading the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the students graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, their assigned grade is guaranteed to be at least some minimum value.
+
+\subsection{Why it Works}
+G is the maximum of \{ some minimum value, the assigned grade \}.
 
 The happiness of one student grading one paper is equivalent to $$\frac{H(G)+H(0)}{2}-1$$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
 
@@ -72,23 +78,26 @@ If they grade both papers, their happiness will be equal to $$H(G)-2$$Because th
 If they grade neither then the happiness will be $$H(0)$$ Because they automatically get a 0, but spend no energy.
 
 This means that if $H(G) - 2 > H(0)$, then student will grade both papers. So, for the professor to guarantee that the students use effort and obtain the correct grades, he or she would choose a minimum value such that $H(G) > H(0) + 2$.
-\subsection{The result}
+\subsection{Results}
 The teacher expends one unit of effort, and the students each spend 2, as long as the teacher set the minimum value high enough.
 Everything above $H^{-1}(2)$ will be graded correctly, while everything below it will receive a score of $H^{-1}(2)$.
 This means that the maximum deviation is $H^{-1}(2)$, because this is the score that might be given to someone who deserves a 0. Expressed in happiness units, we get a value of 2.
 The means that the value of the objective function in this case is 4, a very low value, which shows how effective this solution is.
-\section{The Next Step}
-We now have a model that works very well in an unrealistic scenario, so we decided that this solution was fine, and moved on to a new model. The goal for this models was to make it more realistic while still making it simple to understand, and have a simply solution that would be easy for students to understand. 
 
-The major change we made in this model was one to assumption number 11. We changed it to:
+\subsection{Problems}
+The goal for this model was to make it more realistic while still making it simple to understand, and have a simply solution that would be easy for students to understand. We now have a model that works very well in an unrealistic scenario, so we decided that this solution was fine, and moved on to a new model. 
 
+\section{Improved Verification Model}
+The major change made in this model was one to assumption number 11. Now assumption 11 reads as follows:
 \emph{All students are able to communicate with each other}
 
 This provides a very different scenario than our original model, because now students will be able to figure out which papers are calibrated. However, we still wanted to try and generalize our previous solution and apply it to the new model, so we came up with the following scheme.
-\subsection{The New Mechanism}
+
+\subsection{Mechanism}
 Our first attempt to apply a solution to this model was a near carbon copy of the previous scheme.
-We arrange the class in a virtual circle, where every student grades the papers of the \emph{k} students to the right of them. The proffesor also grades every \emph{kth} paper starting from some random point in the circle. If a student misgrades the calibrated paper, they get a 0, otherwise they get the maximum of their objective score and the minimum value from our previous mechanism.
-\subsection{Why it Works and Problems}
+The class is arranged in a virtual circle, where every student grades the papers of the \emph{k} students to the right of them. The professor also grades every \emph{kth} paper starting from some random point in the circle. If a student mis-grades the calibrated paper, they get a 0, otherwise they get the maximum of their objective score and the minimum value from our previous mechanism.
+
+\subsection{Why it Works}
 In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students.
 
 1) They can grade 0 papers, giving them a happiness of $H(0) = 0$
@@ -97,12 +106,19 @@ In this scheme, because of the overlapping papers, the students have no better w
 
 3) They can grade i papers giving them a happiness of $(k-i)\div k \cdot H(G)-i$. This means that it is always worse to grade i, because happiness from grading i is equal to i times happiness for grading 0 plus i-k times happiness for grading k.
 
-The major problem with this method is the amount of work. The professor has to grade $\frac{n}{k}$ papers, which can be massive in a class of 1000+ students. For this reason we tried to come up with a different mechanism.
-\section{A better mechanism}
-In our new mechanism, we went with a completely different strategy, that we wanted to work better than our previous one. It works like this:
+\subsection{Results}
+Even though the students can communicate with one another, they will have no way to determine which paper is calibrated, and are thus best off grading all the papers.
 
-For each assignment, a new assignment is created to evaluate the performance of the graders. Every student receives 2 papers from different people, so that each paper overlaps with one other person, and every paper is distributed twice. The student then chooses how many points to subtract, and writes a justification for each one of these points. Graders are then given a contribution score from 1 to -1. From each of the 2 assignments they grade, they get their points deducted/total points deducted-0.5. Then, if the original writers of the papers can appeal their grade if they are unhappy with it. The professor will grade the paper, and if any of the graders were wrong, they get a 0. To compute the final score, the grader's final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to H(your assigned grade). (Then your grade is converted from Happiness to an actual score). 
-\subsection{Why it works}
+\subsection{Problems}
+The major problem with this method is the amount of work. The professor has to grade $\frac{n}{k}$ papers, which can be massive in a class of 1000+ students. For this reason we tried to come up with a different mechanism.
+
+\section{The Deduction Model}
+In our new mechanism, we went with a completely different strategy, that we wanted to work better than our previous one.
+
+\subsection{Mechanism}
+For each assignment, a new assignment is created to evaluate the performance of the graders. Every student receives 2 papers from different people, so that each paper overlaps with one other person, and every paper is distributed twice. The student then chooses how many points to subtract, and writes a justification for each one of these points. Graders are then given a contribution score from 1 to -1. From each of the 2 assignments they grade, they get their points deducted / total points deducted-0.5. Then, if the original writers of the papers can appeal their grade if they are unhappy with it. The professor will grade the paper, and if any of the graders were wrong, they get a 0. To compute the final score, the grader's final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to H(your assigned grade). (Then your grade is converted from Happiness to an actual score).
+
+\subsection{Why it Works}
 The grader's have two choices, they can either grade the papers, or not grade them.
 
 If the grader does not grade the paper, what score should he give it?
@@ -116,24 +132,28 @@ If the grader does grade the paper, what score should he give it?
 If he gives it a lower score, they throw away free points, and if they give it a lower score there is a risk of them getting a 0 because the scores could be refuted. So, giving it the correct score is the best because it guarantees at least a 50.
 
 So assuming that your partner gives the paper a 100, which is the best thing they could do if they don't grade, then
-	If you don�t grade the paper, you don�t use any effort. So your happiness will H(your grade on the original assignment). Contribution score = 0
+	If you don't grade the paper, you don't use any effort. So your happiness will H(your grade on the original assignment). Contribution score = 0
 	If you do grade, you use 1 unit of effort by default. But, your happiness will be H(your grade on the original assignment) + 3. Contribution score = 1
 	
 If your partner gives the paper its true grade:
-	If you don�t grade the assignment, you will give it a 100 and so your contribution score is -1. So your happiness is H(your original grade) - 4.
+	If you don't grade the assignment, you will give it a 100 and so your contribution score is -1. So your happiness is H(your original grade) - 4.
 	If you do grade the assignment, you and your partner gave the same grades, so get a contribution score of 0. This means that your happiness is H(your original grade). 
 	
-Therefore, it is in everyone's best interest to honestly grade the paper. 
-\subsection{The Result}
+Therefore, it is in everyone's best interest to honestly grade the paper.
+
+\subsection{Results}
 Assuming that everyone acts in the dominant strategy behavior, the maximum work for teacher is 0, the maximum work done for students is 2. 
 Because everyone honestly grades the papers, the maximum deviation is 0.
 So, the objective function is 2, which is even better than our first mechanism.
-\section{The Next Step}
-\subsection{What is wrong?}
+
+\subsection{Problems}
 Although the result that we produced for our previous model is rather good, it encourages very harsh competition between students, and would make the classroom environment feel very negative. This means that we need to find a different solution to the same problem which encourages a kind of positive competition, instead of the negatives formed by trying to find the most mistakes
-\subsection{The next mechanism}
-For the next mechanism, we kept all of our assumptions the same, and simply tried to find a way to better the feeling of negative competition. To do this, we start by having each paper get graded by two people. Then, the original writer of this paper chooses which of the two grades he/she would like to have, and looks over the justifications for losing any points on both papers. If they see that any of these justifications are incorrect, they flag the paper and send it to the professor. Following this, the paper they chose to have is sent to a third party, who grades the paper, and checks if their grade is close to the one that was given to the paper. If it isn't, the paper is sent to the professor. After everything that needs to be flagged has been, the professor grades all the flagged papers, and rewards people who were correct with a 2 point bonus. If no papers from any group were flagged, every grader in that group gets two points. Final grades are whatever the person chose if there was no flagging, or whatever the professor gave them if there was.
-\subsection{Does it work?}
+
+\section{The Flag Model}
+For the next mechanism, we kept all of our assumptions the same, and simply tried to find a way to better the feeling of negative competition.
+\subsection{Mechanism}
+Start by having each paper get graded by two people. Then, the original writer of this paper chooses which of the two grades he / she would like to have, and looks over the justifications for losing any points on both papers. If they see that any of these justifications are incorrect, they flag the paper and send it to the professor. Following this, the paper they chose to have is sent to a third party, who grades the paper, and checks if their grade is close to the one that was given to the paper. If it isn't, the paper is sent to the professor. After everything that needs to be flagged has been, the professor grades all the flagged papers, and rewards people who were correct with a 2 point bonus. If no papers from any group were flagged, every grader in that group gets two points. Final grades are whatever the person chose if there was no flagging, or whatever the professor gave them if there was.
+\subsection{Why it Works}
 To find out how efficient this mechanism is, we need to analyze two things:
 1) Is everyone an honest flagger?
 $$$$
@@ -143,7 +163,7 @@ There are two cases for this:
 
 1) They guess a random score and try to flag everything
 
--In this case, the chance of gaining points is so low that its disregardable
+-In this case, the chance of gaining points is so low that it is negligible
 
 2) They take the time to flag correctly
 
@@ -159,7 +179,7 @@ Their happiness in this case will be 0, because they use no effort, but also hav
 
 The happiness of people who honestly grade, on the other hand, will be a +1 gain, because they use 1 unit of effort to grade and they get 2 units back guaranteed. This higher gain means that it is beneficial to grade honestly.
 
-\subsection{The result}
+\subsection{Results}
 Because everyone is honest, we can now analyze the score of the mechanism:
 
 Maximum work done by one person: 3 (student who flags one paper and grades 2 others)
@@ -168,21 +188,13 @@ Maximum deviation: 1 (1 point gain for being a good grader)
 
 Final score: 4
 
-Although this is not as good as our previous mechanism, it is still an improvement because there is now positive competition instead of negaitve
+Although this is not as good as our previous mechanism, it is still an improvement because there is now positive competition instead of negative.
 
 \begin{thebibliography}{9}
 
 \bibitem{canmoocsreducecc}
   % http://sicet.org/journals/ijttl/issue1201/2_Ruth.pdf
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-<<<<<<< HEAD
-  Ruth, S. (2012). Can MOOCs and existing e-learning paradigms help reduce college costs? International Journal of Technology in Teaching and Learning, 8(1), 21-32.
-=======
-  % Ruth, S. (2012). Can MOOC�s and existing e-learning paradigms help reduce college costs? International Journal of Technology in Teaching and Learning, 8(1), 21-32.
->>>>>>> e175d726659f958d7d64712186e3df485f370f1f
+  Ruth, S. (2012). \emph{Can MOOCs and existing e-learning paradigms help reduce college costs}? International Journal of Technology in Teaching and Learning, 8(1), 21-32.
 
 \bibitem{makingsenseofmoocs}
   % http://www-jime.open.ac.uk/jime/article/viewArticle/2012-18/html
@@ -205,7 +217,32 @@ Although this is not as good as our previous mechanism, it is still an improveme
   Source,
   Year.
 
-\bibitem{test}
+\bibitem{boycottfinal}
+  % http://www.insidehighered.com/news/2013/02/12/students-boycott-final-challenge-professors-grading-policy-and-get
+  Author,
+  \emph{Title}.
+  Source,
+  Year.
+
+\bibitem{autograding}
+  % http://www.ecu.edu/cs-acad/fsonline/customcf/committee/tg/2013proposals/08.pdf
+  Author,
+  \emph{Title}.
+  Source,
+  Year.
+
+\bibitem{edxsoftware}
+  % http://www.bostonmagazine.com/news/blog/2013/04/04/edx-now-has-robots-to-grade-your-essays/
+  Author,
+  \emph{Title}.
+  Source,
+  Year.
+
+\bibitem{automatedsystemssuck}
+  Herrington, A., \& Moran, C. (2012). \emph{Writing to a machine is not writing at all}. In N. Elliot \& L. Perelman (Eds.), Writing assessment in the 21st century: Essays in honor of Edward M. White (pp. 219-232). New York, NY: Hampton Press.
+
+\bibitem{howaccurateispeergrading}
+  % http://educationgroup.mit.edu/HHMIEducationGroup/wp-content/uploads/2011/05/Freeman-et-al-2010.pdf
   Author,
   \emph{Title}.
   Source,
