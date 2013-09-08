@@ -26,34 +26,41 @@ As demonstrated by the above examples, the complexity of the problem lies in the
 This research opportunity is made interesting by the complexity of human nature as well as its necessity for practical use. This paper will cover the thought process of models leading up to the final model of grading, as well as explain the final model and its implications. All models and related calculations will be presented. Section 2 describes the mathematical definition of the problem as well as its rules and assumptions. Section 3
 \section{Materials and Methods}
 To create the models that are used to predict the behavior of the students, a set process was used each time. To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a model. The same set of assumptions can be used for multiple models, which will allow us to evaluate different models side by side. To begin with, a simple set of assumptions was created:
+%Note: Specify that the model refers to a single grading round: There are $n$ students and 1 professor. Every student comes to us with an ungraded paper (input) define the objective score o_i, we then give those papers grades(output) After a mechanism runs each student receives a grade $g_i$ and after performing $w_i$ units of work. Define the professor as index 0.%
 \begin{enumerate}
-  \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-  \item Everyone is risk neutral with respect to happiness
-  \item Students want good grades
+  \item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
+  \item Students want to maximize their final happiness, expressed as $H(g)-W$
+  \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral (i.e, if $H(x)=10$ and $H(y)=5$, then getting x and y each with 50 percent chance, gives a happiness of 7.5).
+  \item The final happiness depends only on the grade assigned to the student and the amount of effort exercised. It doesn't depend on the score of others
 \end{enumerate}
+%add simple list%
 
-These assumptions, in layman's terms, state that student's are happiest when they do no work, want to be happy, want good grades, and have a function that expresses there happiness. Also, they state that students will not avoid nor specifically try and take risks to get happier.
+%Explanation of the choice of assumption
+% - We need to talk about happiness because it provides a numerical way to compare different outcomes
+% - Why don't we care about our friends
 
-The next step is to create a system that will allow multiple different models to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism.
+
+%First objective%
+No student can deviate from the truthful strategy to improve his happiness. In math terms, if by acting honestly student i grades $w_i$ papers and gets a grade of $g_i$ there shouldn't be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
+
+%Efficiency objective%
+The next step is to create a system that will allow multiple different models to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. In mathematical terms we want to minimize the function $max_{i \ge 1} |H(g_i)-H(o_i)| + max_{i \ge 0} w_i$ in the worst possible case.
 
 Being able to evaluate two mechanisms side by side is key to the success of the problem, because it allows us to definitively determine whether one mechanism is better than the other. In the benchmark, the two important factors are both necessary to consider, as  without one or the other, it would become impossible to create an efficient mechanism. Without caring about the workload, a model could be considered efficient if it simply asked the professor to grade every paper, because the grades would be very accurate, but a mechanism like this is clearly inefficient. Also, without caring about accuracy, not grading the papers becomes an efficient design.
 
-Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the simple: 
+% We now have a well defined problem that we need to solve. Of course the set of assumptions might not be very realistic as we will so we 
+
+Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the 
+simple into:
+%Repeat above corrections%
 \begin{enumerate}
-  \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
-  \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-  \item Everyone is risk neutral with respect to happiness
-  \item Students want good grades
-\end{enumerate}
-into:
-\begin{enumerate}
-\item The objective score of an assignment is from 0 to 100
-\item The objective score assigned by the professor is the correct objective score
+\item The objective score of an assignment is from 0 to 100%setting%
+\item The objective score assigned by the professor is the correct objective score%setting%
 \item Grading is binary, a grader can either grade or not grade, \emph{i.e} there is no way to use 0.5 units of effort
-\item Not everyone has the ability to get the correct objective score
+
+\item Not everyone has the ability to get the correct objective score 
+
 \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
 \item Students want good grades
 \item People don't like doing work
@@ -61,7 +68,9 @@ into:
 \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
 \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
 \item Everyone is risk neutral with respect to happiness
+
 \item All students can communicate with all other students
+
 \end{enumerate}
 These assumptions provide the necessary environment to begin creating a mechanism, as they state everything that is necessary to understand how students behave. Simply put, every assignment has a grade from 1-100, and whatever the professor says goes. Every student has a different capacity for grading, and as such not everyone will be able to correctly grade very assignment, but they can only choose to either grade or not grade. All students are capable of communicating with each other, and will do so, and the rest is from the simple set of assumptions.
 
