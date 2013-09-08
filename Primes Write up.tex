@@ -63,7 +63,7 @@ These are the assumptions that we have made in creating this model.
 This model is quite unrealistic, but not by such a degree that it is unimaginable. We were, however, able to create a perfect solution if the problem took place in this situation.
 
 \subsection{Mechanism}
-In our model, we have the professor grade one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
+In the model, we have the professor grade one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
 
 
 The professor then tells the students that ``Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0.'' The students then go about their business grading the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the students graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, their assigned grade is guaranteed to be at least some minimum value.
@@ -91,11 +91,11 @@ The goal for this model was to make it more realistic while still making it simp
 The major change made in this model was one to assumption number 11. Now assumption 11 reads as follows:
 \emph{All students are able to communicate with each other}
 
-This provides a very different scenario than our original model, because now students will be able to figure out which papers are calibrated. However, we still wanted to try and generalize our previous solution and apply it to the new model, so we came up with the following scheme.
+This provides a very different scenario than the original model, because now students will be able to figure out which papers are calibrated. However, we still wanted to try and generalize the previous solution and apply it to the new model, so we came up with the following scheme.
 
 \subsection{Mechanism}
-Our first attempt to apply a solution to this model was a near carbon copy of the previous scheme.
-The class is arranged in a virtual circle, where every student grades the papers of the \emph{k} students to the right of them. The professor also grades every \emph{kth} paper starting from some random point in the circle. If a student mis-grades the calibrated paper, they get a 0, otherwise they get the maximum of their objective score and the minimum value from our previous mechanism.
+The first attempt to apply a solution to this model was a near carbon copy of the previous scheme.
+The class is arranged in a virtual circle, where every student grades the papers of the \emph{k} students to the right of them. The professor also grades every \emph{kth} paper starting from some random point in the circle. If a student mis-grades the calibrated paper, they get a 0, otherwise they get the maximum of their objective score and the minimum value from the previous mechanism.
 
 \subsection{Why it Works}
 In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students.
@@ -113,10 +113,10 @@ Even though the students can communicate with one another, they will have no way
 The major problem with this method is the amount of work. The professor has to grade $\frac{n}{k}$ papers, which can be massive in a class of 1000+ students. For this reason we tried to come up with a different mechanism.
 
 \section{The Deduction Model}
-In our new mechanism, we went with a completely different strategy, that we wanted to work better than our previous one.
+In the new mechanism, we went with a completely different strategy, that we wanted to work better than the previous one.
 
 \subsection{Mechanism}
-For each assignment, a new assignment is created to evaluate the performance of the graders. Every student receives 2 papers from different people, so that each paper overlaps with one other person, and every paper is distributed twice. The student then chooses how many points to subtract, and writes a justification for each one of these points. Graders are then given a contribution score from 1 to -1. From each of the 2 assignments they grade, they get their points deducted / total points deducted-0.5. Then, if the original writers of the papers can appeal their grade if they are unhappy with it. The professor will grade the paper, and if any of the graders were wrong, they get a 0. To compute the final score, the grader's final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to H(your assigned grade). (Then your grade is converted from Happiness to an actual score).
+For each assignment, a new assignment is created to evaluate the performance of the graders. Every student receives 2 papers from different people, so that each paper overlaps with one other person, and every paper is distributed twice. The student then chooses how many points to subtract, and writes a justification for each one of these points. Graders are then given a contribution score from 1 to -1. From each of the 2 assignments they grade, they get their points deducted / total points deducted-0.5. Then, if the original writers of the papers can appeal their grade if they are unhappy with it. The professor will grade the paper, and if any of the graders were wrong, they get a 0. To compute the final score, the grader's final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to H(the student's assigned grade). (Then the student's grade is converted from Happiness to an actual score).
 
 \subsection{Why it Works}
 The grader's have two choices, they can either grade the papers, or not grade them.
@@ -131,26 +131,26 @@ If the grader does grade the paper, what score should he give it?
 
 If he gives it a lower score, they throw away free points, and if they give it a lower score there is a risk of them getting a 0 because the scores could be refuted. So, giving it the correct score is the best because it guarantees at least a 50.
 
-So assuming that your partner gives the paper a 100, which is the best thing they could do if they don't grade, then
-	If you don't grade the paper, you don't use any effort. So your happiness will H(your grade on the original assignment). Contribution score = 0
-	If you do grade, you use 1 unit of effort by default. But, your happiness will be H(your grade on the original assignment) + 3. Contribution score = 1
+So assuming that the student's partner gives the paper a 100, which is the best thing they could do if they don't grade, then
+	If you don't grade the paper, you don't use any effort. So the student's happiness will H(the student's grade on the original assignment). Contribution score = 0
+	If you do grade, you use 1 unit of effort by default. But, the student's happiness will be H(the student's grade on the original assignment) + 3. Contribution score = 1
 	
-If your partner gives the paper its true grade:
-	If you don't grade the assignment, you will give it a 100 and so your contribution score is -1. So your happiness is H(your original grade) - 4.
-	If you do grade the assignment, you and your partner gave the same grades, so get a contribution score of 0. This means that your happiness is H(your original grade). 
+If the grader's partner gives the paper its true grade:
+	If the grader doesn't grade the assignment, you will give it a 100 and so the grader's contribution score is -1. So their happiness is H(your original grade) - 4.
+	If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is H(their original grade). 
 	
 Therefore, it is in everyone's best interest to honestly grade the paper.
 
 \subsection{Results}
 Assuming that everyone acts in the dominant strategy behavior, the maximum work for teacher is 0, the maximum work done for students is 2. 
 Because everyone honestly grades the papers, the maximum deviation is 0.
-So, the objective function is 2, which is even better than our first mechanism.
+So, the objective function is 2, which is even better than the first mechanism.
 
 \subsection{Problems}
-Although the result that we produced for our previous model is rather good, it encourages very harsh competition between students, and would make the classroom environment feel very negative. This means that we need to find a different solution to the same problem which encourages a kind of positive competition, instead of the negatives formed by trying to find the most mistakes
+Although the result that we produced for the previous model is rather good, it encourages very harsh competition between students, and would make the classroom environment feel very negative. This means that we need to find a different solution to the same problem which encourages a kind of positive competition, instead of the negatives formed by trying to find the most mistakes
 
 \section{The Flag Model}
-For the next mechanism, we kept all of our assumptions the same, and simply tried to find a way to better the feeling of negative competition.
+For the next mechanism, we kept all of the assumptions the same, and simply tried to find a way to better the feeling of negative competition.
 \subsection{Mechanism}
 Start by having each paper get graded by two people. Then, the original writer of this paper chooses which of the two grades he / she would like to have, and looks over the justifications for losing any points on both papers. If they see that any of these justifications are incorrect, they flag the paper and send it to the professor. Following this, the paper they chose to have is sent to a third party, who grades the paper, and checks if their grade is close to the one that was given to the paper. If it isn't, the paper is sent to the professor. After everything that needs to be flagged has been, the professor grades all the flagged papers, and rewards people who were correct with a 2 point bonus. If no papers from any group were flagged, every grader in that group gets two points. Final grades are whatever the person chose if there was no flagging, or whatever the professor gave them if there was.
 \subsection{Why it Works}
@@ -188,7 +188,7 @@ Maximum deviation: 1 (1 point gain for being a good grader)
 
 Final score: 4
 
-Although this is not as good as our previous mechanism, it is still an improvement because there is now positive competition instead of negative.
+Although this is not as good as the previous mechanism, it is still an improvement because there is now positive competition instead of negative.
 
 \begin{thebibliography}{9}
 
