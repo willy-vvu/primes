@@ -26,26 +26,14 @@ As demonstrated by the above examples, the difficulty of the problem lies in the
 This research opportunity is made interesting by the complexity of human nature as well as its necessity for practical use. This paper will cover the thought process of mechanisms leading up to the final mechanism of grading, as well as explain the final mechanism and its implications. All mechanisms and related calculations will be presented. Section 2 describes the mathematical definition of the problem as well as its rules and assumptions.
 
 \section{Materials and Methods}
-<<<<<<< HEAD
 To create the models that are used to predict the behavior of the students, a set process was used each time. To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a model. The same set of assumptions can be used for multiple models, which will allow us to evaluate different models side by side. To begin with, a simple set of assumptions was created:
 %Note: Specify that the model refers to a single grading round: There are $n$ students and 1 professor. Every student comes to us with an ungraded paper (input) define the objective score o_i, we then give those papers grades(output) After a mechanism runs each student receives a grade $g_i$ and after performing $w_i$ units of work. Define the professor as index 0.%
-=======
-The goal of this research is to find a peer grading system that is as accurate and as efficient as possible. First, the problem must be defined in mathematical terms.
-
-To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a mechanism. The same set of assumptions can be used for multiple mechanisms, which will allow us to evaluate different mechanisms side by side. To begin with, a simple set of assumptions was created:
->>>>>>> 18b3ac6cb9cfff6ce8542429cdcbb91e90f9aae3
 \begin{enumerate}
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-<<<<<<< HEAD
   \item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
   \item Students want to maximize their final happiness, expressed as $H(g)-W$
   \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral (i.e, if $H(x)=10$ and $H(y)=5$, then getting x and y each with 50 percent chance, gives a happiness of 7.5).
   \item The final happiness depends only on the grade assigned to the student and the amount of effort exercised. It doesn't depend on the score of others
-=======
-  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$, $W$ is number of work units used
-  \item Everyone is risk neutral with respect to happiness
-  \item Students want good grades
->>>>>>> 18b3ac6cb9cfff6ce8542429cdcbb91e90f9aae3
 \end{enumerate}
 %add simple list%
 
@@ -53,38 +41,20 @@ To begin with, a set of assumptions is created. These assumptions are used to ex
 % - We need to talk about happiness because it provides a numerical way to compare different outcomes
 % - Why don't we care about our friends
 
-<<<<<<< HEAD
-
 %First objective%
 No student can deviate from the truthful strategy to improve his happiness. In math terms, if by acting honestly student i grades $w_i$ papers and gets a grade of $g_i$ there shouldn't be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
 
+\subsection{Benchmark}
 %Efficiency objective%
 The next step is to create a system that will allow multiple different models to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. In mathematical terms we want to minimize the function $max_{i \ge 1} |H(g_i)-H(o_i)| + max_{i \ge 0} w_i$ in the worst possible case.
-=======
-\subsection{Benchmark}
-Once the assumptions are complete, a benchmark can be selected based on the goals of the system. A benchmark will allow for a quantitative way to compare mechanisms. To define such a benchmark, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. Mathematically, the goal is to minimize the maximum amount of work done by a single person, as well as minimize maximum deviation between any student's given grade and the grade their assignment deserves.
->>>>>>> 18b3ac6cb9cfff6ce8542429cdcbb91e90f9aae3
 
 Caring about the workload is just as important as caring about accurate grades. If the system was purely based on minimizing only the work done by a single person, everyone could just get 100. Likewise, if the system was purely based on maximizing grade accuracy, the professor could grade everything. In order to properly model the problem to achieve a solution that is reasonable, both aspects of the problem need to be considered.
 
-<<<<<<< HEAD
 % We now have a well defined problem that we need to solve. Of course the set of assumptions might not be very realistic as we will so we 
 
-Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the 
+Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ``''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the 
 simple into:
 %Repeat above corrections%
-=======
-\subsection{Rules}
-After a simple set of assumptions and a benchmark are created, the assumptions need to be further developed into a true model that will become the ``rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This added complexity to the previously simple assumptions:
-\begin{enumerate}
-  \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
-  \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-  \item Everyone is risk neutral with respect to happiness
-  \item Students want good grades
-\end{enumerate}
-into:
->>>>>>> 18b3ac6cb9cfff6ce8542429cdcbb91e90f9aae3
 \begin{enumerate}
 \item The objective score of an assignment is from 0 to 100%setting%
 \item The objective score assigned by the professor is the correct objective score%setting%
@@ -110,12 +80,11 @@ These assumptions provide the necessary environment to begin creating a mechanis
 
 Because it would be illogical to start creating a mechanism to encompass all of these assumptions, every mechanism grows in complexity, with the first one being the most simple. Throughout the design process, the assumptions were changed to allow for simplicity, which allows for the creation of simpler models. The complex set of assumptions were always kept in mind, however.
 
-The next step in creating a mechanism
 \section{The Problem}
 In a given class of \emph{n} students and 1 professor, students must submit assignments, each of which have grades on a scale of 1 to 100. All of these assignments must be graded by someone, and no one can grade their own assignment. Our goal is to come up with a scheme that minimizes the maximum amount of work done by a single person, as well as the maximum deviation between any student's given grade and the grade their assignment deserves.
 
 
-[Note from Matt and Christos: Add some discussion about the benchmark: why do you care about workload? Why do you care about accurate grades? If you just care about workload, give everyone 100. If you just care about grades, have the professor grade everything. Need to consider both to properly model the problem.]
+%[Note from Matt and Christos: Add some discussion about the benchmark: why do you care about workload? Why do you care about accurate grades? If you just care about workload, give everyone 100. If you just care about grades, have the professor grade everything. Need to consider both to properly model the problem.]
 Once the rules and assumptions have been defined and the benchmark determined, different grading mechanisms can be created and tested. This is where mechanism design and game theory comes into play. Mechanism design is used to create a system that satisfies a set of constraints and achieves a certain purpose. Then, game theory is used to mathematically predict student behavior to benchmark such a system. Starting from the simplest and most obvious approaches, various mechanisms were created, tested, and refined upon in an iterative process that spanned several months. The end result is fairly complete, although there are still questions to be answered in future work.
 
 \section{The Calibration Mechanism}
