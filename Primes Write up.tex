@@ -19,28 +19,33 @@ There have been many attempts at solving such an important problem~\cite{autogra
 
 Game theory allows the creation of a unified system of assumptions that simulate student behavior in a class. The grading system can be viewed as a ``game'' where the set of ``rules'' are known to everyone and the ``players'' --- the students --- ``play'' the game in order to get the best possible result. Using the assumptions and rules, game theory can predict how students will behave when they ``play''. This way, mechanism efficiency and effectiveness cam be proved, allowing the evaluation of different sets of rules.
 
-In addition to modeling grading systems, this project develops a mechanism in which students accurately grade the assignments of other students. Students are assumed to be self-interested; they care about their own grades, not the grades of their peers. With this, the problem becomes how to find the perfect incentive for students to spend time to grade assignments of others. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e. they will just give every assignment a 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but clever students will still just give all papers 100. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task.
+The difficulty of the problem lies in finding an incentive for students to spend time to grade assignments of others who they don't care about. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e. they will just give every assignment a 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but clever students will still just give all papers 100. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task. The main purpose of this work is to devise mechanisms which avoid these problems, allowing for work to be distributed efficiently.
 
-As demonstrated by the above examples, the complexity of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that can't be manipulated.
+As demonstrated by the above examples, the difficulty of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that can't be manipulated.
 
-This research opportunity is made interesting by the complexity of human nature as well as its necessity for practical use. This paper will cover the thought process of models leading up to the final model of grading, as well as explain the final model and its implications. All models and related calculations will be presented. Section 2 describes the mathematical definition of the problem as well as its rules and assumptions. Section 3
+This research opportunity is made interesting by the complexity of human nature as well as its necessity for practical use. This paper will cover the thought process of mechanisms leading up to the final mechanism of grading, as well as explain the final mechanism and its implications. All mechanisms and related calculations will be presented. Section 2 describes the mathematical definition of the problem as well as its rules and assumptions.
+
 \section{Materials and Methods}
-To create the models that are used to predict the behavior of the students, a set process was used each time. To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a model. The same set of assumptions can be used for multiple models, which will allow us to evaluate different models side by side. To begin with, a simple set of assumptions was created:
+The goal of this research is to find a peer grading system that is as accurate and as efficient as possible. First, the problem must be defined in mathematical terms.
+
+To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a mechanism. The same set of assumptions can be used for multiple mechanisms, which will allow us to evaluate different mechanisms side by side. To begin with, a simple set of assumptions was created:
 \begin{enumerate}
   \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
+  \item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$, $W$ is number of work units used
   \item Everyone is risk neutral with respect to happiness
   \item Students want good grades
 \end{enumerate}
 
 These assumptions, in layman's terms, state that student's are happiest when they do no work, want to be happy, want good grades, and have a function that expresses there happiness. Also, they state that students will not avoid nor specifically try and take risks to get happier.
 
-The next step is to create a system that will allow multiple different models to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism.
+\subsection{Benchmark}
+Once the assumptions are complete, a benchmark can be selected based on the goals of the system. A benchmark will allow for a quantitative way to compare mechanisms. To define such a benchmark, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. Mathematically, the goal is to minimize the maximum amount of work done by a single person, as well as minimize maximum deviation between any student's given grade and the grade their assignment deserves.
 
-Being able to evaluate two mechanisms side by side is key to the success of the problem, because it allows us to definitively determine whether one mechanism is better than the other. In the benchmark, the two important factors are both necessary to consider, as  without one or the other, it would become impossible to create an efficient mechanism. Without caring about the workload, a model could be considered efficient if it simply asked the professor to grade every paper, because the grades would be very accurate, but a mechanism like this is clearly inefficient. Also, without caring about accuracy, not grading the papers becomes an efficient design.
+Caring about the workload is just as important as caring about accurate grades. If the system was purely based on minimizing only the work done by a single person, everyone could just get 100. Likewise, if the system was purely based on maximizing grade accuracy, the professor could grade everything. In order to properly model the problem to achieve a solution that is reasonable, both aspects of the problem need to be considered.
 
-Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the simple: 
+\subsection{Rules}
+After a simple set of assumptions and a benchmark are created, the assumptions need to be further developed into a true model that will become the ``rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This added complexity to the previously simple assumptions:
 \begin{enumerate}
   \item Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
@@ -63,6 +68,9 @@ into:
 \item Everyone is risk neutral with respect to happiness
 \item All students can communicate with all other students
 \end{enumerate}
+
+Put simply, in a given class of \emph{n} students and 1 professor, students must submit assignments, each of which have grades on a scale of 0 to 100. All of these assignments must be graded by someone, and no one can grade their own assignment. Grading one of the assignments costs 1 unit of effort, and will always find the correct score, \emph{i.e} the \emph{objective score}, and grading is the only way to find this objective score.
+
 These assumptions provide the necessary environment to begin creating a mechanism, as they state everything that is necessary to understand how students behave. Simply put, every assignment has a grade from 1-100, and whatever the professor says goes. Every student has a different capacity for grading, and as such not everyone will be able to correctly grade very assignment, but they can only choose to either grade or not grade. All students are capable of communicating with each other, and will do so, and the rest is from the simple set of assumptions.
 
 Because it would be illogical to start creating a mechanism to encompass all of these assumptions, every mechanism grows in complexity, with the first one being the most simple. Throughout the design process, the assumptions were changed to allow for simplicity, which allows for the creation of simpler models. The complex set of assumptions were always kept in mind, however.
@@ -73,40 +81,14 @@ In a given class of \emph{n} students and 1 professor, students must submit assi
 
 
 [Note from Matt and Christos: Add some discussion about the benchmark: why do you care about workload? Why do you care about accurate grades? If you just care about workload, give everyone 100. If you just care about grades, have the professor grade everything. Need to consider both to properly model the problem.]
+Once the rules and assumptions have been defined and the benchmark determined, different grading mechanisms can be created and tested. This is where mechanism design and game theory comes into play. Mechanism design is used to create a system that satisfies a set of constraints and achieves a certain purpose. Then, game theory is used to mathematically predict student behavior to benchmark such a system. Starting from the simplest and most obvious approaches, various mechanisms were created, tested, and refined upon in an iterative process that spanned several months. The end result is fairly complete, although there are still questions to be answered in future work.
 
-\subsection{Rules}
-Grading one of the assignments costs 1 unit of effort, and will always find the correct score, \emph{i.e} the \emph{objective score}, and grading is the only way to find this objective score.
-\subsection{Assumptions}
-These are the assumptions that were made in creating this model.
+\section{The Calibration Mechanism}
 
-1) The objective score is from 0 to 100
-
-2) Grading is binary, a grader can either grade or not grade, \emph{i.e} there is no way to use 0.5 units of effort
-
-3) Everyone, including the professor, has the ability to get the correct objective score
-
-4) Every assignment costs 1 unit of effort, no matter who grades or how difficult the assignment
-
-5) Students want good grades
-
-6) People don't like doing work
-
-7) Students are selfish and don't care about their friends
-
-8) Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-
-9) Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-
-10) Everyone is risk neutral with respect to happiness
-
-11) \emph{Students cannot communicate with each other}
-
-\section{The Calibration Model}
-
-This model is quite unrealistic, but not by such a degree that it is unimaginable. Because of this, it was possible to create a perfect solution if the problem took place in this situation.
+This mechanism is quite unrealistic, but not by such a degree that it is unimaginable. Because of this, it was possible to create a perfect solution if the problem took place in this situation.
 
 \subsection{Mechanism}
-In the model, the professor grades one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
+In the mechanism, the professor grades one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
 
 
 The professor then tells the students that ``Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0.'' The students then go about their business grading the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the students graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, their assigned grade is guaranteed to be at least some minimum value.
@@ -128,16 +110,16 @@ This means that the maximum deviation is $H^{-1}(2)$, because this is the score 
 The means that the value of the objective function in this case is 4, a very low value, which shows how effective this solution is.
 
 \subsection{Problems}
-The goal for this model was to make it more realistic while still making it simple to understand, and have a simply solution that would be easy for students to understand. There is now a model that works very well in an unrealistic scenario, so we moved on to a new model. 
+The goal for this mechanism was to make it more realistic while still making it simple to understand, and have a simply solution that would be easy for students to understand. There is now a mechanism that works very well in an unrealistic scenario, so we moved on to a new mechanism. 
 
-\section{Improved Verification Model}
-The major change made in this model was one to assumption number 11. Now assumption 11 reads as follows:
+\section{Improved Verification Mechanism}
+The major change made in this mechanism was one to assumption number 11. Now assumption 11 reads as follows:
 \emph{All students are able to communicate with each other}
 
-This provides a very different scenario than the original model, because now students will be able to figure out which papers are calibrated. However, it would be better to try and generalize the previous solution and apply it to the new model, which leads to the following scheme.
+This provides a very different scenario than the original mechanism, because now students will be able to figure out which papers are calibrated. However, it would be better to try and generalize the previous solution and apply it to the new mechanism, which leads to the following scheme.
 
 \subsection{Mechanism}
-The first attempt to apply a solution to this model was a near carbon copy of the previous scheme.
+The first attempt to apply a solution to this mechanism was a near carbon copy of the previous scheme.
 The class is arranged in a virtual circle, where every student grades the papers of the \emph{k} students to the right of them. The professor also grades every \emph{kth} paper starting from some random point in the circle. If a student mis-grades the calibrated paper, they get a 0, otherwise they get the maximum of their objective score and the minimum value from the previous mechanism.
 
 \subsection{Why it Works}
@@ -155,7 +137,7 @@ Even though the students can communicate with one another, they will have no way
 \subsection{Problems}
 The major problem with this method is the amount of work. The professor has to grade $\frac{n}{k}$ papers, which can be massive in a class of 1000+ students. For this reason a different mechanism was necessary.
 
-\section{The Deduction Model}
+\section{The Deduction Mechanism}
 In the new mechanism, a different strategy was created; one that would ideally work better than the previous ones.
 
 \subsection{Mechanism}
@@ -190,9 +172,9 @@ Because everyone honestly grades the papers, the maximum deviation is 0.
 So, the objective function is 2, which is even better than the first mechanism.
 
 \subsection{Problems}
-Although the result that was produced for the previous model is rather good, it encourages very harsh competition between students, and would make the classroom environment feel very negative. This means that finding a different solution to the same problem was necessary, in which students are placed in positive competition, instead of the negative one formed by trying to find the most mistakes
+Although the result that was produced for the previous mechanism is rather good, it encourages very harsh competition between students, and would make the classroom environment feel very negative. This means that finding a different solution to the same problem was necessary, in which students are placed in positive competition, instead of the negative one formed by trying to find the most mistakes
 
-\section{The Flag Model}
+\section{The Flag Mechanism}
 For the next mechanism, all of the assumptions were kept the same, and simply tried to find a way to better the feeling of negative competition.
 \subsection{Mechanism}
 Start by having each paper get graded by two people. Then, the original writer of this paper chooses which of the two grades he / she would like to have, and looks over the justifications for losing any points on both papers. If they see that any of these justifications are incorrect, they flag the paper and send it to the professor. Following this, the paper they chose to have is sent to a third party, who grades the paper, and checks if their grade is close to the one that was given to the paper. If it isn't, the paper is sent to the professor. After everything that needs to be flagged has been, the professor grades all the flagged papers, and rewards people who were correct with a 2 point bonus. If no papers from any group were flagged, every grader in that group gets two points. Final grades are whatever the person chose if there was no flagging, or whatever the professor gave them if there was.
