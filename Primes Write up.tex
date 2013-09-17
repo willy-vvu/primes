@@ -4,11 +4,13 @@
 \date{\today}
 \usepackage[margin=1in]{geometry}
 \usepackage{parskip}
+\usepackage{cite}
 \usepackage{graphicx}
 \setlength{\parindent}{15pt}
 \begin{document}
 \maketitle
 \section{Introduction}
+\cite{m85}
 Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses), as well the importance of MOOCs to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started~\cite{canmoocsreducecc}. However, the MOOC's main importance comes from its scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofmoocs}: By the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofmoocs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
 
 High student-professor ratios lead to problems for professors. Professors are simply unable to grade hundreds of thousands of submissions. Currently, two types of solutions are used to remedy the problem: automated grading and peer grading. Automated grading relies on machines to grade assignments. However, machines can only check certain types of answers (i.e. multiple choice), severely limiting the depth of the questions asked~\cite{rightandwrongmoocs}. Even though automated grading for written essays is an active area of research with much recent progress, a usable solution does not yet exist~\cite{automatedsystemssuck}. On the other hand, peer grading can grade any type of question, but a system utilizing it could easily be ``hacked'' by the students~\cite{makingsenseofmoocs}. Although both of these systems are interesting concepts, they are limiting or inaccurate in practice~\cite{howaccurateispeergrading}.
@@ -260,77 +262,6 @@ Although this is not as good as the previous mechanism, it is still an improveme
 \noindent
 \includegraphics[width=\textwidth]{Chart.eps}
 }
-\begin{thebibliography}{9}
-
-\bibitem{canmoocsreducecc}
-  % http://sicet.org/journals/ijttl/issue1201/2_Ruth.pdf
-  Ruth, S. (2012). \emph{Can MOOCs and existing e-learning paradigms help reduce college costs}? International Journal of Technology in Teaching and Learning, 8(1), 21-32.
-
-\bibitem{makingsenseofmoocs}
-  % http://www-jime.open.ac.uk/jime/article/viewArticle/2012-18/html
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{swotanalysisofmoocs}
-  % http://www.editlib.org/p/112020
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{rightandwrongmoocs}
-  % http://www.tonybates.ca/2012/08/05/whats-right-and-whats-wrong-about-coursera-style-moocs/
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{boycottfinal}
-  % http://www.insidehighered.com/news/2013/02/12/students-boycott-final-challenge-professors-grading-policy-and-get
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{autograding}
-  % http://www.ecu.edu/cs-acad/fsonline/customcf/committee/tg/2013proposals/08.pdf
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{edxsoftware}
-  % http://www.bostonmagazine.com/news/blog/2013/04/04/edx-now-has-robots-to-grade-your-essays/
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-
-\bibitem{automatedsystemssuck}
-  Herrington, A., \& Moran, C. (2012). \emph{Writing to a machine is not writing at all}. In N. Elliot \& L. Perelman (Eds.), Writing assessment in the 21st century: Essays in honor of Edward M. White (pp. 219-232). New York, NY: Hampton Press.
-
-\bibitem{howaccurateispeergrading}
-  % http://educationgroup.mit.edu/HHMIEducationGroup/wp-content/uploads/2011/05/Freeman-et-al-2010.pdf
-  Author,
-  \emph{Title}.
-  Source,
-  Year.
-  
-\bibitem{theproblemswithpeergradingincoursera}
-%http://www.insidehighered.com/blogs/hack-higher-education/problems-peer-grading-coursera
-Author,
-  \emph{Title}.
-  Source,
-  Year.
-  
-\bibitem{robogradingproblems}
-%http://bltnotjustasandwich.com/2013/04/05/the-problems-with-moocs-1-robo-essay-grading/
-Author,
-  \emph{Title}.
-  Source,
-  Year.
-  
-\end{thebibliography}
+\bibliography{bibliography}{}
+\bibliographystyle{plain}
 \end{document}
