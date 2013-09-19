@@ -10,19 +10,18 @@
 \begin{document}
 \maketitle
 \section{Introduction}
-\cite{m85}
-Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses), as well the importance of MOOCs to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started~\cite{canmoocsreducecc}. However, the MOOC's main importance comes from its scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofmoocs}: By the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofmoocs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
+Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses), as well the importance of MOOCs to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started in May of 2012~\cite{canmoocsreducecc}. However, the MOOC's main importance comes from its scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofmoocs}: By the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofmoocs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
 
 High student-professor ratios lead to problems for professors. Professors are simply unable to grade hundreds of thousands of submissions. Currently, two types of solutions are used to remedy the problem: automated grading and peer grading. Automated grading relies on machines to grade assignments. However, machines can only check certain types of answers (i.e. multiple choice), severely limiting the depth of the questions asked~\cite{rightandwrongmoocs}. Even though automated grading for written essays is an active area of research with much recent progress, a usable solution does not yet exist~\cite{automatedsystemssuck}. On the other hand, peer grading can grade any type of question, but a system utilizing it could easily be ``hacked'' by the students~\cite{makingsenseofmoocs}. Although both of these systems are interesting concepts, they are limiting or inaccurate in practice~\cite{howaccurateispeergrading}.
 
 The problem of grading large numbers of submissions is important to solve. Without a solid solution, MOOCs cannot provide efficient feedback for their students, rendering them unable to effectively evaluate their knowledge. Because this limits their learning abilities, it is imperative to create an efficient system that enables students to receive feedback to learn efficiently.
 
-There have been many attempts at solving such an important problem~\cite{autograding}~\cite{edxsoftware}. However, this work introduces what previous attempts lack: a rigorous mathematical analysis of the system using tools from game theory and mechanism design. This work sets a concrete set of constraints that a grading system must satisfy to mitigate student incentive to cheat, as well as a concrete benchmark to analyze the efficiency of various systems. Together, these create a concrete measure for evaluating peer grading systems in terms of efficiency (how much time the professor and students spend grading) and fairness for the students (how accurate their final scores are). Having this measurement model is a large contribution in itself, because it allows comparison between different systems. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
+There have been many attempts at solving such an important problem~\cite{autograding}~\cite{edxsoftware}. However, this work introduces what previous attempts lack: a rigorous mathematical analysis of the system using tools from game theory and mechanism design. This work sets a concrete set of constraints that a grading system must satisfy to mitigate students' incentive to cheat, as well as a concrete benchmark to analyze the efficiency of various systems. Together, these create a concrete measure for evaluating peer grading systems in terms of efficiency (how much time the professor and students spend grading) and fairness for the students (how accurate their final scores are). Having this measurement model is a large contribution in itself, because it allows comparison between different systems. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
 %[Note from Matt and Christos: 1) mention that coming up with a model is itself a big contribution, because now we can compare the quality of two different mechanisms. 2) Mention that certainly theory is not a perfect predictor of what will happen in practice, but that game theory and mechanism design (and all the assumptions used in this work) have a history of ``calling good mechanisms good and bad mechanisms bad''. Also, solutions that do not satisfy game theoretic constraints may work for a while, but in the long run if a system can be exploited, eventually it will be. See here for an interesting example of this: http://www.insidehighered.com/news/2013/02/12/students-boycott-final-challenge-professors-grading-policy-and-get]
 
 Game theory allows the creation of a unified system of assumptions that simulate student behavior in a class. The grading system can be viewed as a ``game'' where the set of ``rules'' are known to everyone and the ``players'' --- the students --- ``play'' the game in order to get the best possible result. Using the assumptions and rules, game theory can predict how students will behave when they ``play''. This way, mechanism efficiency and effectiveness cam be proved, allowing the evaluation of different sets of rules.
 
-The difficulty of the problem lies in finding an incentive for students to spend time to grade assignments of others who they don't care about. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e. they will just give every assignment a 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but clever students will still just give all papers 100. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task. The main purpose of this work is to devise mechanisms which avoid these problems, allowing for work to be distributed efficiently.
+The difficulty of the problem lies in finding an incentive for students to spend time to grade assignments of others who they don't care about. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e how can the professor tell the difference between an acurately assigned hundred and randomly awarded 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but the professor still can't tell the difference betweena randomly or sincerely awarded grade. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task. The main purpose of this work is to devise mechanisms which avoid these problems, allowing for work to be distributed efficiently.
 
 As demonstrated by the above examples, the difficulty of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that can't be manipulated.
 
@@ -30,9 +29,9 @@ This research opportunity is made interesting by the complexity of human nature 
 
 \section{Materials and Methods}
 \subsection{The Scenario}
-In our trying to find a solution to the professor's problem, we created a scenario in which our solution applies to a single assignment. This means that our system will have to be repeated for every assignment, instead of performing on a global scale. In such a "round" of grading, there are $n$ students, who each bring one ungraded paper to the professor. These ungraded papers are like the input for a function. Each of these papers has an objective score $o_i\mid 0<o_i<100$. This is the score the professor would give out. Our mechanism then grades the paper, and outputs these grades. After one "round" each student receives a grade $g_i$ and after performing $w_i$ units of work, where for one paper, $w_i=1$. The professor is index 0.
+In our trying to find a solution to the professor's problem, we consider the case of a single assingment. To apply them to an entire class, simply apply them to each assignment. In such a "round" of grading, there are $n$ students, who each bring one ungraded paper to the professor. These ungraded papers are like the input for a function. Each of these papers, $i$ has an objective score $o_i\mid 0<o_i<100$. This is the score the professor would give out. Our mechanism then has the students grade the papers in a clever way and output the grades. We identify the students by an index $i$ from $1$ to $n$ and the professor as index $0$.
 \subsection{Assumptions}
-To create the models that are used to predict the behavior of the students, a set process was used each time. To begin with, a set of assumptions is created. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a model. The same set of assumptions can be used for multiple models, which will allow us to evaluate different models side by side. To begin with, a simple set of assumptions was created:
+To create the models that are used to predict the behavior of the students, we use a set process every each time. To begin with, we create a set of assumptions. These assumptions are used to explain how students will act in a given situation; for example, one assumption could be that students want good grades. This is a logical assumption that is likely true, as all the assumptions are, and can be used to classify the behavior of the students in a model. The same set of assumptions can be used for multiple models, which will allow us to evaluate different models side by side. To begin with, a simple set of assumptions was created:
 \begin{enumerate}
 	\item Students want good grades
  	\item Doing work makes students unhappy
@@ -43,53 +42,38 @@ To create the models that are used to predict the behavior of the students, a se
 However, we wanted to create a mathematical solution, so these assumptions need to be changed into math terms. The result of this is as follows:
 \begin{enumerate}
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-  \item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
+  \item Students can grade others' work accurately (i.e they can find $o_i$) but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
   \item Students want to maximize their final happiness, expressed as $H(g)-W$
   \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral (i.e, if $H(x)=10$ and $H(y)=5$, then getting x and y each with 50 percent chance, gives a happiness of 7.5).
   \item The final happiness depends only on the grade assigned to the student and the amount of effort exercised. It doesn't depend on the score of others
 \end{enumerate}
 
-\subsection{Why?}
-There are two questions that need to be addressed, first, why is happiness important, and second, why are the scores of others not important? The importance of happiness lies in the fact that it provides a way to compare different outcomes; effectively allowing us to show definitively which of two models is better. The reasoning for not caring about friends is due to the relatively low impact they have on someone's grades and happiness, as well as the incredible complexity the model would have to account for with this considered.
+\paragraph{Why?}
+There are two questions that need to be addressed, first, why is happiness important, and second, why are the scores of others not important? Happiness is important because it provides a measure of the combination of the work performed and grade received. The reasoning for not caring about friends is due to the relatively low impact they have on someone's grades and happiness, for example, in a coursera course with 150,000 students, it is extremely unlikely that any tudent will ever be able to have any effect on the grade of another student. So, for simplicity, we ignore the "friendship" effect.
 \subsection{First major objective}
-No student can deviate from the truthful strategy to improve his happiness. In math terms, if by acting honestly student i grades $w_i$ papers and gets a grade of $g_i$ there shouldn't be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
+The first goal of the system is to make sure that every student gets the most happiness when they correctly grade every assignment that the professor asks them to. If a system has this property, then it is reasonable to assume that students will always choose to grade every assignment the professor asks them to. Without this property, a system becomes extremely unpredictable. So, in other words, no student can deviate from the truthful strategy to improve his happiness. In math terms, if by acting honestly student i grades $w_i$ papers and gets a grade of $g_i$ there shouldn't be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
 
 \subsection{Benchmark}
 %Efficiency objective%
-The next step is to create a system that will allow multiple different models to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. In mathematical terms we want to minimize the function $max_{i \ge 1} |H(g_i)-H(o_i)| + max_{i \ge 0} w_i$ in the worst possible case.
+The next step is to create a system that will allow multiple different mechanisms to be compared and evaluated side by side; in other words, a benchmark needs to be created. To do this, two things need to be addressed: how accurate the grades the mechanism produces are, and how happy people are. Because happiness can be directly expressed as a function of work, the two things that need to be evaluated are how accurate the grades are, and how much work is being done. As such, the benchmark becomes a sum of the amount of work done by the person doing the most work and the maximum deviation from the correct grades; the lower the sum, the more efficient the mechanism. In mathematical terms we want to minimize the function $max_{i \ge 1} |H(g_i)-H(o_i)| + max_{i \ge 0} w_i$ in the worst possible case.
 
-Caring about the workload is just as important as caring about accurate grades. If the system was purely based on minimizing only the work done by a single person, everyone could just get 100. Likewise, if the system was purely based on maximizing grade accuracy, the professor could grade everything. In order to properly model the problem to achieve a solution that is reasonable, both aspects of the problem need to be considered.
+When creating this benchmark, there are 2 things that need to be considered. First of all, caring about accuracy. This is important because if we don't care, then we could give everyone a 100, which, as explained earlier, is a terrible mechanism. Secondly, caring about work done. If we don't care about the amount of work doen, we could have the professor grade everything, which is bad because it makes the professor extremely unhappy. 
+
+Also, we need to address why we use maximum for these two things, and not sum. Caring about the maximum difference in grades and not the sum. Consider these two outcomes: each student's real grade should be 90 but they get a 91 and each student's real grade should be a 90, but all of them get a 90 except for 1 who gets a 0. In this case, the first case is clearly better, something that is only caputured by a maximum. To address caring about the maximum work done, consider these two outcomes: one where a professor grades all $n$ papers, and another where each student grades $2$ papers. In this case, the first scenario is far worse, even though the total work performed is less than the second. For this reason, we use a maximum.
+
+
 
 % We now have a well defined problem that we need to solve. Of course the set of assumptions might not be very realistic as we will so we 
 
-Once a simple set of assumptions and a benchmark were created, the assumptions need to be further developed into a true model that will become the ``''rules'' of the game. To do this, a model was created that will simulate the environment of a classroom, based on the observations of students inside real classes. This turned the list of assumptions from the 
-simple into:
+Now that a simple set of assumptions and a benchmark have been created, it becomes possible to create simple mechanisms, and improve upon them until we get to a final, satisfactory mechanism.
+
+To improve upon our mechanisms, we need to often change our assumptions. This means that the original set of assumptions we proposed will change throughout the course of the paper to allow mechanisms to handle more complex situations.
+
+One advantage of this is that we can now address the fact that the above set of assumptions is rather simple and unrealistic, for instance assuming that every student is a perfect grader.
 %Repeat above corrections%
-\begin{enumerate}
-\item When grading, $w_i=0 \oplus w_i=1$
-\item For all students, $g_i \neq o_i$
-\item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
-\item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
-\item Final happiness is unaffected by other people, only affected by $g_i$ and $w_i$
-\item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-\item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral.
-\item For a given student in $N$, that student has contact with all other students in $N$.
-\end{enumerate}
-Put simply:
-\begin{enumerate}
-\item Students cannot "half bake" an assignment
-\item Students can't always get the exact objective score
-\item Students want good grades
-\item Students don't like grading
-\item Students are selfish
-\item Doing work costs 1 unit of effort
-\item Students are risk neutral with respect to happiness
-\item All students can talk to each other
-\end{enumerate}
 
-These assumptions provide the necessary environment to begin creating a mechanism, as they state everything that is necessary to understand how students behave. Simply put, every assignment has a grade from 1-100, and whatever the professor says goes. Every student has a different capacity for grading, and as such not everyone will be able to correctly grade very assignment, but they can only choose to either grade or not grade. All students are capable of communicating with each other, and will do so, and the rest is from the simple set of assumptions.
 
-Because it would be illogical to start creating a mechanism to encompass all of these assumptions, every mechanism grows in complexity, with the first one being the most simple. Throughout the design process, the assumptions were changed to allow for simplicity, which allows for the creation of simpler models. The complex set of assumptions were always kept in mind, however.
+
 
 \section{Discussion}
 With this research, the goal was to create a mechanism that fulfilled our two goals; incentivizing students to play the "game" the way they were meant to, and to efficiently and effectively grade the assignments of these students. Although our mechanisms are not truly realistic, the significance of them cannot be denied. The mechanisms created by the end of the research came very close to realism, with only one factor missing, and could still be implemented in a classroom environment where all students are capable of grading others assignments efficiently.
@@ -256,7 +240,30 @@ Maximum deviation: 1 (1 point gain for being a good grader)
 Final score: 4
 
 Although this is not as good as the previous mechanism, it is still an improvement because there is now positive competition instead of negative.
+\subsection{Final Assumptions}
+Now that we have reached a point far into the research, we are able to propose a model that accounts for a much more realistic and complex world:
 
+\begin{enumerate}
+\item When grading, $w_i=0 \oplus w_i=1$
+\item For all students, $g_i \neq o_i$
+\item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
+\item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
+\item Final happiness is unaffected by other people, only affected by $g_i$ and $w_i$
+\item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
+\item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral.
+\item For a given student in $N$, that student has contact with all other students in $N$.
+\end{enumerate}
+Put simply:
+\begin{enumerate}
+\item Students cannot "half bake" an assignment
+\item Students can't always get the exact objective score
+\item Students want good grades
+\item Students don't like grading
+\item Students are selfish
+\item Doing work costs 1 unit of effort
+\item Students are risk neutral with respect to happiness
+\item All students can talk to each other
+\end{enumerate}
 \section{Illustrations}
 {
 \noindent
