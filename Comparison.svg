@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1558.0707"
-   height="900.80194"
+   width="1218.1536"
+   height="1135.6981"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -24,13 +24,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="731.12583"
-     inkscape:cy="-140.49569"
+     inkscape:zoom="1"
+     inkscape:cx="839.45592"
+     inkscape:cy="522.92165"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:snap-bbox="true"
+     inkscape:current-layer="g3997"
+     showgrid="false"
+     inkscape:snap-bbox="false"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="false"
@@ -43,8 +43,8 @@
      inkscape:snap-midpoints="false"
      inkscape:snap-object-midpoints="false"
      inkscape:snap-center="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -63,7 +63,7 @@
        spacingy="5px"
        dotted="false"
        originx="136.6582px"
-       originy="85.103842px" />
+       originy="320.00005px" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -73,7 +73,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -620,7 +620,166 @@
            x="-102.63672"
            y="468.32379"
            style="font-size:28px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara4640">Assignments graded</flowPara></flowRoot>    <path
+         id="flowPara4640">Assignments graded</flowPara></flowRoot>    <flowRoot
+       transform="translate(-484.45898,942.04029)"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3130"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3132"><rect
+           y="216.95856"
+           x="1104.5"
+           height="79.999992"
+           width="280"
+           id="rect3134" /></flowRegion><flowPara
+         style="font-size:28px"
+         id="flowPara3136">Objective function</flowPara><flowPara
+         id="flowPara3952"
+         style="font-size:28px">(Lower is better)</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3138"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-473.95898,1006.3106)"><flowRegion
+         id="flowRegion3140"><rect
+           id="rect3142"
+           width="240"
+           height="40"
+           x="1140"
+           y="304.09448" /></flowRegion><flowPara
+         id="flowPara3144"
+         style="font-size:32px"><flowSpan
+   style="font-size:28px"
+   id="flowSpan3146">In a class </flowSpan>of 25</flowPara></flowRoot>    <flowRoot
+       transform="translate(-473.95898,966.31061)"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot3148"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3150"><rect
+           y="304.09448"
+           x="1140"
+           height="40"
+           width="240"
+           id="rect3152" /></flowRegion><flowPara
+         style="font-size:32px"
+         id="flowPara3154"><flowSpan
+   id="flowSpan3156"
+   style="font-size:28px">In a class </flowSpan>of 100</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3158"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-473.95898,926.31061)"><flowRegion
+         id="flowRegion3160"><rect
+           id="rect3162"
+           width="240"
+           height="40"
+           x="1140"
+           y="304.09448" /></flowRegion><flowPara
+         id="flowPara3164"
+         style="font-size:32px"><flowSpan
+   style="font-size:28px"
+   id="flowSpan3166">In a class </flowSpan>of 1000</flowPara></flowRoot>    <g
+       id="g3997"
+       style="fill:#36d736;fill-opacity:1">
+      <rect
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3172"
+         width="40"
+         height="40"
+         x="620.04102"
+         y="1310.4052" />
+      <rect
+         y="512.36212"
+         x="240"
+         height="500"
+         width="20"
+         id="rect3944"
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3946"
+         width="20"
+         height="159.99995"
+         x="960"
+         y="852.36218" />
+      <rect
+         y="932.36212"
+         x="780"
+         height="79.999977"
+         width="20"
+         id="rect3948"
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3950"
+         width="20"
+         height="239.99995"
+         x="600"
+         y="772.36218" />
+      <rect
+         y="853.36218"
+         x="420"
+         height="158.99995"
+         width="20"
+         id="rect3954"
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         style="color:#000000;fill:#36d736;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3174"
+         width="20"
+         height="359.50055"
+         x="60.000004"
+         y="652.86157" />
+    </g>
+    <g
+       id="g4006"
+       style="fill:#00a800;fill-opacity:1">
+      <rect
+         y="1270.4052"
+         x="620.04102"
+         height="40"
+         width="40"
+         id="rect3170"
+         style="color:#000000;fill:#00a800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         y="532.36212"
+         x="60.000004"
+         height="120.49944"
+         width="20"
+         id="rect3956"
+         style="color:#000000;fill:#00a800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         y="592.36212"
+         x="600"
+         height="179.99995"
+         width="20"
+         id="rect3960"
+         style="color:#000000;fill:#00a800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       id="g4011"
+       style="fill:#1b781b;fill-opacity:1">
+      <rect
+         style="color:#000000;fill:#1b781b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3168"
+         width="40"
+         height="40"
+         x="620.04102"
+         y="1230.4052" />
+      <rect
+         style="color:#000000;fill:#1b781b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3958"
+         width="20"
+         height="160"
+         x="60.000004"
+         y="372.36212" />
+      <rect
+         y="502.36212"
+         x="600"
+         height="89.999954"
+         width="20"
+         id="rect3962"
+         style="color:#000000;fill:#1b781b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <path
        inkscape:connector-curvature="0"
        id="path4617"
        d="m -20,1012.3621 1079.4816,0"
