@@ -6,7 +6,9 @@
 \usepackage{parskip}
 \usepackage{cite}
 \usepackage{graphicx}
+\usepackage{amsthm}
 \setlength{\parindent}{15pt}
+\newtheorem{theorem}{Theorem}
 \begin{document}
 \maketitle
 \section{Introduction}
@@ -16,7 +18,7 @@ High student-professor ratios lead to problems for professors. Professors are si
 
 The problem of grading large numbers of submissions is important to solve. Without a solid solution, MOOCs cannot provide efficient feedback for their students, rendering them unable to effectively evaluate their knowledge. Because this limits their learning abilities, it is imperative to create an efficient system that enables students to receive feedback to learn efficiently.
 
-There have been many attempts at solving such an important problem~\cite{autograding}~\cite{edxsoftware}. However, this work introduces what previous attempts lack: a rigorous mathematical analysis of the system using tools from game theory and mechanism design. This work sets a concrete set of constraints that a grading system must satisfy to mitigate students' incentive to cheat, as well as a concrete benchmark to analyze the efficiency of various systems. Together, these create a concrete measure for evaluating peer grading systems in terms of efficiency (how much time the professor and students spend grading) and fairness for the students (how accurate their final scores are). Having this measurement model is a large contribution in itself, because it allows comparison between different systems. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
+There have been many attempts at solving such an important problem~\cite{autograding}~\cite{edxsoftware}. However, this work introduces what previous attempts lack: a rigorous mathematical analysis of the system using tools from game theory and mechanism design. This work sets a concrete set of constraints that a grading system must satisfy to mitigate students' incentive to cheat, as well as a concrete benchmark to analyze the efficiency of various systems. Together, these create a concrete measure for evaluating peer grading systems in terms of efficiency (how much time the professor and students spend grading) and fairness for the students (how accurate their final scores are). Having this measurement model is a large contribution in itself, because it allows comparison between different systems. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not~\cite{AGTbook}. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
 %[Note from Matt and Christos: 1) mention that coming up with a model is itself a big contribution, because now we can compare the quality of two different mechanisms. 2) Mention that certainly theory is not a perfect predictor of what will happen in practice, but that game theory and mechanism design (and all the assumptions used in this work) have a history of ``calling good mechanisms good and bad mechanisms bad''. Also, solutions that do not satisfy game theoretic constraints may work for a while, but in the long run if a system can be exploited, eventually it will be. See here for an interesting example of this: http://www.insidehighered.com/news/2013/02/12/students-boycott-final-challenge-professors-grading-policy-and-get]
 
 Game theory allows the creation of a unified system of assumptions that simulate student behavior in a class. The grading system can be viewed as a ``game'' where the set of ``rules'' are known to everyone and the ``players'' --- the students --- ``play'' the game in order to get the best possible result. Using the assumptions and rules, game theory can predict how students will behave when they ``play''. This way, mechanism efficiency and effectiveness cam be proved, allowing the evaluation of different sets of rules.
@@ -106,36 +108,34 @@ Aside from improving previous research done in this field, this research also su
 
 Human judgement has always been superior to that of a machine, and this research continues to support that idea. As powerful as automated grading can be in practice, when it comes to theory, peer grading is simply more efficient. This means that with the right mechanism, such as the ones proposed by this research, so, in practice peer grading should be superior to automated grading. All in all, this research has opened doors for game theorists to make improvements to current grading schemes, and also provides mechanisms that are a distinct improvement over current peer and automated grading systems.
 \section{Results}
-%[Note from Matt and Christos: Add some discussion about the benchmark: why do you care about workload? Why do you care about accurate grades? If you just care about workload, give everyone 100. If you just care about grades, have the professor grade everything. Need to consider both to properly model the problem.]
 Once the rules and assumptions have been defined and the benchmark determined, different grading mechanisms can be created and tested. This is where mechanism design and game theory comes into play. Mechanism design is used to create a system that satisfies a set of constraints and achieves a certain purpose. Then, game theory is used to mathematically predict student behavior to benchmark such a system. Starting from the simplest and most obvious approaches, various mechanisms were created, tested, and refined upon in an iterative process that spanned several months. The end result is fairly complete, although there are still questions to be answered in future work.
 
-\section{The Calibration Mechanism}
+\subsection{The Calibration Mechanism}
 
-This mechanism is quite unrealistic, but not by such a degree that it is unimaginable. Because of this, it was possible to create a perfect solution if the problem took place in this situation.
+First we design a mechansim that does extremely well in the simple model we defined above.
 
-\subsection{Mechanism}
-In the mechanism, the professor grades one paper, called \emph{X}. The professor then distributes all the student's papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
-
-
-The professor then tells the students that ``Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0.'' The students then go about their business grading the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the students graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, their assigned grade is guaranteed to be at least some minimum value.
-
-\subsection{Why it Works}
+\subsubsection{Mechanism}
+In the mechanism, the professor grades one paper, called \emph{X}. The professor then distributes all the students' papers randomly among the students, while making sure that no student receives his or her own paper. Every student is also given a copy of \emph{X}.
+\begin{theorem}
+The professor then tells the students that ``Out of the two papers you were given, one of them has been graded by me, and the other hasn't. If you fail to give the correct grade for the one I graded, then you will receive a 0.'' The students then grade the papers, and individually report the grades they gave out to the professor. Then, just like the professor promised, if the students graded the pre-graded, or \emph{calibrated} paper incorrectly, then that grader gets a 0 on the assignment. If they graded correctly, their assigned grade is guaranteed to be at least some minimum value.
+\end{theorem}
+\begin{proof}
 G is the maximum of \{ some minimum value, the assigned grade \}.
+The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
 
-The happiness of one student grading one paper is equivalent to $$\frac{H(G)+H(0)}{2}-1$$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
+If they grade both papers, their happiness will be equal to $H(G)-2$Because they spent two units of energy, and are guaranteed to get G.
 
-If they grade both papers, their happiness will be equal to $$H(G)-2$$Because they spent two units of energy, and are guaranteed to get G.
-
-If they grade neither then the happiness will be $$H(0)$$ Because they automatically get a 0, but spend no energy.
+If they grade neither then the happiness will be $H(0)$ Because they automatically get a 0, but spend no energy.
 
 This means that if $H(G) - 2 > H(0)$, then student will grade both papers. So, for the professor to guarantee that the students use effort and obtain the correct grades, he or she would choose a minimum value such that $H(G) > H(0) + 2$.
-\subsection{Results}
-The teacher expends one unit of effort, and the students each spend 2, as long as the teacher set the minimum value high enough.
+The teacher expends one unit of effort, students each spend 2, as long as the teacher set the minimum value high enough.
 Everything above $H^{-1}(2)$ will be graded correctly, while everything below it will receive a score of $H^{-1}(2)$.
-This means that the maximum deviation is $H^{-1}(2)$, because this is the score that might be given to someone who deserves a 0. Expressed in happiness units, the value is 2.
+So, maximum deviation is $H^{-1}(2)$, because this is the score that might be given to someone who deserves a 0. Expressed in happiness units, the value is 2.
+\end{proof}
+\subsection{Benchmark}
 The means that the value of the objective function in this case is 4, a very low value, which shows how effective this solution is.
 
-\subsection{Problems}
+\subsubsection{Problems}
 The goal for this mechanism was to make it more realistic while still making it simple to understand, and have a simply solution that would be easy for students to understand. There is now a mechanism that works very well in an unrealistic scenario, so we moved on to a new mechanism. 
 
 \section{Improved Calibration Mechanism}
@@ -176,8 +176,7 @@ If the grader does not grade the paper, what score should he give it?
 
 If they take off any points, the points will surely be refuted by the professor during the regrade.
 So if they take off any points, they will get a 0 on the grading assignment.
-If the grader's give it 100, they might get 50 if the other grader also gives it 100. If he gives it anything else, the original grader will get 0.
-$$$$
+If the grader's give it 100, they might get 50 if the other grader also gives it 100. If he gives it anything else, the original grader will get 0.\\
 If the grader does grade the paper, what score should he give it?
 
 If he gives it a lower score, they throw away free points, and if they give it a lower score there is a risk of them getting a 0 because the scores could be refuted. So, giving it the correct score is the best because it guarantees at least a 50.
@@ -206,8 +205,7 @@ For the next mechanism, all of the assumptions were kept the same, and simply tr
 Start by having each paper get graded by two people. Then, the original writer of this paper chooses which of the two grades he / she would like to have, and looks over the justifications for losing any points on both papers. If they see that any of these justifications are incorrect, they flag the paper and send it to the professor. Following this, the paper they chose to have is sent to a third party, who grades the paper, and checks if their grade is close to the one that was given to the paper. If it isn't, the paper is sent to the professor. After everything that needs to be flagged has been, the professor grades all the flagged papers, and rewards people who were correct with a 2 point bonus. If no papers from any group were flagged, every grader in that group gets two points. Final grades are whatever the person chose if there was no flagging, or whatever the professor gave them if there was.
 \subsection{Why it Works}
 To find out how efficient this mechanism is, two things needed to be analyzed:
-1) Is everyone an honest flagger?
-$$$$
+1) Is everyone an honest flagger?\\
 2) Do the graders grade honestly
 \subsubsection{Flagging}
 There are two cases for this:

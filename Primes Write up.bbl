@@ -26,6 +26,11 @@ Anne Herrington and Charles Moran.
 \newblock Writing to a machine is not writing at all.
 \newblock {\em National Writing Project}, 2012.
 
+\bibitem{AGTbook}
+Noam Nisan, Tim Roughgarden, E.~Tardos, and V.~V. Vazirani, editors.
+\newblock {\em {Algorithmic Game Theory}}.
+\newblock Cambridge University Press, 2007.
+
 \bibitem{swotanalysisofmoocs}
 Laddie Odom.
 \newblock A swot analysis of the potential impact of moocs.
