@@ -1,0 +1,31 @@
+Requirements:
+Describe how you performed your work, giving sufficient detail so that someone trained in the field is able to understand what you did and can replicate it.
+Include the methods you used, written in a format commonly used in publications in your field of study. Do not merely restate a protocol or copy blocks of text; instead, use your own words to describe what you did, referencing key papers where appropriate.
+Explain your personal role in the work and the roles played by others in supporting this work. Include, for example, acknowledgments to others in the laboratory for running key instrumentation or other protocols. You may refer to others who assisted you by title but do not include any specific names in the body of your Research Report.
+Mention common procedures but there is no need to describe them in detail; provide references to where the method is published. All modifications of existing methods should be described.
+
+Mostly Theory
+
+How Performed - Go in depth:
+-Create set of assumptions
+-Came up with some simple models
+-Disprove
+-Brainstorm
+-Come up with theory
+-Turn theory into set of rules
+-Put rules through test
+-Edit rules
+-Repeat until satisfied
+-Evaluate using objective function
+-Brainstorm again...
+
+Future
+-Come up with something really good
+-Write code
+-Implement
+
+Roles
+-Mentors (Matt and Christos) taught us about game theory and the process by which we find solutions, helped us evaluate solutions
+-We came up with solutions/problems with solutions
+-PRIMES program helped review our work/gave us ideas
+
