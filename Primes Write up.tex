@@ -102,15 +102,9 @@ In this mechanism, the professor chooses one paper to grade, which he gives to e
 With this mechanism, all students should behave honestly and the mechanism should output accurate grades while maintaining a low amount of per-person work.
 \end{theorem}
 
-<<<<<<< HEAD
 \begin{proof}
 G is the maximum of \{ some minimum value, the assigned grade \}.
 The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
-=======
-\begin{proof}[Analysis]
-Let $G$ be the maximum of \{some minimum value $m$, the assigned grade\}.
-The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$, because the students have a 0.5 chance of getting a 0 and a 0.5 chance of getting $G$.
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
 
 If a student grades both papers, his or her happiness will be equal to $H(G)-2$. Because the grader spent two units of energy, and are guaranteed to get $G$.
 
@@ -139,14 +133,8 @@ In this mechanism, we apply the calibration mechanism on a larger scale. Every s
 \begin{theorem}
 In this mechanism, students will return accurate grades, even though they can communicate with each other.
 \end{theorem}
-<<<<<<< HEAD
 \begin{proof}
-In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students. They can grade 0 papers, giving them a happiness of $H(0) = 0$ or grade all the papers they are assigned, giving them a happiness of $H(g) - k$ or they can grade $i$ papers giving them a happiness of $\frac{i}{k} \cdot H(G)-i$. This means that it is always worse to grade i, because happiness from grading i is equal to i times happiness for grading 0 plus i-k times happiness for grading k.
-=======
-\begin{proof}[Analysis]
 In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students. They can grade 0 papers, giving them a happiness of $H(0) = 0$ or grade all the papers they are assigned, giving them a happiness of $H(g) - k$ or they can grade $i$ papers giving them a happiness of $\frac{i}{k} \cdot H(G)-i$. This means that it is always worse to grade $i$, because happiness from grading $i$ is equal to $i$ times happiness for grading 0 plus $i-k$ times happiness for grading $k$.
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
-
 Even though the students can communicate with one another, they will have no way to determine which paper is calibrated because there are multiple calibrated papers that overlap, and are thus best off grading all the papers. As long as the minimum value is high enough, the papers will be accurately graded, as before.
 \end{proof}
 \subsubsection{Benchmark and Remaining Issues}
@@ -159,11 +147,7 @@ The maximum amount of work will be done by the professor, who has to grade $\fra
 With this mechanism, we aim to fix the faults of the previous mechanism while retaining the same set of assumptions. Other than reducing the workload, we aim to accomplish the same goals as the improved calibration mechanism.
 \subsubsection{Process}
 \begin{definition}(Deduction Mechanism)
-<<<<<<< HEAD
-In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, student $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and j receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
-=======
-In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, sudent $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and $j$ receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
+In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, student $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and $j$ receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
 \end{definition}
 \begin{theorem}
 The addition of the contribution score being added or subtracted should encourage graders to honestly grade papers, for fear of losing points and the possible reward.
@@ -186,39 +170,22 @@ Now that we know what the students will do, lets look at what happens when we in
 If the student's partner gives the paper a 100, which is the best thing they could do if they don't grade, then
 	If they don't grade the paper, they don't use any effort, and their contribution score is 0. So the student's happiness will $H(g) + 4*0 = H(g)$.
 
-<<<<<<< HEAD
-If they do grade, they use 1 unit of effort by default, but get the full contribution score of 1. This means that their final happiness is $H(g) + 4*1 - 1 = H(g)+3$.
+If the student grades, he or she uses 1 unit of effort by default, but get the full contribution score of 1. This means that their final happiness is $H(g) + 4\cdot1 - 1 = H(g)+3$.
 	
 If the partner gives the paper its true grade:
-	If the grader doesn't grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is $H(g) + 4*-1 = H(g)-4$.
+	If the grader does not grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is $H(g) + 4\cdot(-1) = H(g)-4$.
 
-If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is $H(g) + 4*0 - 1 = H(g)-1$.
-=======
-Assuming that the student's partner gives the paper a 100, which is the best thing they could do if they do not grade, then
-	If they do not grade the paper, they do not use any effort. So the student's happiness will H(the student's grade on the original assignment). Contribution score = 0
-	If they do grade, they use 1 unit of effort by default. But, the student's happiness will be H(the student's grade on the original assignment) + 3. Contribution score = 1
-	
-If the partner gives the paper its true grade:
-	If the grader does not grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is H(their original grade) - 4.
-	If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is H(their original grade). 
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
+If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is $H(g) + 4\cdot0 - 1 = H(g)-1$.
 	
 In both of the above cases, the happiness outputs for honestly grading the paper is higher than the happiness output when not grading the paper. Our assumptions state that students will do whatever makes them happiest, so they will honestly grade the papers.
 
 \end{proof}
-<<<<<<< HEAD
 \noindent
-\emph{This process is summarized in figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
+\emph{This process is summarized in Figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
 \newline
-\emph{The benchmark results for The Calibration Mechanism can be seen in figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
+\emph{The benchmark results for The Calibration Mechanism can be seen in Figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
 \subsubsection{Benchmark}
 In this model, the most work is being done by the students, who each grade 2 papers. In this mechanism, the professor will not perform any work, because students will adhere to the dominant strategy behavior, and honestly grade the paper. This means that no papers will ever reach the professor, so he/she will not have to grade anything. Also, because every student will follow dominant strategy behavior, the maximum deviation from the objective score will be 0, since every student will output accurate grades. This means that the final benchmark is $2+0=2$. This is the lowest out of all the mechanisms so far.
-=======
-\emph{This process is summarized in Figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
-
-\emph{The benchmark results for The Calibration Mechanism can be seen in Figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
-
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
 \subsection{Final Assumptions}
 Now that we have reached a point far into the research, we have a model that accounts for a very realistic world view, however, the deduction mechanism still has some unrealistic parts, primarily the inability to deal with students who are incompetent graders. With this in mind, we designed a final set of assumptions that more effectively simulate a realistic world.
 
@@ -242,23 +209,13 @@ Now that we have reached a point far into the research, we have a model that acc
 \end{figure}
 \begin{figure}
 	\centering
-<<<<<<< HEAD
 		\includegraphics[width=0.75\textwidth]{Flowchart-Calibration.eps}
-		\caption {A flowchart of the Calibration Mechanism (section~\ref{sec:calibration}, page~\pageref{sec:calibration}) from the student perspective.\label{fig:calibration}}
-\end{figure}
-\begin{figure}
-	\centering
-		\includegraphics[width=0.75\textwidth]{Flowchart-Deduction.eps}
-		\caption {A flowchart of the Deduction Mechanism (section~\ref{sec:deduction}, page~\pageref{sec:deduction}) from the student perspective.\label{fig:deduction}}
-=======
-		\includegraphics[width=\textwidth]{Flowchart-Calibration.eps}
 		\caption {A flowchart of the Calibration Mechanism (Section~\ref{sec:calibration}, page~\pageref{sec:calibration}) from the student perspective.\label{fig:calibration}}
 \end{figure}
 \begin{figure}
 	\centering
-		\includegraphics[width=\textwidth]{Flowchart-Deduction.eps}
+		\includegraphics[width=0.75\textwidth]{Flowchart-Deduction.eps}
 		\caption {A flowchart of the Deduction Mechanism (Section~\ref{sec:deduction}, page~\pageref{sec:deduction}) from the student perspective.\label{fig:deduction}}
->>>>>>> c0d89298a09e6f73a9f3ade32225acb0fd85d089
 \end{figure}
 }
 \section{Discussion}
