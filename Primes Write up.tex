@@ -27,9 +27,9 @@ There have been many attempts at solving such an important problem~\cite{autogra
 
 Game theory allows the creation of a unified system of assumptions that simulate student behavior in a class. The grading system can be viewed as a ``game'' where the set of ``rules'' are known to everyone and the ``players'' --- the students --- ``play'' the game in order to get the best possible result. Using the assumptions and rules, game theory can predict how students will behave when they ``play''. This way, mechanism efficiency and effectiveness can be proved, allowing the evaluation of different sets of rules.
 
-The difficulty of the problem lies in finding an incentive for students to spend time to grade assignments of others who they don't care about. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e how can the professor tell the difference between an accurately assigned hundred and randomly awarded 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but the professor still can't tell the difference between a randomly or sincerely awarded grade. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task. The main purpose of this work is to devise mechanisms which avoid these problems, allowing for work to be distributed efficiently.
+The difficulty of the problem lies in finding an incentive for students to spend time to grade assignments of others who they do not care about. Incentivizing students seems simple at first: let the professor give bonus points to students who grade, for example. However, this may not return anything useful because a clever student will just take the points and assign a generic grade (i.e how can the professor tell the difference between an accurately assigned hundred and randomly awarded 100). The next step would be to implement simple checking: e.g. have each paper be graded by two students who both receive bonus points if their grades match. This case may work if the students are isolated, but the professor still cannot tell the difference between a randomly or sincerely awarded grade. This way, their papers will match those of other clever students, giving them points without grading. These examples show that properly incentivizing graders can be a difficult task. The main purpose of this work is to devise mechanisms which avoid these problems, allowing for work to be distributed efficiently.
 
-As demonstrated by the above examples, the difficulty of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that can't be manipulated.
+As demonstrated by the above examples, the difficulty of the problem lies in the complex behavior of selfish human beings. Because human nature dictates that people will do whatever is in their best interest and may try to outsmart the system, coming up with a strict set of rules to encourage the desired behavior can be quite challenging. A mechanism should be made as simple as possible, but the above examples show that a small amount of simplicity must be sacrificed to obtain a system that cannot be manipulated.
 
 This research opportunity is made interesting by the complexity of human nature as well as its huge practical value. This paper will cover the thought process of mechanisms leading up to the final mechanism and its implications. All mechanisms and related calculations will be compared in terms of scalability and effectiveness.
 
@@ -50,23 +50,33 @@ To re-express the above in mathematics:
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
   \item Students can grade others' work accurately (i.e they can find $o_i$) but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
   \item Students want to maximize their final happiness, expressed as $H(g)-W$
-  \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral (i.e, if $H(x)=10$ and $H(y)=5$, then getting x and y each with 50 percent chance, gives a happiness of 7.5).
-  \item The final happiness depends only on the grade assigned to the student and the amount of effort exercised. It doesn't depend on the score of others
+  \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral (i.e, if $H(x)=10$ and $H(y)=5$, then getting $x$ and $y$ each with $50$ percent chance, gives a happiness of $7.5$).
+  \item The final happiness depends only on the grade assigned to the student and the amount of effort exercised. It does not depend on the score of others
 \end{enumerate}
 
 There are two things that need to be considered: the importance of a student's own happiness and the irrelevance of others' grades. Happiness is important because it provides a measure of the combination of the work performed and grade received. The reasoning for not caring about friends is due to the relatively low impact they have on someone's grades and happiness, for example, in a Coursera course with 150,000 students~\cite{swotanalysisofmoocs}, it is extremely unlikely that any student will ever be able to have any effect on the grade of another student. So, for simplicity, we ignore the ``friendship''effect.
-\subsection{First major objective}
-The first goal of the system is to make sure that every student gets the most happiness when they correctly grade every assignment that the professor asks them to. If a system has this property, then it is reasonable to assume that students will always choose to grade every assignment the professor asks them to. Without this property, a system becomes extremely unpredictable. So, in other words, no student can deviate from the truthful strategy to improve his happiness. In math terms, if by acting honestly student i grades $w_i$ papers and gets a grade of $g_i$ there shouldn't be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
+
+\subsection{Objective}
+The goal of the system is to make sure that every student gets the most happiness when they correctly grade every assignment they are given to grade. Without this property, a system becomes extremely unpredictable. In other words, no student can deviate from the truthful strategy to improve his or her happiness. In math terms, if by acting honestly student $i$ grades $w_i$ papers and gets a grade of $g_i$ there should not be any way for the student to spend $w'_i$ units of effort and get a score $g'_i$ where $H(g'_i)-w'_i > H(g_i)-w_i$.
 
 \subsection{Benchmark}
 %Efficiency objective%
 A benchmark that will allow different mechanisms to be compared is vital to the iterative process of mechanism development. Mechanisms should be compared in terms of the relative happiness of people --- which can be expressed as a function of work done --- as well as the accuracy of the grades produced. Therefore, the benchmark becomes the maximum work assigned to any student plus the maximum deviation of student assigned grades to the correct grades, so that a lower scoring mechanism produces a more desired outcome. In mathematical terms, we want to minimize the function $max_{i \ge 1} |H(g_i)-H(o_i)| + max_{i \ge 0} w_i$ in the worst possible case.
 
-When creating this benchmark, there are 2 things that need to be considered: accuracy and workload. Accuracy is important because if we don't care, then we could give everyone a 100, which, as explained earlier, is a terrible mechanism. Secondly, caring about work done. If we don't care about the amount of work done, we could have the professor grade everything, which is bad because it makes the professor extremely unhappy. 
+When creating this benchmark, there are 2 things that need to be considered: accuracy and workload. Accuracy is important because if we do not care, then we could give everyone a 100, which, as explained earlier, is a terrible mechanism. Secondly, caring about work done. If we do not care about the amount of work done, we could have the professor grade everything, which is bad because it makes the professor extremely unhappy. 
 
-Also, we need to address why we use maximum for these two things, and not sum. Caring about the maximum difference in grades and not the sum. Consider these two outcomes: each student's real grade should be 90 but they get a 91 and each student's real grade should be a 90, but all of them get a 90 except for 1 who gets a 0. In this case, the first case is clearly better, something that is only captured by a maximum. To address caring about the maximum work done, consider these two outcomes: one where a professor grades all $n$ papers, and another where each student grades $2$ papers. In this case, the first scenario is far worse, even though the total work performed is less than the second. For this reason, we use a maximum.
-
-
+In our case, we used the \emph{maximum} deviation and the \emph{maximum} work done. The reason why we didn't use the\emph{sum} of the deviations or the \emph{sum} of work done is the following. Consider these two cases for the maximum deviation of the student-given grade to the hypothetical professor-given grade.
+\begin{enumerate}[label=\Alph*]
+\item Each of 1000 students should receive a 90, but their peers assigned them a 91. Maximum deviation is 1, sum is 1000.
+\item Each of 1000 students should receive a 90. One person is assigned a 0, while everyone else is assigned a 90. Maximum deviation is 90, sum is 90.
+\end{enumerate}
+Clearly, case A is better than case B. The smaller maximum deviation for case A reflects this.
+For the maximum work done, consider the the following cases:
+\begin{enumerate}[label=\Alph*]
+\item The professor grades 1000 papers. Maximum work is 1000, sum is 1000.
+\item Each of 1000 students grades 2 papers. Maximum work is 2, sum is 2000.
+\end{enumerate}
+This time, case B is intuitively better than case A. Again, the smaller maximum deviation agrees.
 
 % We now have a well defined problem that we need to solve. Of course the set of assumptions might not be very realistic as we will so we 
 
@@ -85,59 +95,59 @@ Once the rules and assumptions have been defined and the benchmark determined, d
 \subsubsection{Process}
 First, we design a mechanism that does extremely well in a model defined by our simple and unrealistic assumptions, which we used as a starting point.
 \begin{definition}(Calibration Mechanism)
-In this mechanism, the professor chooses one paper to grade, which he gives to every student, along with a second, ungraded paper. If the students fail to grade the paper the professor graded correctly, they get a 0. Otherwise they get the minimum of an arbitrary number $???$ and the grade their assigned grade.
+In this mechanism, the professor chooses one paper to grade, which he gives to every student, along with a second, ungraded paper. If the students fail to grade the paper the professor graded correctly, they get a 0. Otherwise they get the minimum of an arbitrary number $m$ and the grade their assigned grade.
 \end{definition}
 \begin{theorem}
 With this mechanism, all students should behave honestly and the mechanism shoul output accurate grades while maintaining a low amount of per-person work.
 \end{theorem}
 
 \begin{proof}[Analysis]
-G is the maximum of \{ some minimum value, the assigned grade \}.
-The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
+Let $G$ be the maximum of \{some minimum value $m$, the assigned grade\}.
+The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$, because the students have a 0.5 chance of getting a 0 and a 0.5 chance of getting $G$.
 
-If they grade both papers, their happiness will be equal to $H(G)-2$Because they spent two units of energy, and are guaranteed to get G.
+If a student grades both papers, his or her happiness will be equal to $H(G)-2$. Because the grader spent two units of energy, and are guaranteed to get $G$.
 
-If they grade neither then the happiness will be $H(0)$ Because they automatically get a 0, but spend no energy.
+If a student grades neither, his or her happiness will be $H(0)$, because he or she automatically get a 0 but spend no energy.
 
-This means that if $H(G) - 2 > H(0)$, then student will grade both papers. So, for the professor to guarantee that the students use effort and obtain the correct grades, $H(???) > H(0) + 2$.
-The teacher expends one unit of effort, each student spends 2, as long as the teacher set the minimum value high enough.
+This means that if $H(G) - 2 > H(0)$, then a student will grade both papers. So, for the professor to guarantee that the students use effort and obtain the correct grades, $H(m) > H(0) + 2$.
+The teacher expends one unit of effort, each student spends 2, as long as the teacher set the minimum value $m$ high enough.
 Everything above $H^{-1}(2)$ will be graded correctly, while everything below it will receive a score of $H^{-1}(2)$.
 So, maximum deviation is $H^{-1}(2)$, because this is the score that might be given to someone who deserves a 0. Expressed in happiness units, the value is 2.
 \end{proof}
-\emph{This process is summarized in figure~\ref{fig:calibration} on page~\pageref{fig:calibration}.}
+\emph{This process is summarized in Figure~\ref{fig:calibration} on page~\pageref{fig:calibration}.}
 
 \subsubsection{Benchmark and Remaining Issues}
-The means that the value of the objective function in this case is 4, a very low value, because it is exactly the same as if we convinced every student to grade accurately grade 4 papers.
+Computed from the above, the objective function of this mechanism is 4 --- a very low value. A value of 4 is equivalent to if we convinced every student to grade accurately grade 4 papers.
 
-\emph{The benchmark results for The Calibration Mechanism can be seen in figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
+\emph{The benchmark results for The Calibration Mechanism can be seen in Figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
 
 This mechanism is extremely simple, and relies on the unrealistic assumption that students are unable to communicate with each other. If they were able to, students would be able to figure out which paper is calibrated by checking which one they all share.
 
 \subsection{Improved Calibration Mechanism}
 \subsubsection{Process}
-In the calibration mechanism, we assumed that students couldn't communicate with each other. For this mechanism, we relax this assumption, thus changing assumption number 11, which now reads as: \emph{All students are able to communicate with each other}
+In the calibration mechanism, we assumed that students could not communicate with each other. For this mechanism, we relax this assumption, thus changing assumption number 11, which now reads as: \emph{All students are able to communicate with each other}
 \begin{definition}(Improved Calibration Mechanism)
-In this mechanism, we apply the calibration mechanism on a larger scale. Every student grades the papers of \emph{k} other students. The professor also grades every \emph{kth} paper, these are the calibrated papers. The same system for assigning grades is used as in the calibration mechanism.
+In this mechanism, we apply the calibration mechanism on a larger scale. Every student grades the papers of $k$ other students. The professor also grades every $k$th paper, these are the calibrated papers. The same system for assigning grades is used as in the calibration mechanism.
 \end{definition}
 \begin{theorem}
 In this mechanism, students will return accurate grades, even though they can communicate with each other.
 \end{theorem}
 \begin{proof}[Analysis]
-In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students. They can grade 0 papers, giving them a happiness of $H(0) = 0$ or grade all the papers they are assigned, giving them a happiness of $H(g) - k$ or they can grade $i$ papers giving them a happiness of $\frac{i}{k} \cdot H(G)-i$. This means that it is always worse to grade i, because happiness from grading i is equal to i times happiness for grading 0 plus i-k times happiness for grading k.
+In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students. They can grade 0 papers, giving them a happiness of $H(0) = 0$ or grade all the papers they are assigned, giving them a happiness of $H(g) - k$ or they can grade $i$ papers giving them a happiness of $\frac{i}{k} \cdot H(G)-i$. This means that it is always worse to grade $i$, because happiness from grading $i$ is equal to $i$ times happiness for grading 0 plus $i-k$ times happiness for grading $k$.
 
 Even though the students can communicate with one another, they will have no way to determine which paper is calibrated because there are multiple calibrated papers that overlap, and are thus best off grading all the papers. As long as the minimum value is high enough, the papers will be accurately graded, as before.
 \end{proof}
 \subsubsection{Benchmark and Remaining Issues}
 The maximum amount of work will be done by the professor, who has to grade $\frac{n}{k}$ papers, making the benchmark $\frac{n}{k}+4$, a potentially higher value than before. The huge problem with this is the high amount of work being done.
 
-\emph{The benchmark results for The Improved Calibration Mechanism can be seen in figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
+\emph{The benchmark results for The Improved Calibration Mechanism can be seen in Figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
 
 \subsection{The Deduction Mechanism}
 \label{sec:deduction}
 With this mechanism, we aim to fix the faults of the previous mechanism while retaining the same set of assumptions. Other than reducing the workload, we aim to accomplish the same goals as the improved calibration mechanism.
 \subsubsection{Process}
 \begin{definition}(Deduction Mechanism)
-In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, sudent $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and j receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
+In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, sudent $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and $j$ receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
 \end{definition}
 \begin{theorem}
 The addition of the contribution score being added or subtraced should encourage graders to honestly grade papers, for fear of losing points and the possible reward.
@@ -159,20 +169,20 @@ If the grader does grade the paper, what score should he or she give it?
 If the grader takes off fewer points than the true score of the assignment, he or she is throwing away free points. If the grader deducts too aggressively, there is a risk for him or her to get a 0 because the score could be refuted. 
 Therefore, assigning the correct score is the best because it guarantees at least a 50.
 
-Assuming that the student's partner gives the paper a 100, which is the best thing they could do if they don't grade, then
-	If they don't grade the paper, they don't use any effort. So the student's happiness will H(the student's grade on the original assignment). Contribution score = 0
+Assuming that the student's partner gives the paper a 100, which is the best thing they could do if they do not grade, then
+	If they do not grade the paper, they do not use any effort. So the student's happiness will H(the student's grade on the original assignment). Contribution score = 0
 	If they do grade, they use 1 unit of effort by default. But, the student's happiness will be H(the student's grade on the original assignment) + 3. Contribution score = 1
 	
 If the partner gives the paper its true grade:
-	If the grader doesn't grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is H(their original grade) - 4.
+	If the grader does not grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is H(their original grade) - 4.
 	If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is H(their original grade). 
 	
 Therefore, it is in everyone's best interest to honestly grade the paper.
 
 \end{proof}
-\emph{This process is summarized in figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
+\emph{This process is summarized in Figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
 
-\emph{The benchmark results for The Calibration Mechanism can be seen in figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
+\emph{The benchmark results for The Calibration Mechanism can be seen in Figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
 
 \subsection{Final Assumptions}
 Now that we have reached a point far into the research, we have a model that accounts for a very realistic world view, however, the deduction mechanism still has some unrealistic parts, primarily the inablitity to deal with students who are incompetent graders. With this in mind, we designed a final set of assumptions that more effectively simulate a realistic world.
@@ -180,12 +190,11 @@ Now that we have reached a point far into the research, we have a model that acc
 \begin{enumerate}[itemsep=0pt, parsep=0pt]
 \item When grading, $w_i=0 \oplus w_i=1$
 \item For all students, $g_i \neq o_i$
-\item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
+\item Students all share a common happiness function, $H(g)$, where $g$ represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
 \item Students can grade others' work perfectly but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
 \item Final happiness is unaffected by other people, only affected by $g_i$ and $w_i$
-\item Doing work costs one unit of happiness, so after grading a paper, a student's happiness can be expressed as $H(g)-W$,W is number of work units used
-\item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral.
-\item For a given student in $N$, that student has contact with all other students in $N$.
+\item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral
+\item For a given student in $N$, that student has contact with all other students in $N$
 \end{enumerate}
 \section{Illustrations}
 {
@@ -198,16 +207,16 @@ Now that we have reached a point far into the research, we have a model that acc
 \begin{figure}
 	\centering
 		\includegraphics[width=\textwidth]{Flowchart-Calibration.eps}
-		\caption {A flowchart of the Calibration Mechanism (section~\ref{sec:calibration}, page~\pageref{sec:calibration}) from the student perspective.\label{fig:calibration}}
+		\caption {A flowchart of the Calibration Mechanism (Section~\ref{sec:calibration}, page~\pageref{sec:calibration}) from the student perspective.\label{fig:calibration}}
 \end{figure}
 \begin{figure}
 	\centering
 		\includegraphics[width=\textwidth]{Flowchart-Deduction.eps}
-		\caption {A flowchart of the Deduction Mechanism (section~\ref{sec:deduction}, page~\pageref{sec:deduction}) from the student perspective.\label{fig:deduction}}
+		\caption {A flowchart of the Deduction Mechanism (Section~\ref{sec:deduction}, page~\pageref{sec:deduction}) from the student perspective.\label{fig:deduction}}
 \end{figure}
 }
 \section{Discussion}
-With this research, the goal was to create a mechanism that fulfilled our two goals; incentivizing students to play the ``game''the way they were meant to, and to efficiently and effectively grade the assignments of these students. Although our mechanisms are not truly realistic, the significance of them cannot be denied. The mechanisms created by the end of the research came very close to realism, with only one factor missing, and could still be implemented in a classroom environment where all students are capable of grading others assignments efficiently.
+With this research, the goal was to create a mechanism that fulfilled our two goals; incentivizing students to play the ``game'' the way they were meant to, and to efficiently and effectively grade the assignments of these students. Although our mechanisms are not truly realistic, the significance of them cannot be denied. The mechanisms created by the end of the research came very close to realism, with only one factor missing, and could still be implemented in a classroom environment where all students are capable of grading others assignments efficiently.
 
 The work done in creating these mechanisms further builds upon that which has been done before to try and answer the same question of grading large numbers of papers. Much of the previous work done to address this problem involves creating automated mechanisms that simple spit out machine-assigned grades. These solutions, as stated previously, are inefficient and often produce unsatisfactory results. By creating these mechanisms using game theory, it has been shown that computers do not need to be relied upon to grade papers, opening the way for others to create game theory driven solutions to this problem.
 
@@ -225,11 +234,11 @@ All in all, with the final mechanism, all of the goals that were set up were acc
 
 However important the creation of these mechanisms is, arguably more important to the future development of further solutions is the creation of a realistic and robust model. Without a model, many of the mechanisms mentioned would have been impossible to create, and would certainly not work as well as they do. The creation of a model is essential in game theory as it provides the outline for how the ``players''of a given game will act under any set of circumstances. As such, by creating a good model, this research has undergone the trouble of providing a way for anyone to predict how students will behave. 
 
-Not only did this research lead to the creation of a good model, but it also led to the creation of a benchmark. The creation of a benchmark is important because it allows two or mechanisms to be compared side by side, and it allows theorists to definitively determine which of these mechanisms is superior. With this, it becomes possible to compare the results of this research to the results of others, and also allows future work to be done by others. Not only does a benchmark allow the research done here to be compared to that of others, but it allows two totally independent mechanisms not derived from this research to be compared, which could lead to a universal system of evaluating peer grading systems.
+Not only did this research lead to the creation of a good model, but it also led to the creation of a benchmark. The creation of a benchmark is important because it allows two mechanisms to be compared side by side, and it allows theorists to definitively determine which of these mechanisms is superior. With this, it becomes possible to compare the results of this research to the results of others, and also allows future work to be done by others. Not only does a benchmark allow the research done here to be compared to that of others, but it allows two totally independent mechanisms not derived from this research to be compared, which could lead to a universal system of evaluating peer grading systems.
 
 Both of these are major contributions towards further developments in the field of research this problem takes place in, primarily game theory. By doing so, grading mechanisms across online courses will constantly be able to evolve and improve with contributions from anyone. By creating the benchmark and model, all mechanisms will undergo a uniform set of evaluations that will allow online course systems to determine which system is the best out of any proposals. By doing so, this research has opened up a road for many game theorists to develop and analyze new ideas that will lead to improvements in student happiness and results from online courses.
 
-Due to the numerous possibilities the creation of a model and benchmark can lead to for future research, it is clear that they are the most important results gained from this research. Without them, nothing else could have been done, and no future mechanisms could be created that would be able to be analyzed in the same way that these were. Due to the importance of future research in this field, it was imperative that this research led to more solutions in the future, so that the problem that was identified would be quickly and efficiently solved.
+Due to the numerous possibilities the creation of a model and benchmark can lead to future research, it is clear that they are the most important results gained from this research. Without them, nothing else could have been done, and no future mechanisms could be created that would be able to be analyzed in the same way that these were. Due to the importance of future research in this field, it was imperative that this research led to more solutions in the future, so that the problem that was identified would be quickly and efficiently solved.
 
 Although the models presented by this research are not completely realistic, they do show that there is much room for improvement in the area of grading online courses, and that it is possible to take a strictly mathematical approach at designing a mechanism, and then implementing it using computer science. By showing that this is possible, a huge amount of potential for future research has been opened, primarily due to the creation of a benchmark and model. With these tools, other game theorists can create their own mechanisms, and compare them to those of others around the world.
 
@@ -237,8 +246,14 @@ Aside from improving previous research done in this field, this research also su
 
 Human judgment has always been superior to that of a machine, and this research continues to support that idea. As powerful as automated grading can be in practice, when it comes to theory, peer grading is simply more efficient. This means that with the right mechanism, such as the ones proposed by this research, so, in practice peer grading should be superior to automated grading. All in all, this research has opened doors for game theorists to make improvements to current grading schemes, and also provides mechanisms that are a distinct improvement over current peer and automated grading systems.
 
+As our mechanisms evolve, the benchmark scores yielded by each tends to decrease. However, this is not the case with the improved calibration mechanism, which actually provided a higher benchmark score than the previous mechanism. This stems from the fact that the assumptions were changed, and the mechanism was not. This shows that with a change in assumptions, a new mechanism must be created to address the change, as old mechanisms will often perform badly in new models.
+
+In comparison with more traditional methods of peer grading, our mechanisms peformed extremely well, aside from the improved calibration mechanism. \emph{See figure~\ref{fig:comparison} on page~\pageref{fig:comparison} for a graphical representation of this}. As can be seen in this figure, the benchmark scores of all traditional methods of grading (peer grading, hand grading by the professor, and automated grading), have higher benchark scores than our mechanisms. This means that they are flawed in some way, either in the accuracy of their grades, or the amount of work that one person has to do.
+
+With this comparison, it can be clearly seen that the mechanisms created with this research are more efficient than any currently employed in modern classrooms.
+
 \section{Conclusion}
-In this research, we learned and established the validity of game theory and mathematically based models when solving complex problems involving human nature. Using this to answer the unanswered of how professors should go about grading the astronomically high number of papers submitted by students in the online courses known as MOOCs
+In this research, we learned and established the validity of game theory and mathematically based models when solving complex problems involving human nature. Using this to answer the unanswered of how professors should go about grading the astronomically high number of papers submitted by students in the online courses known as MOOCs.
 
 Theoretically, all of our results are perfectly valid, however one must acknowledge that theory is not practice. Because of this, it becomes hard to say how valid our results are, since they have not been tested in the real world. In the real world, there is always the chance that theory falls apart; this is the main flaw in the validity of our results.
 
