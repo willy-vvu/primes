@@ -33,6 +33,7 @@ As demonstrated by the above examples, the difficulty of the problem lies in the
 
 This research opportunity is made interesting by the complexity of human nature as well as its huge practical value. This paper will cover the thought process of mechanisms leading up to the final mechanism and its implications. All mechanisms and related calculations will be compared in terms of scalability and effectiveness.
 
+With this in mind, we set out to create a series of mechanisms that increase in complexity, as well as creating an ever-changing model. We start with a simple model and set of assumptions and gradually build upon this set to increase the realism of the model. After every change in assumptions, we create a new mechanism that applies to the new set of assumptions, and works effectively and efficiently. By the end of our research, we have contributed a highly realistic and detailed model that other game theorists can build off of to form their own solutions, as well as a set of realistic mechanisms that could be implemented in practice.
 \section{Materials and Methods}
 \subsection{The Scenario}
 The first step to remedy the professor's problem is to follow the grading of a single assignment. The assignment is easy enough to consider independently, and can be generalized to multiple assignments. In such a ``round'' of grading, there are $n$ students, who each bring one ungraded paper to the professor. These ungraded papers are like the input for a function. Each of these papers, $i$ has an objective score $o_i\mid 0<o_i<100$. This is the score the professor would give out. Our mechanism then has the students grade the papers in a clever way and output the grades. We identify the students by an index $i$ from $1$ to $n$ and the professor as index $0$.
@@ -46,7 +47,7 @@ To create the models that are used to predict the behavior of the students, we u
   	\item The happiness of a student is only affected by their grade and the amount of work they do
 \end{enumerate}
 To re-express the above in mathematics:
-\begin{enumerate}
+\begin{enumerate}[itemsep=0pt, parsep=0pt]
   \item Students all share a common happiness function, $H(g)$, where \emph{g} represents the grade the students received, and the output is their happiness. w.l.o.g. $H(0)=0$
   \item Students can grade others' work accurately (i.e they can find $o_i$) but doing so costs one unit of happiness. Therefore after grading $W$ papers, a student's happiness can be expressed as $H(g)-W$
   \item Students want to maximize their final happiness, expressed as $H(g)-W$
@@ -88,10 +89,10 @@ First, we design a mechanism that does extremely well in a model defined by our 
 In this mechanism, the professor chooses one paper to grade, which he gives to every student, along with a second, ungraded paper. If the students fail to grade the paper the professor graded correctly, they get a 0. Otherwise they get the minimum of an arbitrary number $???$ and the grade their assigned grade.
 \end{definition}
 \begin{theorem}
-With this mechanism, all students should behave honestly and the mechanism shoul output accurate grades while maintaining a low amount of per-person work.
+With this mechanism, all students should behave honestly and the mechanism should output accurate grades while maintaining a low amount of per-person work.
 \end{theorem}
 
-\begin{proof}[Analysis]
+\begin{proof}
 G is the maximum of \{ some minimum value, the assigned grade \}.
 The happiness of one student grading one paper is equivalent to $\frac{H(G)+H(0)}{2}-1$ Because the students have a 0.5 chance of getting a 0, and a one-half chance of getting G.
 
@@ -122,7 +123,7 @@ In this mechanism, we apply the calibration mechanism on a larger scale. Every s
 \begin{theorem}
 In this mechanism, students will return accurate grades, even though they can communicate with each other.
 \end{theorem}
-\begin{proof}[Analysis]
+\begin{proof}
 In this scheme, because of the overlapping papers, the students have no better way of figuring out which papers are calibrated than random guessing, even though they can all communicate with each other. As such, there are 3 options for the students. They can grade 0 papers, giving them a happiness of $H(0) = 0$ or grade all the papers they are assigned, giving them a happiness of $H(g) - k$ or they can grade $i$ papers giving them a happiness of $\frac{i}{k} \cdot H(G)-i$. This means that it is always worse to grade i, because happiness from grading i is equal to i times happiness for grading 0 plus i-k times happiness for grading k.
 
 Even though the students can communicate with one another, they will have no way to determine which paper is calibrated because there are multiple calibrated papers that overlap, and are thus best off grading all the papers. As long as the minimum value is high enough, the papers will be accurately graded, as before.
@@ -137,45 +138,47 @@ The maximum amount of work will be done by the professor, who has to grade $\fra
 With this mechanism, we aim to fix the faults of the previous mechanism while retaining the same set of assumptions. Other than reducing the workload, we aim to accomplish the same goals as the improved calibration mechanism.
 \subsubsection{Process}
 \begin{definition}(Deduction Mechanism)
-In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, sudent $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and j receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
+In this mechanism, each paper is randomly assigned to 2 students. Students deduct as many points as they want, and write a justification for each of them. For each paper graded by students $i$ and $j$, where $i$ took of $x_i$ points and $j$ took off $x_j$, student $i$ receives contribution score $\frac{x_i}{x_i + x_j}$, and j receives $\frac{x_j}{x_i + x_j}$. Students may then choose to appeal their paper's grade if they are unhappy with it, at which point the professor grades it and gives an incorrect grader a 0. To compute the final score for a student, their final grade on the assignment is calculated as follows: 4 points times their contribution score are added or subtracted to $H(g)$. (Then the student’s grade is converted from Happiness to an actual score).
 \end{definition}
 \begin{theorem}
-The addition of the contribution score being added or subtraced should encourage graders to honestly grade papers, for fear of losing points and the possible reward.
+The addition of the contribution score being added or subtracted should encourage graders to honestly grade papers, for fear of losing points and the possible reward.
 \end{theorem}
-\begin{proof}[Analysis]
+\begin{proof}
 The graders have two choices, they can either grade the papers, or not grade them.
 
 If the grader does not grade the paper, what score should he or she give it?
 
-If they take off any points, the points will surely be refuted by the professor during the regrade.
-So if they take off any points, they will get a 0 on the grading assignment.
-If the grader's give it 100, they might get 50 if the other grader also gives it 100. If he gives it anything else, the original grader will get 0.\\
+If they take off any points that shouldn't be taken off, the points will surely be refuted by the professor during the regrade.
+So if they take off any points, they will get a 0 on the grading assignment because of the professor's punishment.
+If the grader gives the paper 100, they might get 0.5 if the other grader also gives it 100. If he gives it anything else, the original grader will get 0. This is much better than a guaranteed zero, so they will give the paper 100.
+
 If the grader does grade the paper, what score should he give it?
 
-If the grader randomly takes off any points, the points will surely be refuted by the professor during the regrade, and the grader will get a 0 on the grading assignment.
-If the grader gives it 100, he or she will get a 0 the grading assignment if his or her partner does not give 100. In the case of agreement, both graders get 50 on the grading assignment.\\
-If the grader does grade the paper, what score should he or she give it?
+Obviously, if the student takes the effort to grade the paper, they will give the paper its true score, because doing anything else either forfeits a higher contribution score, or guarantees a 0 due to the professor's punishment. This means that they are guaranteed at least a contribution score of 0.5, so after grading both of their assigned papers, the graders will get a full contribution score of 1.
 
-If the grader takes off fewer points than the true score of the assignment, he or she is throwing away free points. If the grader deducts too aggressively, there is a risk for him or her to get a 0 because the score could be refuted. 
-Therefore, assigning the correct score is the best because it guarantees at least a 50.
+Now that we know what the students will do, lets look at what happens when we introduce the grading partner. 
 
-Assuming that the student's partner gives the paper a 100, which is the best thing they could do if they don't grade, then
-	If they don't grade the paper, they don't use any effort. So the student's happiness will H(the student's grade on the original assignment). Contribution score = 0
-	If they do grade, they use 1 unit of effort by default. But, the student's happiness will be H(the student's grade on the original assignment) + 3. Contribution score = 1
+If the student's partner gives the paper a 100, which is the best thing they could do if they don't grade, then
+	If they don't grade the paper, they don't use any effort, and their contribution score is 0. So the student's happiness will $H(g) + 4*0 = H(g)$.
+
+If they do grade, they use 1 unit of effort by default, but get the full contribution score of 1. This means that their final happiness is $H(g) + 4*1 - 1 = H(g)+3$.
 	
 If the partner gives the paper its true grade:
-	If the grader doesn't grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is H(their original grade) - 4.
-	If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is H(their original grade). 
+	If the grader doesn't grade the assignment, they will give it a 100 and so the grader's contribution score is -1. So their happiness is $H(g) + 4*-1 = H(g)-4$.
+
+If the grader does grade the assignment, they and their partner gave the same grades, so they get a contribution score of 0. This means that their happiness is $H(g) + 4*0 - 1 = H(g)-1$.
 	
-Therefore, it is in everyone's best interest to honestly grade the paper.
+In both of the above cases, the happiness outputs for honestly grading the paper is higher than the happiness output when not grading the paper. Our assumptions state that students will do whatever makes them happiest, so they will honestly grade the papers.
 
 \end{proof}
+\noindent
 \emph{This process is summarized in figure~\ref{fig:deduction} on page~\pageref{fig:deduction}.}
-
+\newline
 \emph{The benchmark results for The Calibration Mechanism can be seen in figure~\ref{fig:comparison} on page~\pageref{fig:comparison}.}
-
+\subsubsection{Benchmark}
+In this model, the most work is being done by the students, who each grade 2 papers. In this mechanism, the professor will not perform any work, because students will adhere to the dominant strategy behavior, and honestly grade the paper. This means that no papers will ever reach the professor, so he/she will not have to grade anything. Also, because every student will follow dominant strategy behavior, the maximum deviation from the objective score will be 0, since every student will output accurate grades. This means that the final benchmark is $2+0=2$. This is the lowest out of all the mechanisms so far.
 \subsection{Final Assumptions}
-Now that we have reached a point far into the research, we have a model that accounts for a very realistic world view, however, the deduction mechanism still has some unrealistic parts, primarily the inablitity to deal with students who are incompetent graders. With this in mind, we designed a final set of assumptions that more effectively simulate a realistic world.
+Now that we have reached a point far into the research, we have a model that accounts for a very realistic world view, however, the deduction mechanism still has some unrealistic parts, primarily the inability to deal with students who are incompetent graders. With this in mind, we designed a final set of assumptions that more effectively simulate a realistic world.
 
 \begin{enumerate}[itemsep=0pt, parsep=0pt]
 \item When grading, $w_i=0 \oplus w_i=1$
@@ -187,22 +190,23 @@ Now that we have reached a point far into the research, we have a model that acc
 \item Students only care about the expectation of their final happiness, which, put in game theory terms, makes them risk neutral.
 \item For a given student in $N$, that student has contact with all other students in $N$.
 \end{enumerate}
+\newpage
 \section{Illustrations}
 {
 \noindent
 \begin{figure}[!h]
 	\centering
-		\includegraphics[width=\textwidth]{Comparison.eps}
+		\includegraphics[width=0.75\textwidth]{Comparison.eps}
 		\caption {A comparison of mechanisms in terms of effectiveness and scalability.\label{fig:comparison}}
 \end{figure}
 \begin{figure}
 	\centering
-		\includegraphics[width=\textwidth]{Flowchart-Calibration.eps}
+		\includegraphics[width=0.75\textwidth]{Flowchart-Calibration.eps}
 		\caption {A flowchart of the Calibration Mechanism (section~\ref{sec:calibration}, page~\pageref{sec:calibration}) from the student perspective.\label{fig:calibration}}
 \end{figure}
 \begin{figure}
 	\centering
-		\includegraphics[width=\textwidth]{Flowchart-Deduction.eps}
+		\includegraphics[width=0.75\textwidth]{Flowchart-Deduction.eps}
 		\caption {A flowchart of the Deduction Mechanism (section~\ref{sec:deduction}, page~\pageref{sec:deduction}) from the student perspective.\label{fig:deduction}}
 \end{figure}
 }
@@ -236,6 +240,12 @@ Although the models presented by this research are not completely realistic, the
 Aside from improving previous research done in this field, this research also supports the idea that many others have proposed: that peer grading is more efficient than automated grading. When EdX first introduced its automated grading system, many were skeptical of the idea, and had right to be. For this reason, systems such as Coursera have yet to adopt this, and instead default to peer grading. As many people suspected, and as this research confirms, peer grading can indeed be more efficient than automated grading when implemented correctly, simply because the A.I. of current machines cannot handle the many different ways a student can answer an open ended question.
 
 Human judgment has always been superior to that of a machine, and this research continues to support that idea. As powerful as automated grading can be in practice, when it comes to theory, peer grading is simply more efficient. This means that with the right mechanism, such as the ones proposed by this research, so, in practice peer grading should be superior to automated grading. All in all, this research has opened doors for game theorists to make improvements to current grading schemes, and also provides mechanisms that are a distinct improvement over current peer and automated grading systems.
+
+As our mechanisms evolve, the benchmark scores yielded by each tends to decrease. However, this is not the case with the improved calibration mechanism, which actually provided a higher benchmark score than the previous mechanism. This stems from the fact that the assumptions were changed, and the mechanism was not. This shows that with a change in assumptions, a new mechanism must be created to address the change, as old mechanisms will often perform badly in new models.
+
+In comparison with more traditional methods of peer grading, our mechanisms peformed extremely well, aside from the improved calibration mechanism. \emph{See figure~\ref{fig:comparison} on page~\pageref{fig:comparison} for a graphical representation of this}. As can be seen in this figure, the benchmark scores of all traditional methods of grading (peer grading, hand grading by the professor, and automated grading), have higher benchark scores than our mechanisms. This means that they are flawed in some way, either in the accuracy of their grades, or the amount of work that one person has to do.
+
+With this comparison, it can be clearly seen that the mechanisms created with this research are more efficient than any currently employed in modern classrooms.
 
 \section{Conclusion}
 In this research, we learned and established the validity of game theory and mathematically based models when solving complex problems involving human nature. Using this to answer the unanswered of how professors should go about grading the astronomically high number of papers submitted by students in the online courses known as MOOCs
