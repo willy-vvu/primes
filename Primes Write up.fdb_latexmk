@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Primes Write up"] 1379879676 "Primes Write up.aux" "Primes Write up.bbl" "Primes Write up" 1379879891
+["bibtex Primes Write up"] 1380144698 "Primes Write up.aux" "Primes Write up.bbl" "Primes Write up" 1380150229
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Primes Write up.aux" 1379879890 3219 6b24e5c5c6a19ab4e54db3c4390323ba ""
+  "Primes Write up.aux" 1380150228 3176 65ba9c08b8b7d74e73401755ded83032 ""
   "Primes Write up.bcf" 0 -1 0 ""
   "bibliography.bib" 1379622732 2876 eaca30c5cb78a4e211a0a3c4ef26c395 ""
   (generated)
   "Primes Write up.blg"
   "Primes Write up.bbl"
-["pdflatex"] 1379879889 "Primes Write up.tex" "Primes Write up.pdf" "Primes Write up" 1379879891
+["pdflatex"] 1380150226 "Primes Write up.tex" "Primes Write up.pdf" "Primes Write up" 1380150229
   "/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1335995445 7612 c47308d923ec19888707b0f1792b326a ""
@@ -21,7 +21,6 @@
   "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty" 1335995445 19987 01cb2f3c1d21e5f05711b7fd50b17f2a ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty" 1303341166 11401 72b18f76ab3cc71c15213a919836506a ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls" 1254151887 20571 b8bd218bf2e18b4f5817ee643cd9c515 ""
-  "/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd" 1254151887 2109 c400bd6c901edc4a09e4d53fcffd3b3c ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo" 1254151887 9053 a28d9b3c915d12545f3d5e7c4986be20 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/cite/cite.sty" 1284405395 32577 d37d76244d26661e9ca51f1fa50cf0d1 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty" 1317339792 42666 6fa770e3485520a6a5f2ea7d259c8f8d ""
@@ -45,12 +44,12 @@
   "Flowchart-Calibration.eps" 1379634730 346312 8179e573dc16150ced49fdc8caa680bf ""
   "Flowchart-Deduction-eps-converted-to.pdf" 1379634730 130453 baa01a579d53ef7b2f99e83540f89f47 ""
   "Flowchart-Deduction.eps" 1379634730 375086 f6fb4edbd9669605bac3b7c8e977e8c0 ""
-  "Primes Write up.aux" 1379879890 3219 6b24e5c5c6a19ab4e54db3c4390323ba ""
-  "Primes Write up.bbl" 1379879676 1838 92e29a3cc6826155bb20e39c6ca02b12 "bibtex Primes Write up"
-  "Primes Write up.tex" 1379879880 41142 85b6a50c1608f03ea1bd04ec178ed189 ""
+  "Primes Write up.aux" 1380150228 3176 65ba9c08b8b7d74e73401755ded83032 ""
+  "Primes Write up.bbl" 1380144698 1838 92e29a3cc6826155bb20e39c6ca02b12 "bibtex Primes Write up"
+  "Primes Write up.tex" 1380150194 41330 c008df7ed126a03c43ef42b6aa581a3a ""
   (generated)
-  "Primes Write up.aux"
   "Flowchart-Calibration-eps-converted-to.pdf"
+  "Primes Write up.aux"
   "Primes Write up.pdf"
   "Comparison-eps-converted-to.pdf"
   "Flowchart-Deduction-eps-converted-to.pdf"
