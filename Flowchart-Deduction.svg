@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Flowchart Deduction.svg">
+   sodipodi:docname="Flowchart-Deduction.svg">
   <defs
      id="defs4">
     <marker
@@ -97,9 +97,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
      inkscape:cx="324.14529"
-     inkscape:cy="475.7434"
+     inkscape:cy="273.71289"
      inkscape:document-units="px"
-     inkscape:current-layer="g5947"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="in"
      inkscape:snap-bbox="false"
@@ -118,8 +118,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
@@ -143,7 +143,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -323,7 +323,7 @@
            id="flowPara3878">Take off too many points</flowPara><flowPara
            id="flowPara7021">on one paper</flowPara><flowPara
            id="flowPara3880"
-           style="font-weight:normal;font-style:italic">1 unit of effort</flowPara></flowRoot>    </g>
+           style="font-style:italic;font-weight:normal">0 units of effort</flowPara></flowRoot>    </g>
     <g
        id="g5892"
        style="fill:#92ff98;fill-opacity:1">
@@ -373,7 +373,7 @@
            id="flowPara7080">Partner takes more points</flowPara><flowPara
            id="flowPara7949" /><flowPara
            id="flowPara7089"
-           style="font-style:italic">Earn H(G) - 4</flowPara></flowRoot>      <flowRoot
+           style="font-style:italic">Earn H(G)</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3804-5-2"
          style="font-size:18px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -385,7 +385,8 @@
              x="192"
              y="232.09998"
              style="font-size:18px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-           id="flowPara3936-5">Takes more pts and gets refuted</flowPara><flowPara
+           id="flowPara3936-5">Gets refuted by partner</flowPara><flowPara
+           id="flowPara3447" /><flowPara
            id="flowPara3938-7"
            style="font-style:italic">Earn H(0)</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
@@ -401,7 +402,7 @@
              style="font-size:18px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
            id="flowPara3936-5-5">Partner takes more pts and gets refuted</flowPara><flowPara
            id="flowPara3938-7-4"
-           style="font-style:italic">Earn H(G)+4</flowPara></flowRoot>      <flowRoot
+           style="font-style:italic">Earn H(G)+2</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3804-5-23"
          style="font-size:18px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -416,7 +417,7 @@
            id="flowPara3938-8">Partner takes less points</flowPara><flowPara
            id="flowPara7947" /><flowPara
            id="flowPara7074"
-           style="font-style:italic">Earn H(G)+4</flowPara></flowRoot>    </g>
+           style="font-style:italic">Earn H(G)+2</flowPara></flowRoot>    </g>
     <g
        id="g5887"
        style="fill:#a5c8ff;fill-opacity:1">
@@ -461,7 +462,7 @@
            id="flowPara4176" /><flowPara
            id="flowPara4178">For one paper,</flowPara><flowPara
            id="flowPara4180"
-           style="font-style:italic">H(0) - 1</flowPara></flowRoot>      <g
+           style="font-style:italic">H(0)</flowPara></flowRoot>      <g
          id="g5898">
         <flowRoot
            transform="translate(0,664.25976)"
@@ -480,7 +481,7 @@
              id="flowPara7767" /><flowPara
              id="flowPara7097">For one paper,</flowPara><flowPara
              id="flowPara7099"
-             style="font-style:italic">H(G) - 4</flowPara><flowPara
+             style="font-style:italic">H(G)</flowPara><flowPara
              id="flowPara4194" /><flowPara
              id="flowPara4196" /><flowPara
              id="flowPara4198" /></flowRoot>      </g>
@@ -501,7 +502,7 @@
            id="flowPara7777" /><flowPara
            id="flowPara7751">For one paper,</flowPara><flowPara
            id="flowPara4265"
-           style="font-style:italic">H(G) + 3</flowPara></flowRoot>    </g>
+           style="font-style:italic">H(G) + 1</flowPara></flowRoot>    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4267"
@@ -514,7 +515,7 @@
            x="96"
            y="40.099976"
            style="font-size:18px" /></flowRegion><flowPara
-         id="flowPara4273"></flowPara></flowRoot>    <text
+         id="flowPara4273" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="94.611328"
@@ -536,7 +537,7 @@
            height="124.24876"
            x="24.243662"
            y="80.140381" /></flowRegion><flowPara
-         id="flowPara4289"></flowPara></flowRoot>    <g
+         id="flowPara4289" /></flowRoot>    <g
        id="g6026"
        style="fill:#ffa0a0;fill-opacity:1">
       <rect
