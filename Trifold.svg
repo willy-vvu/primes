@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4320"
+   height="3240"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Trifold.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="1003.5085"
+     inkscape:cy="1083.9215"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="in"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-page="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="4"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="in"
+       spacingx="1in"
+       spacingy="1in" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="90,0"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="990,0"
+       id="guide2989" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1170,0"
+       id="guide2991" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="2070,0"
+       id="guide2993" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="2250,0"
+       id="guide2995" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3150,0"
+       id="guide2997" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="4230,0"
+       id="guide2999" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3330,0"
+       id="guide3001" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1080,0"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="2160,0"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3240,0"
+       id="guide3007" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,3150"
+       id="guide3009" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,2880"
+       id="guide3011" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,2790"
+       id="guide3013" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,2187.6378)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3031"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(0,-2187.6378)"><flowRegion
+         id="flowRegion3033"><rect
+           id="rect3035"
+           width="4140"
+           height="360"
+           x="90"
+           y="90"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         id="flowPara3043"
+         style="font-size:144px;text-align:center;text-anchor:middle">Teaching a Class to Grade Itself Using Game Theory</flowPara><flowPara
+         id="flowPara3047"
+         style="font-size:72px;text-align:center;text-anchor:middle">William Wu and Nicholaas Kaashoek</flowPara></flowRoot>    <flowRoot
+       transform="translate(-379.96875,-1595.8836)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       id="flowRoot3049"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3051"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+           y="-141.7542"
+           x="469.96875"
+           height="89.999992"
+           width="900"
+           id="rect3053" /></flowRegion><flowPara
+         style="font-size:72px;text-align:start;text-anchor:start"
+         id="flowPara3057">Abstract</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3061"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(-379.66992,-1334.51)"><flowRegion
+         id="flowRegion3063"><rect
+           id="rect3065"
+           width="900"
+           height="630"
+           x="469.66992"
+           y="-313.12781"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         id="flowPara3067"
+         style="font-size:32px;text-align:justify;text-anchor:start;font-weight:normal;-inkscape-font-specification:Arial">An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After iteration of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration and Deduction. The Deduction mechanism performs relatively well in the benchmark, outperforming traditional automated and peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3069"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(-331.78711,-794.51003)"><flowRegion
+         id="flowRegion3071"><rect
+           id="rect3073"
+           width="900.00006"
+           height="89.999977"
+           x="421.78711"
+           y="-133.12778"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         id="flowPara3075"
+         style="font-size:72px;text-align:start;text-anchor:start">Introduction</flowPara></flowRoot>    <flowRoot
+       transform="translate(-379.60937,-372.7824)"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       id="flowRoot3077"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3079"><rect
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+           y="-464.85541"
+           x="469.60938"
+           height="1080"
+           width="900"
+           id="rect3081" /></flowRegion><flowPara
+         style="font-size:32px;font-weight:normal;text-align:justify;text-anchor:start;-inkscape-font-specification:Arial"
+         id="flowPara3087">In recent years, MOOCs (Massive Open Online Courses) such as Coursera or EdX have been gaining popularity. More importantly, MOOC systems are able to educate massive numbers of students from anywhere in the world, which leads to problems: professors are simply unable to grade the hundreds of thousands of submissions. One common solution, automated grading, relies on machines to grade assignments. Machines can only grade certain types of problem (i.e. multiple choice), limiting the depth of the questions asked. Although automated essay grading is an active area of research, the quality and accuracy of such systems is still under heavy debate. Peer grading can grade any type of question, but can easily be &quot;hacked&quot; by clever students. A definitive solution has yet to be found that can efficiently and accurately evaluate students' mastery of the course material.</flowPara><flowPara
+         style="font-size:32px;font-weight:normal;text-align:justify;text-anchor:start;-inkscape-font-specification:Arial"
+         id="flowPara3094"></flowPara><flowPara
+         style="font-size:32px;font-weight:normal;text-align:justify;text-anchor:start;-inkscape-font-specification:Arial"
+         id="flowPara3096">We propose several peer grading systems using game theory and mechanism design, backed by a rigorous mathematical analysis of the system. By defining constraints that a grading system must satisfy to mitigate students' incentive to cheat and by creating a benchmark to analyze the efficiency of various systems, we allow for comparison between different systems in terms of efficiency for the class and fairness for the students. In general, mechanisms that do not follow game theoretic constraints may work in the short-term, but will be exploited if possible in the long term.</flowPara></flowRoot>  </g>
+</svg>
