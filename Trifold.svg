@@ -289,9 +289,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.23892475"
-     inkscape:cx="2779.5408"
-     inkscape:cy="1033.2961"
+     inkscape:zoom="0.25"
+     inkscape:cx="2001.8199"
+     inkscape:cy="1874.4701"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -393,7 +393,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -403,7 +403,7 @@
      id="layer1"
      transform="translate(0,2187.6378)">
     <g
-       transform="matrix(0.72601947,0,0,0.72601947,3429.1637,-1969.4018)"
+       transform="matrix(0.72601947,0,0,0.72601947,2349.1637,-349.40175)"
        id="g4159">
       <rect
          y="0"
@@ -521,11 +521,11 @@
              id="rect3133" /></flowRegion><flowPara
            id="flowPara3135" /></flowRoot>      <flowRoot
          transform="translate(20,268.2677)"
-         style="font-size:27.54747059px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot3069-1"
          xml:space="preserve"><flowRegion
            id="flowRegion3071-7"><rect
-             style="font-size:27.54747059px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
              y="764.09448"
              x="0"
              height="99.999992"
@@ -546,7 +546,7 @@
            id="flowPara3111">Traditional Peer Grading</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3105-7"
-         style="font-size:27.54747059px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(403.78711,283.3199)"><flowRegion
            id="flowRegion3107-4"><rect
              id="rect3109-0"
@@ -554,7 +554,7 @@
              height="100.00015"
              x="-23.787109"
              y="749.0423"
-             style="font-size:27.54747059px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara3111-9">Traditional Automated Grading*</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3105-4"
@@ -581,11 +581,11 @@
              style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara3111-7">Deduction Mechanism</flowPara></flowRoot>      <flowRoot
          transform="translate(-14.355469,653.00174)"
-         style="font-size:34.43433824px;font-style:normal;font-weight:300;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot3986-6"
          xml:space="preserve"><flowRegion
            id="flowRegion3988-1"><rect
-             style="text-align:end;text-anchor:end;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:34.43433824px;writing-mode:lr;line-height:125%"
+             style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Roboto;-inkscape-font-specification:Roboto Light"
              y="259.36044"
              x="-65.644531"
              height="40.000023"
@@ -594,7 +594,7 @@
            id="flowPara3992-2">2</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4035"
-         style="font-size:34.43433824px;font-style:normal;font-weight:300;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-14.355469,373.00174)"><flowRegion
            id="flowRegion4037"><rect
              id="rect4039"
@@ -602,14 +602,14 @@
              height="40.000023"
              x="-65.644531"
              y="259.36044"
-             style="text-align:end;text-anchor:end;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:34.43433824px;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara4041">25</flowPara></flowRoot>      <flowRoot
          transform="translate(-14.355469,253.00174)"
-         style="font-size:34.43433824px;font-style:normal;font-weight:300;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4043"
          xml:space="preserve"><flowRegion
            id="flowRegion4045"><rect
-             style="text-align:end;text-anchor:end;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:34.43433824px;writing-mode:lr;line-height:125%"
+             style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Roboto;-inkscape-font-specification:Roboto Light"
              y="259.36044"
              x="-65.644531"
              height="40.000023"
@@ -618,7 +618,7 @@
            id="flowPara4049">100</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4051"
-         style="font-size:34.43433824px;font-style:normal;font-weight:300;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-34.34375,139.56424)"><flowRegion
            id="flowRegion4053"><rect
              id="rect4055"
@@ -626,14 +626,14 @@
              height="40.000008"
              x="-65.65625"
              y="252.79796"
-             style="text-align:end;text-anchor:end;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:34.43433824px;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara4057">1000</flowPara></flowRoot>      <flowRoot
          transform="translate(-14.355469,533.00174)"
-         style="font-size:34.43433824px;font-style:normal;font-weight:300;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4313"
          xml:space="preserve"><flowRegion
            id="flowRegion4315"><rect
-             style="text-align:end;text-anchor:end;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:34.43433824px;writing-mode:lr;line-height:125%"
+             style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Roboto;-inkscape-font-specification:Roboto Light"
              y="259.36044"
              x="-65.644531"
              height="40.000023"
@@ -655,7 +655,7 @@
            id="flowPara4266">Assignments graded by each student</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4357"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-474,996.2675)"><flowRegion
            id="flowRegion4359"><rect
              id="rect4361"
@@ -663,13 +663,13 @@
              height="40"
              x="1140"
              y="304.09448"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara4363"
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"><flowSpan
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"><flowSpan
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
    id="flowSpan4365">In a class </flowSpan>of 25</flowPara></flowRoot>      <flowRoot
          transform="translate(-474,956.2675)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4367"
          xml:space="preserve"><flowRegion
            id="flowRegion4369"><rect
@@ -678,14 +678,14 @@
              height="40"
              width="240"
              id="rect4371"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara4373"><flowSpan
    id="flowSpan4375"
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">In a class </flowSpan>of 100</flowPara></flowRoot>      <flowRoot
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In a class </flowSpan>of 100</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4377"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-474,916.2675)"><flowRegion
            id="flowRegion4379"><rect
              id="rect4381"
@@ -693,22 +693,22 @@
              height="40"
              x="1140"
              y="304.09448"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara4383"
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"><flowSpan
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"><flowSpan
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
    id="flowSpan4385">In a class </flowSpan>of 1000</flowPara></flowRoot>      <g
          id="g8903"
-         style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
-           style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3205-7-8"
            width="40"
            height="100.00008"
            x="840"
            y="532.36212" />
         <rect
-           style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#b0ffe6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect4387"
            width="40"
            height="40"
@@ -717,25 +717,25 @@
       </g>
       <g
          id="g8899"
-         style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
            y="632.36212"
            x="840"
            height="180.00008"
            width="40"
            id="rect3203-5-1"
-           style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
            y="1260.3619"
            x="620"
            height="40"
            width="40"
            id="rect4389"
-           style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#26ffb9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
       <flowRoot
          transform="translate(-1114,992.87218)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4301"
          xml:space="preserve"><flowRegion
            id="flowRegion4303"><rect
@@ -744,14 +744,14 @@
              height="40"
              width="240"
              id="rect4305"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara4307"><flowSpan
    id="flowSpan4309"
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">In a class </flowSpan>of 25</flowPara></flowRoot>      <flowRoot
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In a class </flowSpan>of 25</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4329"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-1114,952.87218)"><flowRegion
            id="flowRegion4331"><rect
              id="rect4333"
@@ -759,13 +759,13 @@
              height="40"
              x="1140"
              y="304.09448"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara4335"
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"><flowSpan
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"><flowSpan
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
    id="flowSpan4337">In a class </flowSpan>of 100</flowPara></flowRoot>      <flowRoot
          transform="translate(-1114,912.87218)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4339"
          xml:space="preserve"><flowRegion
            id="flowRegion4341"><rect
@@ -774,11 +774,11 @@
              height="40"
              width="240"
              id="rect4343"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara4345"><flowSpan
    id="flowSpan4347"
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">In a class </flowSpan>of 1000</flowPara></flowRoot>      <flowRoot
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In a class </flowSpan>of 1000</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4349"
          style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
@@ -793,23 +793,23 @@
            id="flowPara4355"
            style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">Assignments graded by the professor</flowPara></flowRoot>      <g
          id="g8883"
-         style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
            y="532.36218"
            x="20"
            height="119.99992"
            width="40"
            id="rect3203"
-           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
            y="632.36218"
            x="740"
            height="179.99992"
            width="40"
            id="rect3203-5"
-           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
-           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#77bdff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect4395"
            width="40"
            height="40"
@@ -818,9 +818,9 @@
       </g>
       <g
          id="g8878"
-         style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
-           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3205"
            width="40"
            height="120.00011"
@@ -828,7 +828,7 @@
            y="412.362" />
         <rect
            ry="0"
-           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3205-7"
            width="40"
            height="99.999916"
@@ -840,21 +840,21 @@
            height="40"
            width="40"
            id="rect4397"
-           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#b0d8ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
       <flowRoot
          transform="translate(-114.71875,367.04968)"
-         style="font-size:41.32120589px;font-style:normal;font-weight:300;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;writing-mode:lr"
+         style="font-size:41.32120514px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot4626"
          xml:space="preserve"><flowRegion
            id="flowRegion4628"><rect
-             style="text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:41.32120589px;writing-mode:lr;line-height:125%"
+             style="font-size:41.32120514px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
              y="-31.261648"
              x="-21.86669"
              height="64.248062"
              width="1238.6"
              id="rect4630" /></flowRegion><flowPara
-           style="font-size:41.32120589px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+           style="font-size:41.32120514px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara4632">Workload / Objective Function vs Various Mechanisms</flowPara></flowRoot>      <flowRoot
          transform="matrix(0,-1,1,0,-599.34279,909.72548)"
          style="font-size:34.43433762px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
@@ -885,7 +885,7 @@
            style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara3952">(Lower is better)</flowPara></flowRoot>      <flowRoot
          transform="translate(-794,996.26749)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot3138"
          xml:space="preserve"><flowRegion
            id="flowRegion3140"><rect
@@ -894,14 +894,14 @@
              height="40"
              width="240"
              id="rect3142"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara3144"><flowSpan
    id="flowSpan3146"
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">In a class </flowSpan>of 25</flowPara></flowRoot>      <flowRoot
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In a class </flowSpan>of 25</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot3148"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          transform="translate(-794,956.2675)"><flowRegion
            id="flowRegion3150"><rect
              id="rect3152"
@@ -909,13 +909,13 @@
              height="40"
              x="1140"
              y="304.09448"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
            id="flowPara3154"
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"><flowSpan
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"><flowSpan
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
    id="flowSpan3156">In a class </flowSpan>of 100</flowPara></flowRoot>      <flowRoot
          transform="translate(-794,916.2675)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot3158"
          xml:space="preserve"><flowRegion
            id="flowRegion3160"><rect
@@ -924,29 +924,29 @@
              height="40"
              width="240"
              id="rect3162"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara3164"><flowSpan
    id="flowSpan3166"
-   style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">In a class </flowSpan>of 1000</flowPara></flowRoot>      <g
+   style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In a class </flowSpan>of 1000</flowPara></flowRoot>      <g
          id="g8868"
-         style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
-           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3956"
            width="40"
            height="120"
            x="70"
            y="532.36212" />
         <rect
-           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3960"
            width="40"
            height="179.99998"
            x="790"
            y="592.36212" />
         <rect
-           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#92ff98;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3170"
            width="40"
            height="40"
@@ -955,19 +955,22 @@
       </g>
       <g
          id="g8873"
-         style="color:#000000;fill:#c3ffc6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#c3ffc6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <path
-           style="color:#000000;fill:#c3ffc6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030"
+           style="color:#000000;fill:#c3ffc6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            d="m 300,1220.3621 40,0 0,40 -40,0 z"
-           id="rect3168" />
+           id="rect3168"
+           inkscape:connector-curvature="0" />
         <path
-           style="color:#000000;fill:#c3ffc6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030"
+           style="color:#000000;fill:#c3ffc6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            d="m 70,412.362 40,0 0,120.00012 -40,0 z"
-           id="rect3958" />
+           id="rect3958"
+           inkscape:connector-curvature="0" />
         <path
-           style="color:#000000;fill:#c3ffc6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030"
+           style="color:#000000;fill:#c3ffc6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            d="m 790,502.362 40,0 0,90.00014 -40,0 z"
-           id="rect3962" />
+           id="rect3962"
+           inkscape:connector-curvature="0" />
       </g>
       <flowRoot
          transform="translate(568.49443,283.3199)"
@@ -1010,41 +1013,41 @@
            height="40.000019"
            width="40"
            id="rect3167"
-           style="color:#000000;fill:#2b97ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#2b97ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
       <g
          id="g9152"
-         style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
            y="812.36212"
            x="840"
            height="200.00009"
            width="40"
            id="rect3036-6"
-           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
-           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3030"
            width="40"
            height="40.000011"
            x="300"
            y="972.36218" />
         <rect
-           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3040"
            width="39.999935"
            height="79.999969"
            x="1020"
            y="932.36212" />
         <rect
-           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect4391"
            width="40"
            height="40"
            x="620"
            y="1300.3619" />
         <rect
-           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.22361035;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#00eca0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.2236104;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3169"
            width="40.000004"
            height="79.999924"
@@ -1053,16 +1056,16 @@
       </g>
       <g
          id="g8859"
-         style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
+         style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate">
         <rect
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3944"
            width="40"
            height="500"
            x="250"
            y="512.36212" />
         <rect
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3948"
            width="40"
            height="160.00011"
@@ -1074,9 +1077,9 @@
            height="239.99998"
            width="40"
            id="rect3950"
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect3954"
            width="40.000168"
            height="360.00003"
@@ -1088,21 +1091,21 @@
            height="359.50055"
            width="39.999992"
            id="rect3174"
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
            y="1300.3621"
            x="300"
            height="40"
            width="40"
            id="rect3172"
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
         <rect
            y="852.36212"
            x="610"
            height="159.99983"
            width="40"
            id="rect3171"
-           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980171000000030;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+           style="color:#000000;fill:#74f77c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.30980158;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
       <path
          style="fill:none;stroke:#000000;stroke-width:2.00048018;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1111,7 +1114,7 @@
          inkscape:connector-curvature="0" />
       <flowRoot
          transform="translate(798.90625,161.81945)"
-         style="font-size:27.54747059px;font-style:normal;font-weight:300;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+         style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowRoot3173"
          xml:space="preserve"><flowRegion
            id="flowRegion3175"><rect
@@ -1120,8 +1123,8 @@
              height="54.999939"
              width="180"
              id="rect3177"
-             style="-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;font-size:27.54747059px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></flowRegion><flowPara
-           style="font-size:27.54747059px;-inkscape-font-specification:Roboto Light;font-family:Roboto;font-weight:300;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+             style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
+           style="font-size:27.54747009px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
            id="flowPara3179">*approximate</flowPara></flowRoot>    </g>
     <flowRoot
        xml:space="preserve"
@@ -1141,17 +1144,17 @@
          style="font-size:64px;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto Ultra-Light;font-family:Roboto;font-weight:200;font-style:normal;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%">William Wu and Nicholaas Kaashoek</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3069"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial;color:#000000;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       transform="translate(739.13086,-1664.6297)"><flowRegion
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(734.7239,-861.02587)"><flowRegion
          id="flowRegion3071"><rect
            id="rect3073"
            width="900"
            height="89.999985"
            x="430.86914"
            y="-72.119957"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
          id="flowPara3075"
-         style="font-size:72px;text-align:center;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;-inkscape-font-specification:Roboto Ultra-Light;font-family:Roboto;font-weight:200;font-style:normal;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%">Calibration Mechanism</flowPara></flowRoot>    <flowRoot
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light">Calibration Mechanism</flowPara></flowRoot>    <flowRoot
        transform="translate(-379.625,-1209.5324)"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot3077"
@@ -1652,7 +1655,7 @@
          id="flowPara3075-9"
          style="font-size:72px;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto Ultra-Light;font-family:Roboto;font-weight:200;font-style:normal;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%">Introduction</flowPara></flowRoot>    <g
        id="g10828"
-       transform="translate(0,-101.81351)">
+       transform="translate(-4.406964,701.79032)">
       <g
          id="g3189"
          transform="matrix(1.4751077,0,0,1.4751077,1242.3725,-2147.7031)">
@@ -1797,7 +1800,7 @@
                  x="192"
                  y="232.09998"
                  style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Roboto;-inkscape-font-specification:Roboto Light" /></flowRegion><flowPara
-               id="flowPara3936">Calibrated assignment</flowPara><flowPara
+               id="flowPara3936">&quot;Calibrated&quot; assignment</flowPara><flowPara
                style="font-style:italic"
                id="flowPara3938">50% chance</flowPara><flowPara
                id="flowPara4085"
@@ -1911,7 +1914,11 @@
                  id="flowPara4192"
                  style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light">Slightly happy</flowPara><flowPara
                  style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
-                 id="flowPara7943">Total happiness</flowPara><flowPara
+                 id="flowPara3598" /><flowPara
+                 style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+                 id="flowPara3591">Total happiness</flowPara><flowPara
+                 style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+                 id="flowPara3596">(H(0)+H(G))/2</flowPara><flowPara
                  style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
                  id="flowPara4194" /><flowPara
                  style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light"
@@ -1999,7 +2006,7 @@
                x="43.599609"
                y="77.749306" /></flowRegion><flowPara
              id="flowPara4297"
-             style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light">Calibrated assignment</flowPara><flowPara
+             style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light">&quot;Calibrated&quot; assignment</flowPara><flowPara
              id="flowPara4368"
              style="font-size:16.94791412px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Light">pre-graded by professor</flowPara></flowRoot>        <flowRoot
            xml:space="preserve"
@@ -2105,7 +2112,7 @@
          inkscape:connector-curvature="0" />
     </g>
     <flowRoot
-       transform="translate(2855.793,-860.44438)"
+       transform="translate(2855.1965,-1677.5193)"
        style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light"
        id="flowRoot3571-2"
        xml:space="preserve"><flowRegion
@@ -2121,7 +2128,7 @@
        xml:space="preserve"
        id="flowRoot3579-3"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       transform="translate(2781.7542,329.38057)"><flowRegion
+       transform="translate(2781.0092,-39.876446)"><flowRegion
          id="flowRegion3581-7"><rect
            id="rect3583-2"
            width="900"
@@ -2133,8 +2140,8 @@
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light">Future Work</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3069-17-27"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light;writing-mode:lr"
-       transform="translate(285.08777,795.99069)"><flowRegion
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light"
+       transform="translate(285.08777,835.99069)"><flowRegion
          id="flowRegion3071-4-6"><rect
            id="rect3073-0-14"
            width="900"
@@ -2143,7 +2150,7 @@
            y="-373.62848"
            style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light" /></flowRegion><flowPara
          id="flowPara3075-9-2"
-         style="font-size:72px;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto Ultra-Light;font-family:Roboto;font-weight:200;font-style:normal;font-stretch:normal;font-variant:normal;writing-mode:lr;line-height:125%">Benchmark</flowPara></flowRoot>    <flowRoot
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light">Benchmark</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3069-17-2-1"
        style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light;color:#000000;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;writing-mode:lr"
@@ -2198,7 +2205,7 @@
          id="flowPara3677" /><flowPara
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowPara3639" /></flowRoot>    <flowRoot
-       transform="translate(-386.37214,1186.9354)"
+       transform="translate(-386.37214,1226.9354)"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot3077-5-5"
        xml:space="preserve"><flowRegion
@@ -2206,14 +2213,36 @@
            style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
            y="-674.57318"
            x="476.37213"
-           height="359.99997"
+           height="449.99997"
            width="900"
            id="rect3081-1-7" /></flowRegion><flowPara
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
-         id="flowPara3674"><flowSpan
-           id="flowSpan3678"
-           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light">In order to measure exactly which mechanisms are better than others, we created a numerical benchmark where a lower score is better. The score is computed by adding the most work done by any person to the highest possible error in grading.</flowSpan></flowPara></flowRoot>    <flowRoot
-       transform="translate(2853.8778,815.21279)"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3587">In order to measure exactly which mechanisms are better than others, we created a numerical benchmark where a lower score is better. The score is computed by adding the most work done by any person to the highest possible error in grading. Mathematically:</flowPara><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3589"><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3579">max</flowSpan><flowSpan
+           style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;baseline-shift:sub;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3591">i≥1</flowSpan><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3581">{|H(g</flowSpan><flowSpan
+           style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;baseline-shift:sub;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3593">i</flowSpan><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3583">)−H(o</flowSpan><flowSpan
+           style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;baseline-shift:sub;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3599">i</flowSpan><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3585">)|}+ max</flowSpan><flowSpan
+           style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;baseline-shift:sub;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3601">i≥0</flowSpan><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3587">{w</flowSpan><flowSpan
+           style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;baseline-shift:sub;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3603">i</flowSpan><flowSpan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto Slab;-inkscape-font-specification:Roboto Slab Light"
+           id="flowSpan3589">} </flowSpan></flowPara></flowRoot>    <flowRoot
+       transform="translate(2853.1328,445.95577)"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot3077-4"
        xml:space="preserve"><flowRegion
@@ -2224,9 +2253,11 @@
            height="630"
            width="900"
            id="rect3081-3" /></flowRegion><flowPara
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
-         id="flowPara3096-16">As a long term goal, we would like to see our mechanisms and models implemented in an actualy MOOC such as Edx or Coursera. Looking towards the short term, we intend to develop a mechanism based on the assumptions gathered from mechanical turk, and to also make that mechanism work more efficiently than any before it. We would then like to polish our assumptions and make them more realistic. In addition, we plan to run additional trials on mechanical turk to further confirm our assumptions. We also want to get started on an implementation that we can test somewhere, be it at school or with friends. All in all, we bascially want to create a more realistic model, a very effective and efficient mechanism, and we want to implement both of these in an actual online course system. As another goal, we would like to see our model be used by others to create their own solutions. </flowPara></flowRoot>    <flowRoot
-       transform="translate(2853.8778,-110.47871)"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3604">In the short term, our assumptions could be made more realistic, as we consider issues such as how to generate accurate grades from incompetent graders as well as students only partially grading assignments. With more realistic assumptions, more realistic mechanisms are also required.</flowPara><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3608">In the long term, we would like to see our model used by others to create new mechanisms, or existing mechanisms implemented in MOOCs such as Edx or Coursera.</flowPara></flowRoot>    <flowRoot
+       transform="translate(2853.2813,-927.55357)"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot3077-4-8"
        xml:space="preserve"><flowRegion
@@ -2234,11 +2265,19 @@
            style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
            y="-727.15912"
            x="476.12219"
-           height="810"
-           width="900"
+           height="1267.0748"
+           width="900.5965"
            id="rect3081-3-7" /></flowRegion><flowPara
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
-         id="flowPara3096-16-6">In this research, we set out to create a set of realistic assumptions that would allow us to predict how students act in a classroom environment, while also creating a set of mechanisms that take advantage of this and incentivize students to do what we want; stay honest and grade efficiently. In our first goal, we had what we feel is a very good sucess. This is important to us as it allows people to use our mechanisms to create their own solutions to this problem. This does not mean that our model is finalized by any means, but it is very far along, and we feel that it is quite strong. The second goal is not as far along sadly, but we feel that the mechanisms that we developed are still an important result, and that they show strong results. They fit very well into a less realistic system, and cannot truly be implemented unless they are in a much smaller classroom where the professor can exercise more control. In addition to this we used the new Mechanical Turk tool to crowdsource our experiments, allowing us to confirm the assumptions we made, which helps validate our model and mechanisms in the eyes of other game theorists. </flowPara></flowRoot>    <flowRoot
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3784">We began by creating a student model consistng of assumptions predicting how students would realistically act. Using a croudsourced experiment, we validated key assumptions and a system of incentivization. The model is less than realistic, and can still be further improved.</flowPara><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3790"></flowPara><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3820">Based off our model, we developed various grading mechanisms using mechanism design that, according to our student model and game theory, would incentivize students to grade accurately and efficiently. These mechanisms optimally perform in a less realistic student model and can still work reasonably well in a smaller classroom.</flowPara><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3818" /><flowPara
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3814">Our model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions. Efficiency is measured in terms of the benchmark we created, a numerical score encompassing both the accuracy of grades and the effort spent by any one person. We hope that our work lays a steady foundation upon which improvements can be made.</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot10582"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Roboto;font-style:normal;font-weight:300;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Roboto Light;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
@@ -2252,7 +2291,7 @@
        xml:space="preserve"
        id="flowRoot10590"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       transform="translate(715.42969,-527.63188)"><flowRegion
+       transform="translate(711.02273,275.97195)"><flowRegion
          id="flowRegion10592"><rect
            id="rect10594"
            width="900"
@@ -2275,7 +2314,7 @@
            id="rect10602" /></flowRegion><flowPara
          style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light"
          id="flowPara10604">Analysis</flowPara></flowRoot>    <flowRoot
-       transform="translate(783.71875,-90.83484)"
+       transform="translate(779.31179,712.76899)"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot3077-5-1"
        xml:space="preserve"><flowRegion
@@ -2308,5 +2347,49 @@
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Roboto;-inkscape-font-specification:Roboto Light"
          id="flowPara10824" /><flowPara
          style="font-size:32px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Roboto;-inkscape-font-specification:Roboto Light"
-         id="flowPara10826">This mechanism is far more complex than the last one created, but is actually more efficient. In a classroom environment where the professor has very high control over the class, and all the students are very capable graders as the mechanism does not account for incompetent graders</flowPara></flowRoot>  </g>
+         id="flowPara10826">This mechanism is far more complex than the last one created, but is actually more efficient. In a classroom environment where the professor has very high control over the class, and all the students are very capable graders as the mechanism does not account for incompetent graders</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3610"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(2851.8203,1076.5308)"><flowRegion
+         id="flowRegion3612"><rect
+           id="rect3614"
+           width="901.24609"
+           height="634.34381"
+           x="476.93359"
+           y="-748.51239"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3752">[1] Tony Bates. What’s right and what’s wrong about coursera-style moocs. Online Learn- ing and Distance Eductation Resources, 2012.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3754">[2] Zack Budryk. Dangerous curves. Inside Higher Ed, 2013.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3756">[3] Sir John Daniel. Making sense of moocs: Musings in a maze of myth, paradox and possibility. Journal of Interactive Media in Education, 2012.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3758">[4] Anne Herrington and Charles Moran. Writing to a machine is not writing at all. National Writing Project, 2012.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3760">[5] Noam Nisan, Tim Roughgarden, E. Tardos, and V. V. Vazirani, editors. Algorithmic Game Theory. Cambridge University Press, 2007.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3762">[6] Laddie Odom. A swot analysis of the potential impact of moocs. EdITLib, 2013.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3764">[7] Eric Randall. Edx now has software to grade your essays. Boston Magazine, 2013.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3766">[8] Ruth S. Can moocs and existing e-learning paradigms help reduce college costs? Inter- national Journal of Technology in Teaching and Learning, pages 21–32, 2012.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3768">[9] Theophrastus. The problems with moocs 1: Robo essay-grading. BLT - Bible*Literature*Translation, 2013.</flowPara><flowPara
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:justify;text-anchor:start;font-family:Roboto;-inkscape-font-specification:Roboto Light"
+         id="flowPara3770">[10] Audrey Watters. The problems with peer grading in coursera. Inside Higher Ed, 2012.</flowPara></flowRoot>    <flowRoot
+       transform="translate(2779.7631,64.901029)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       id="flowRoot3774"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3776"><rect
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Arial;-inkscape-font-specification:Arial"
+           y="173.11755"
+           x="548.99078"
+           height="90.000069"
+           width="900"
+           id="rect3778" /></flowRegion><flowPara
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light"
+         id="flowPara3780">References</flowPara></flowRoot>  </g>
 </svg>
