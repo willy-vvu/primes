@@ -1,11 +1,6 @@
 \begin{thebibliography}{10}
 
-\bibitem{autograding}
-Using automatic grading to improve e-learning in information and computer
-  technology courses.
-\newblock {\em East Carolina University\/} (2013).
-
-\bibitem{rightandwrongmoocs}
+\bibitem{rightandwrongMOOCs}
 Bates, T.
 \newblock What's right and what's wrong about coursera-style moocs.
 \newblock {\em Online Learning and Distance Eductation Resources\/} (2012).
@@ -15,7 +10,7 @@ Budryk, Z.
 \newblock Dangerous curves.
 \newblock {\em Inside Higher Ed\/} (2013).
 
-\bibitem{makingsenseofmoocs}
+\bibitem{makingsenseofMOOCs}
 Daniel, S.~J.
 \newblock Making sense of moocs: Musings in a maze of myth, paradox and
   possibility.
@@ -31,7 +26,7 @@ Nisan, N., Roughgarden, T., Tardos, E., and Vazirani, V.~V., Eds.
 \newblock {\em {Algorithmic Game Theory}}.
 \newblock Cambridge University Press, 2007.
 
-\bibitem{swotanalysisofmoocs}
+\bibitem{swotanalysisofMOOCs}
 Odom, L.
 \newblock A swot analysis of the potential impact of moocs.
 \newblock {\em EdITLib\/} (2013).
@@ -41,7 +36,7 @@ Randall, E.
 \newblock Edx now has software to grade your essays.
 \newblock {\em Boston Magazine\/} (2013).
 
-\bibitem{canmoocsreducecc}
+\bibitem{canMOOCsreducecc}
 S, R.
 \newblock Can moocs and existing e-learning paradigms help reduce college
   costs?
