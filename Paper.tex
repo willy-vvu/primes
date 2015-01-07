@@ -84,11 +84,11 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
-An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After iteration of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment. The Deduction mechanism performs relatively well in the benchmark, outperforming traditional automated and peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
+An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After iteration of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
 \end{abstract}
 
 \keywords{
-	MOOC; game theory; mechanism design; peer grading; learning at scale;
+	Massive Open Online Courses; MOOC; game theory; mechanism design; peer grading; learning at scale;
 }
 
 \category{K.3.m.}{Computers and Education}{Miscellaneous}
@@ -101,11 +101,12 @@ High student-professor ratios lead to problems for professors. Professors are si
 We propose several peer grading mechanisms based on game theory and our student model - a set of assumptions we believe students abide by. We also create a benchmark to compare between our and existing mechanisms. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not~\cite{AGTbook}. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
 
 \section{Model and Assumptions}
+\label{sec:modelandassumptions}
 Our student model consists of assumptions we believed students abide by, as follows:
 \begin{enumerate}
-  \item Let H be a function of a student's grade, returning a student's happiness, such that H(0)=0. \newline \textit{Happiness is an arbitrary numerical unit.}
+  \item Let H be a function of a student's grade, returning a student's happiness, such that a grade of zero yields zero happiness ($H(0)=0$). \newline \textit{Happiness is an arbitrary numerical unit.}
   \item Students want to maximize their happiness.
-  \item Grading an assignment costs 1 happiness.
+  \item Grading an assignment costs 1 (one) happiness.
   \item Happiness is not affected by external factors, such as the grades of peers.
   \item Students can communicate with their peers.
   \item Students are not perfect graders.
@@ -117,10 +118,13 @@ Our student model consists of assumptions we believed students abide by, as foll
 
 \section{Benchmark}
 
-To compare mechanisms, we created a numerical benchmark (objective function) where a lower score is better. The score is computed by adding the most work done by any person to the highest possible error in grading. Mathematically:
+To compare mechanisms, we created a numerical benchmark (objective function) where a lower score is better. The score is computed by adding the highest possible error in student grading to the most work done by any person. Mathematically:
 
-$\max_{i \ge 1} \{|H(g_i)-H(o_i)|\} + \max_{i \ge 0} \{w_i\}$
+$\max_{i \ge 1} \{|H(g_i)-H(o_i)|\} + \max_{i \ge 1} \{w_i\}$
 
+Where $w_i$ is the work done, or number of assignments graded, by the $i$th person, $g_i$ is the grade given by student grader on the $i$th assignment, and $o_i$ is the grade that would have been given by the professor on the $i$th assignment. $H$ is the happiness function defined in section~\ref{sec:modelandassumptions}.
+
+Where 
 \subsection{Mechanisms}
 
 \begin{figure}[!h]
@@ -130,7 +134,7 @@ $\max_{i \ge 1} \{|H(g_i)-H(o_i)|\} + \max_{i \ge 0} \{w_i\}$
 \label{fig:calibration}
 \end{figure}
 
-The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, of a 2 in max work done and 2 in max error in grade.
+The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
 The Calibration mechanism can break when students communicate to reveal the calibrated assignment to circumvent grading. The Improved Calibration mechanism mitigates this issue by introducing multiple calibrated papers at the expense of more work, raising the objective score.
 
 We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading.
@@ -153,7 +157,7 @@ The Calibration mechanism rewards students for accurately grading the Calibrated
 
 \subsection{Deduction Mechanism}
 
-The Deduction mechanism (Figure~\ref{fig:deduction}) achieves a very low benchmark score of 2, consisting of a 2 in max work done and a 0 in max error in grade. Incapable graders will raise the benchmark score, as they issue refutations that add work to the professor.
+The Deduction mechanism (Figure~\ref{fig:deduction}) achieves a very low benchmark score of 2, with 2 in max work done and a 0 in max error in grade. Incapable graders will raise the benchmark score, as they issue refutations that add work to the professor.
 
 \begin{figure}[!h]
 \centering
@@ -165,7 +169,7 @@ The Deduction mechanism (Figure~\ref{fig:deduction}) achieves a very low benchma
 \section{Results}
 The comparison of existing solutions and those proposed in this work can be seen in Figure~\ref{fig:comparison}. Each mechanism will be explained below.
 
-Traditional Professor Grading involves one professor grading all assignments. In a class of 1000 students, this method is extremely inefficient.
+Traditional Professor Grading involves one professor grading all assignments. In an online class of 1000 students, this method is extremely inefficient.
 
 In Traditional Peer Grading, each student grades another's assignment without any supervision. However, as in this mechanism, the objective score is high due to the potential error caused by lack of motivation to grade properly.
 
