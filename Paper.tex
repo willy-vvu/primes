@@ -119,16 +119,19 @@ Our student model consists of assumptions we believed students abide by, as foll
   \item When a student assigns a grade G, the chance of the grade being N off from the actual grade is proportional to U.
 \end{enumerate}
 
+With a student model in place, it is now possible to simulate student behavior with game theory, in order to eventually determine the effectiveness of various mechanisms when exposed to students. However, effectiveness needs to be quantified as well. This is addressed by the creation of a numerical benchmark.
+
 \section{Benchmark}
 
 To compare mechanisms, we created a numerical benchmark (objective function) where a lower score is better. The score is computed by adding the highest possible error in student grading to the most work done by any person. Mathematically:
 
 $\max_{i \ge 1} \{|H(g_i)-H(o_i)|\} + \max_{i \ge 1} \{w_i\}$
 
-Where $w_i$ is the work done or number of assignments graded by the $i$th person, $g_i$ is the grade given by student grader on the $i$th assignment, and $o_i$ is the grade that would have been given by the professor on the $i$th assignment. $H$ is the happiness function defined in section~\ref{sec:modelandassumptions}.
+where $w_i$ is the work done or number of assignments graded by the $i$th person, $g_i$ is the grade given by student grader on the $i$th assignment, and $o_i$ is the accurate grade that would have been given by the professor on the $i$th assignment. $H$ is the happiness function defined in the \textit{Models and Assumptions}~section.
 
-Where 
-\subsection{Mechanisms}
+Creating a benchmark now allows various mechanisms to be brainstormed with mechanism design and subsequently tested.
+\section{Mechanisms}
+\subsection{Calibration Mechanism}
 
 \begin{figure}[!h]
 \centering
@@ -138,11 +141,17 @@ Where
 \end{figure}
 
 The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
-The Calibration mechanism can break when students communicate to reveal the calibrated assignment to circumvent grading. The Improved Calibration mechanism mitigates this issue by introducing multiple calibrated papers at the expense of more work, raising the objective score.
 
 We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading.
 
-The Calibration mechanism rewards students for accurately grading the Calibrated set in order to reduce the grading error for the uncalibrated set, as shown in Figure~\ref{fig:reward-error}. This is also evident in Figure~\ref{fig:error-calibration}, where less error in grading the Calibrated set correlates to a lower maximum grading error. An accurate grade for the uncalibrated set is the goal for the Calibration mechanism, and the data suggests that the mechanism works in practice.
+We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set. In Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The conclusion that can be drawn is that the grader's performance on the Calibrated set seems to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.9\columnwidth]{Error-Calibration-Graph.eps}
+\caption{Max error vs Calibrated error}
+\label{fig:error-calibration}
+\end{figure}
 
 \begin{figure}[!h]
 \centering
@@ -151,12 +160,10 @@ The Calibration mechanism rewards students for accurately grading the Calibrated
 \label{fig:reward-error}
 \end{figure}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Error-Calibration-Graph.eps}
-\caption{Max error vs Calibrated error}
-\label{fig:error-calibration}
-\end{figure}
+Putting two parts together, a grader's overall error can be estimated from performance on the Calibrated set. By rewarding graders based low errors on the Calibrated set, more accurate grades for the uncalibrated set are likely to be attained. Accuracy of grades on the uncalibrated set is one of the goals for the Calibration mechanism, and the data suggests that the mechanism works in practice.
+
+\subsection{Improved Calibration Mechanism}
+Originally designed with the assumption that students cannot communicate, the Calibration mechanism quickly breaks when student conspire to reveal the calibrated assignment to circumvent grading. The Improved Calibration mechanism mitigates this issue by introducing multiple calibrated papers at the expense of more work, raising the objective score. However, since the work created by this mechanism does not scale well with class size, a better mechanism was developed: the Deduction mechanism.
 
 \subsection{Deduction Mechanism}
 
