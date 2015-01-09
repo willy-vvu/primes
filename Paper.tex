@@ -142,9 +142,9 @@ Creating a benchmark now allows various mechanisms to be brainstormed with mecha
 
 The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
 
-We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading.
+We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading. We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set.
 
-We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set. In Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The conclusion that can be drawn is that the grader's performance on the Calibrated set seems to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. The data for both of these figures were obtained through a crowdsourced experiment which simulated the calibration mechanism.
+The results of this experiment can be seen in Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The grader's performance on the Calibrated set is shown to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. Together, these verify that the Calibration mechanism indeed works.
 
 \begin{figure}[!h]
 \centering
@@ -214,7 +214,7 @@ We began by creating a student model - a set of assumptions that approximate the
 
 We tested our Calibration mechanism using a croudsourced experiment, finding that it could work in practice. A mechanism based on a more realistic model would achieve better results.
 
-Our model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions. Efficiency is measured in terms of the benchmark we created, a numerical score encompassing both the accuracy of grades and the effort spent by any one person. To the best of our knowledge, this is the first game-
+Our model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions. Efficiency is measured in terms of the benchmark we created, a numerical score encompassing both the accuracy of grades and the effort spent by any one person. To the best of our knowledge, this is the first game-theory-based peer-grading system.
 
 \section{Future Work}
 As we consider how to generate accurate grades from incompetent graders, our model will require more realistic assumptions, which in turn may create more complex mechanisms.
@@ -222,7 +222,7 @@ Eventually, we would like to see new mechanisms based off of our model or our ex
 
 
 \section{Acknowledgments}
-We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support.
+We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support. Of course, none of this is possible without the original idea proposed by our advisor.
 
 \subsection{Additional Authors}
 Mentors \newline
