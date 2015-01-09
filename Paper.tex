@@ -87,7 +87,7 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
-An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After iteration of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
+An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After multiple iterations of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
 \end{abstract}
 
 \keywords{
@@ -113,7 +113,7 @@ Our student model consists of assumptions we believed students abide by, as foll
   \item Happiness is not affected by external factors, such as the grades of peers.
   \item Students can communicate with their peers.
   \item Students are not perfect graders.
-  \item There is no such thing as partial-grading.
+  \item There is no such thing as partial-grading. That is to say, students either grade or do not grade. There is no middle ground.
   \item Students can report their level of uncertainty when they grade. Let this factor be equal to U.
   \item More effort spent in grading lowers uncertainty.
   \item When a student assigns a grade G, the chance of the grade being N off from the actual grade is proportional to U.
@@ -144,7 +144,7 @@ The Calibration mechanism is described visually in Figure~\ref{fig:calibration}.
 
 We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading.
 
-We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set. In Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The conclusion that can be drawn is that the grader's performance on the Calibrated set seems to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error.
+We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set. In Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The conclusion that can be drawn is that the grader's performance on the Calibrated set seems to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. The data for both of these figures were obtained through a crowdsourced experiment which simulated the calibration mechanism.
 
 \begin{figure}[!h]
 \centering
