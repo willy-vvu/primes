@@ -1,88 +1,89 @@
-\documentclass{sigchi}
-
-% Use this command to override the default ACM copyright statement (e.g. for preprints). 
-% Consult the conference website for the camera-ready copyright statement.
-
+\documentclass{chi-ext}
+% Please be sure that you have the dependencies (i.e., additional LaTeX packages) to compile this example.
+% See http://personales.upv.es/luileito/chiext/
 
 %% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% \copyrightinfo{Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
 % {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
 % Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
 % DOI string from ACM form confirmation}
 %% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+\copyrightinfo{Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the Owner/Author. \\
+Copyright is held by the owner/author(s). \\
+{\emph{L@S 2015}}, Mar 14-18, 2015, Vancouver, BC, Canada \\
+ACM 978-1-4503-3411-2/15/03. \\
+http://dx.doi.org/10.1145/2724660.2728676}
 
-\toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is  granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
-{\emph{L@S'15}}, March 14-15, 2015, Vancouver, Canada. \\
-Copyright \copyright~2015 ACM ISBN/15/03...\$15.00. \\
-DOI string from ACM form confirmation}
+\title{Game Theory Based Peer Grading Mechanisms For MOOCs}
 
-% Arabic page numbers for submission. 
-% Remove this line to eliminate page numbers for the camera ready copy
-% \pagenumbering{arabic}
+\numberofauthors{5}
+% Notice how author names are alternately typesetted to appear ordered in 2-column format;
+% i.e., the first 4 autors on the first column and the other 4 auhors on the second column.
+% Actually, it's up to you to strictly adhere to this author notation.
+\author{
+  \alignauthor{
+    \textbf{Constantinos Daskalakis}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenu}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{costis@csail.mit.edu}
+  }\alignauthor{
+    \textbf{Nicolaas Kaashoek}\\
+    \affaddr{Lexington High School}\\
+    \affaddr{251 Waltham Street}\\
+    \affaddr{Lexington, MA 02421, USA}\\
+    \email{nick.kaashoek@gmail.com}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{Christos Tzamos}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenu}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{ctzamos@gmail.com}
+  }\alignauthor{
+    \textbf{Matthew Weinberg}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenu}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{smweinberg@csail.mit.edu}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{William Wu}\\
+    \affaddr{Acton Boxborough Regional High School}\\
+    \affaddr{36 Charter Rd}\\
+    \affaddr{Acton, MA 01720, USA}\\
+    \email{willy.vvu@gmail.com}
+  }
+}
 
+% Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
+\def\plaintitle{Game Theory based Peer Grading Mechanisms for MOOCs}
+\def\plainauthor{William Wu}
+\def\plainkeywords{MOOC, game theory, mechanism design, peer grading, learning at scale}
+\def\plaingeneralterms{Game Theory, Mechanism Design, Peer Grading}
 
-% Load basic packages
-\usepackage{balance}  % to better equalize the last page
-\usepackage{graphicx} % for EPS, load graphicx instead
-\usepackage{times}    % comment if you want LaTeX's default font
-\usepackage{url}      % llt: nicely formatted URLs
+\hypersetup{
+  % Your metadata go here
+  pdftitle={\plaintitle},
+  pdfauthor={\plainauthor},  
+  pdfkeywords={\plainkeywords},
+  pdfsubject={\plaingeneralterms},
+  % Quick access to color overriding:
+  %citecolor=black,
+  %linkcolor=black,
+  %menucolor=black,
+  %urlcolor=black,
+}
+
+\usepackage{graphicx}   % for EPS use the graphics package instead
+\usepackage{balance}    % useful for balancing the last columns
+\usepackage{bibspacing} % save vertical space in references
+
 \usepackage{epstopdf}
 
-% llt: Define a global style for URLs, rather that the default one
-\makeatletter
-\def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
-\makeatother
-\urlstyle{leo}
-
-
-% To make various LaTeX processors do the right thing with page size.
-\def\pprw{8.5in}
-\def\pprh{11in}
-\special{papersize=\pprw,\pprh}
-\setlength{\paperwidth}{\pprw}
-\setlength{\paperheight}{\pprh}
-\setlength{\pdfpagewidth}{\pprw}
-\setlength{\pdfpageheight}{\pprh}
-
-% Make sure hyperref comes last of your loaded packages, 
-% to give it a fighting chance of not being over-written, 
-% since its job is to redefine many LaTeX commands.
-\usepackage[pdftex]{hyperref}
-\hypersetup{
-pdftitle={Game Theory based Peer Grading Mechanisms for MOOCs},
-pdfauthor={LaTeX},
-pdfkeywords={MOOC, game theory, mechanism design, peer grading, learning at scale},
-bookmarksnumbered,
-pdfstartview={FitH},
-colorlinks,
-citecolor=black,
-filecolor=black,
-linkcolor=black,
-urlcolor=black,
-breaklinks=true,
-}
-
-% create a shortcut to typeset table headings
-\newcommand\tabhead[1]{\small\textbf{#1}}
-
-
-% End of preamble. Here it comes the document.
 \begin{document}
-
-\title{Game Theory based Peer Grading Mechanisms for MOOCs}
-
-\numberofauthors{2}
-\author{
-  \alignauthor William Wu\\
-    \affaddr{Acton Boxborough Regional High School}\\
-    \affaddr{36 Charter Rd\\ Acton, MA 01720, USA}\\
-    \email{willy.vvu@gmail.com}
-  \alignauthor Nicolaas Kaashoek\\
-    \affaddr{Lexington High School}\\
-    \affaddr{251 Waltham Street\\ Lexington, MA 02421, USA}\\
-    \email{nick.kaashoek@gmail.com}
-}
 
 \maketitle
 
@@ -90,11 +91,12 @@ breaklinks=true,
 An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After multiple iterations of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
 \end{abstract}
 
-\keywords{
-	Massive Open Online Courses; MOOC; game theory; mechanism design; peer grading; learning at scale;
-}
+\keywords{Massive Open Online Courses; MOOC; game theory; mechanism design; peer grading; learning at scale;}
 
-\category{K.3.m.}{Computers and Education}{Miscellaneous}
+\category{H.5.m}{Information interfaces and presentation (e.g., HCI)}{Miscellaneous}. 
+%See \cite{ACMCCS} 
+See: \url{http://www.acm.org/about/class/1998/} 
+for help using the ACM Classification system.
 
 \section{Introduction}
 Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses) and their importance to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started in May of 2012~\cite{canMOOCsreducecc}. However, the main importance of MOOCs come from their scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofMOOCs}: by the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofMOOCs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
@@ -133,11 +135,11 @@ Creating a benchmark now allows various mechanisms to be brainstormed with mecha
 \section{Mechanisms}
 \subsection{Calibration Mechanism}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Calibration-Flowchart.eps}
-\caption{A flowchart of the Calibration Mechanism from the student perspective.}
-\label{fig:calibration}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{Calibration-Flowchart.eps}
+  \caption{A flowchart of the Calibration Mechanism from the student perspective.}
+  \label{fig:calibration}
 \end{figure}
 
 The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
@@ -146,18 +148,18 @@ We tested and verified the Calibration mechanism through an anonymous crowdsourc
 
 The results of this experiment can be seen in Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The grader's performance on the Calibrated set is shown to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. Together, these verify that the Calibration mechanism indeed works.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Error-Calibration-Graph.eps}
-\caption{Max error vs Calibrated error}
-\label{fig:error-calibration}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{Error-Calibration-Graph.eps}
+  \caption{Max error vs Calibrated error}
+  \label{fig:error-calibration}
 \end{figure}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Reward-Error-Graph.eps}
-\caption{Uncalibrated Error vs Reward}
-\label{fig:reward-error}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{Reward-Error-Graph.eps}
+  \caption{Uncalibrated Error vs Reward}
+  \label{fig:reward-error}
 \end{figure}
 
 Putting two parts together, a grader's overall error can be estimated from performance on the Calibrated set. By rewarding graders based low errors on the Calibrated set, more accurate grades for the uncalibrated set are likely to be attained. Accuracy of grades on the uncalibrated set is one of the goals for the Calibration mechanism, and the data suggests that the mechanism works in practice.
@@ -169,11 +171,11 @@ Originally designed with the assumption that students cannot communicate, the Ca
 
 The Deduction mechanism (Figure~\ref{fig:deduction}) achieves a very low benchmark score of 2, with 2 in max work done and a 0 in max error in grade. Incapable graders will raise the benchmark score, as they issue refutations that add work to the professor.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Deduction-Flowchart.eps}
-\caption{A flowchart of the Deduction Mechanism from the student perspective.}
-\label{fig:deduction}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{Deduction-Flowchart.eps}
+  \caption{A flowchart of the Deduction Mechanism from the student perspective.}
+  \label{fig:deduction}
 \end{figure}
 
 \section{Results}
@@ -194,11 +196,11 @@ The Deduction Mechanism rewards graders for grading more harshly than their peer
 
 Overall, our Calibration and Deduction mechanisms vastly outperform existing solutions with the exception of Improved Calibration.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.9\columnwidth]{Comparison-Graph.eps}
-\caption{A comparison of mechanisms in terms of effectiveness and scalability.}
-\label{fig:comparison}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{Comparison-Graph.eps}
+  \caption{A comparison of mechanisms in terms of effectiveness and scalability.}
+  \label{fig:comparison}
 \end{figure}
 
 
@@ -220,33 +222,12 @@ Our model can easily be reused and improved upon by future researchers who wish 
 As we consider how to generate accurate grades from incompetent graders, our model will require more realistic assumptions, which in turn may create more complex mechanisms.
 Eventually, we would like to see new mechanisms based off of our model or our existing mechanisms implemented in MOOCs such as EdX or Coursera.
 
-
 \section{Acknowledgments}
 We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support. Of course, none of this is possible without the original idea proposed by our advisor.
 
-\subsection{Additional Authors}
-Mentors \newline
-\textbf{Matthew~Weinberg}~(\href{mailto:smweinberg@csail.mit.edu}{smweinberg@csail.mit.edu})\newline
-\textbf{Christos~Tzamos}~(\href{mailto:ctzamos@gmail.com}{ctzamos@gmail.com})
 
-Advisor \newline
-Professor \textbf{Costis~Daskalakis}~(\href{mailto:costis@csail.mit.edu}{costis@csail.mit.edu})
-
-
-% Note that in a perfect world balance wants to be in the first
-% column of the last page.
-%
-% If balance doesn't work for you, you can remove that and
-% hard-code a column break into the bbl file right before you
-% submit:
-%
-% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
-% in-an-ieee-paper-if-using-bibtex
-%
-% Or, just remove \balance and give up on balancing the last page.
-%
 \balance
-
 \bibliographystyle{acm-sigchi}
 \bibliography{bibliography}
+
 \end{document}
