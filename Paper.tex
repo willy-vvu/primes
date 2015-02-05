@@ -22,39 +22,39 @@ http://dx.doi.org/10.1145/2724660.2728676}
 % Actually, it's up to you to strictly adhere to this author notation.
 \author{
   \alignauthor{
-    \textbf{Constantinos Daskalakis}\\
-    \affaddr{Massachusetts Institute of Technology}\\
-    \affaddr{77 Massachusetts Avenu}\\
-    \affaddr{Cambridge, MA 02139}\\
-    \email{costis@csail.mit.edu}
-  }\alignauthor{
-    \textbf{Nicolaas Kaashoek}\\
-    \affaddr{Lexington High School}\\
-    \affaddr{251 Waltham Street}\\
-    \affaddr{Lexington, MA 02421, USA}\\
-    \email{nick.kaashoek@gmail.com}
-  }
-  \vfil
-  \alignauthor{
-    \textbf{Christos Tzamos}\\
-    \affaddr{Massachusetts Institute of Technology}\\
-    \affaddr{77 Massachusetts Avenu}\\
-    \affaddr{Cambridge, MA 02139}\\
-    \email{ctzamos@gmail.com}
-  }\alignauthor{
-    \textbf{Matthew Weinberg}\\
-    \affaddr{Massachusetts Institute of Technology}\\
-    \affaddr{77 Massachusetts Avenu}\\
-    \affaddr{Cambridge, MA 02139}\\
-    \email{smweinberg@csail.mit.edu}
-  }
-  \vfil
-  \alignauthor{
     \textbf{William Wu}\\
     \affaddr{Acton Boxborough Regional High School}\\
     \affaddr{36 Charter Rd}\\
     \affaddr{Acton, MA 01720, USA}\\
     \email{willy.vvu@gmail.com}
+  }\alignauthor{
+    \textbf{Christos Tzamos}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenue}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{ctzamos@gmail.com}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{Constantinos Daskalakis}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenue}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{costis@csail.mit.edu}
+  }\alignauthor{
+    \textbf{Matthew Weinberg}\\
+    \affaddr{Massachusetts Institute of Technology}\\
+    \affaddr{77 Massachusetts Avenue}\\
+    \affaddr{Cambridge, MA 02139}\\
+    \email{smweinberg@csail.mit.edu}
+  }
+  \vfil
+  \alignauthor{
+    \textbf{Nicolaas Kaashoek}\\
+    \affaddr{Lexington High School}\\
+    \affaddr{251 Waltham Street}\\
+    \affaddr{Lexington, MA 02421, USA}\\
+    \email{nick.kaashoek@gmail.com}
   }
 }
 
@@ -144,7 +144,7 @@ Creating a benchmark now allows various mechanisms to be brainstormed with mecha
 
 The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
 
-We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. In this case, ``grading'' involved counting two sets of objects. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading. We added a reward system to the Calibration mechanism to incentivize participants to grade correctly. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set.
+We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. We wrote a program that presented participants with two sets of randomly generated orange and blue colored objects. Each set represented an assignment, and ``grading'' an assignment involved counting the number of orange objects in each set. After observing the set for a randomly chosen amount of time, participants were asked to input the number of orange objects they thought they saw in each set. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set.
 
 The results of this experiment can be seen in Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The grader's performance on the Calibrated set is shown to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. Together, these verify that the Calibration mechanism indeed works.
 
@@ -210,21 +210,14 @@ Overall, our Calibration and Deduction mechanisms vastly outperform existing sol
 % TODO: Prep for Blind Review by removing authors
 
 \section{Conclusion}
-An efficient and accurate solution is needed to grade the large number of assignments in MOOCs.
-
-We began by creating a student model - a set of assumptions that approximate the realistic behavior of students. We then developed various grading mechanisms based on our student model and mechanism design. These mechanisms would incentivize students to grade accurately and efficiently as proven by game theory.
-
-We tested our Calibration mechanism using a croudsourced experiment, finding that it could work in practice. A mechanism based on a more realistic model would achieve better results.
-
-Our model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions. Efficiency is measured in terms of the benchmark we created, a numerical score encompassing both the accuracy of grades and the effort spent by any one person. To the best of our knowledge, this is the first game-theory-based peer-grading system.
+An efficient and accurate solution is needed to grade the large number of assignments in MOOCs. In this paper, a student model was first created - a set of assumptions that approximate the realistic behavior of students. Based on this model, various grading mechanisms were developed: Calibration, Improved Calibration, and Deduction. These mechanisms incentivize students to grade accurately and efficiently as proven by game theory. The Calibration mechanism was tested with a croudsourced experiment, showing that it could work in practice. The student model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions to more realistic scenarios. Mechanism efficiency can be measured in terms of benchmark defined in this paper. The benchmark is a numerical score encompassing both the accuracy of grades and the effort spent by any one person. The inclusion of effort spent by any one person in the benchmark enables the grading system scalability to be taken into account. To the best of our knowledge, these are the first game-theory-based peer-grading mechanisms.
 
 \section{Future Work}
 As we consider how to generate accurate grades from incompetent graders, our model will require more realistic assumptions, which in turn may create more complex mechanisms.
 Eventually, we would like to see new mechanisms based off of our model or our existing mechanisms implemented in MOOCs such as EdX or Coursera.
 
 \section{Acknowledgments}
-We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support. Of course, none of this is possible without the original idea proposed by our advisor.
-
+We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support. Of course, none of this is possible without the original idea proposed by our advisor, Constantinos Daskalakis.
 
 \balance
 \bibliographystyle{acm-sigchi}
