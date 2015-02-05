@@ -88,20 +88,19 @@ http://dx.doi.org/10.1145/2724660.2728676}
 \maketitle
 
 \begin{abstract}
-An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After multiple iterations of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowdsourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
+An efficient peer grading mechanism is proposed for grading the multitude of assignments in online courses. This novel approach is based on game theory and mechanism design. A set of assumptions and a mathematical model is ratified to simulate the dominant strategy behavior of students in a given mechanism. A benchmark function accounting for grade accuracy and workload is established to quantitatively compare effectiveness and scalability of various mechanisms. After multiple iterations of mechanisms under increasingly realistic assumptions, three are proposed: Calibration, Improved Calibration, and Deduction. The Calibration mechanism performs as predicted by game theory when tested in an online crowd-sourced experiment, but fails when students are assumed to communicate. The Improved Calibration mechanism addresses this assumption, but at the cost of more effort spent grading. The Deduction mechanism performs relatively well in the benchmark, outperforming the Calibration, Improved Calibration, traditional automated, and traditional peer grading systems. The mathematical model and benchmark opens the way for future derivative works to be performed and compared.
 \end{abstract}
 
 \keywords{Massive Open Online Courses; MOOC; game theory; mechanism design; peer grading; learning at scale;}
 
-\category{H.5.m}{Information interfaces and presentation (e.g., HCI)}{Miscellaneous}. 
-%See \cite{ACMCCS} 
+\category{K.3.m.}{Computers and Education}{Miscellaneous}. \\
 See: \url{http://www.acm.org/about/class/1998/} 
 for help using the ACM Classification system.
 
 \section{Introduction}
-Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses) and their importance to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started in May of 2012~\cite{canMOOCsreducecc}. However, the main importance of MOOCs come from their scalability. MOOCs are able to educate massive numbers of students from anywhere in the world~\cite{makingsenseofMOOCs}: by the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofMOOCs}. The sheer number of students leads to high student-professor ratios that can reach 150,000:1 in some courses.
+Over the past few years, there has been a tremendous increase in the popularity of MOOCs (Massive Open Online Courses) and their importance to education as a whole. Popular MOOC systems such as Coursera or EdX are well funded, which explains their rapid growth: 60 million dollars were invested in EdX when it started in May of 2012~\cite{canMOOCsreducecc}. The main importance of MOOCs is their ability to educate massive numbers of students worldwide~\cite{makingsenseofMOOCs}: by the end of 2012, 1.7 million students had attended a course through Coursera~\cite{swotanalysisofMOOCs}. This leads to high student-professor ratios, reaching 150,000:1 in some courses.
 
-High student-professor ratios lead to problems for professors. Professors are simply unable to grade hundreds of thousands of submissions. Currently, two types of solutions are used to remedy the problem: automated grading and peer grading~\cite{edxsoftware}. Automated grading relies on machines to grade assignments. Machines can only check certain types of answers (i.e. multiple choice), severely limiting the depth of the questions asked~\cite{rightandwrongMOOCs}. Even though automated grading for written essays is an active area of research with much recent progress, the quality and accuracy of such systems is under heavy debate~\cite{automatedsystemssuck}. Students who know the machine's grading criteria can fool the system~\cite{robogradingproblems}, yielding inconsistent grades.  On the other hand, peer grading can grade any type of question, a system utilizing it could easily be ``hacked'' by the students~\cite{makingsenseofMOOCs}. Additionally, lack of feedback from peer grading is an area of complaint in systems such as Coursera~\cite{howaccurateispeergrading}. These limitations render the students unable to effectively evaluate the mastery of the course material. 
+High student-professor ratios lead to problems for professors, who are simply unable to grade hundreds of thousands of submissions. Currently, two types of solutions are used to remedy the problem: automated grading and peer grading~\cite{edxsoftware}. Automated grading relies on machines, which can only check certain types of answers (i.e. multiple choice), severely limiting the depth of the questions asked~\cite{rightandwrongMOOCs}. Even though automated grading for written essays is an active area of research with much recent progress, the quality and accuracy of such systems is under heavy debate~\cite{automatedsystemssuck}. Students who know the machine's grading criteria can fool the system~\cite{robogradingproblems}, yielding inconsistent grades. On the other hand, peer grading can grade any type of question. However, such systems can easily be ``hacked'' by the students~\cite{makingsenseofMOOCs}. Additionally, lack of feedback from peer grading is an area of complaint in systems such as Coursera~\cite{howaccurateispeergrading}. These limitations render the students unable to effectively evaluate mastery of course material. 
 
 We propose several peer grading mechanisms based on game theory and our student model - a set of assumptions we believe students abide by. We also create a benchmark to compare between our and existing mechanisms. Although a theoretical model cannot predict exactly what will happen in practice, game theory and mechanism design have a history of generally determining mechanisms that work in practice from ones that do not~\cite{AGTbook}. Mechanisms that do not follow game theoretic constraints may work in the short-term, but they will be exploited if possible in the long term~\cite{boycottfinal}.
 
@@ -109,31 +108,31 @@ We propose several peer grading mechanisms based on game theory and our student 
 \label{sec:modelandassumptions}
 Our student model consists of assumptions we believed students abide by, as follows:
 \begin{enumerate}
-  \item Let H be a function of a student's grade, returning a student's happiness, such that a grade of zero yields zero happiness ($H(0)=0$). \newline \textit{Happiness is an arbitrary numerical unit.}
-  \item Students want to maximize their happiness.
-  \item Grading an assignment costs 1 (one) happiness.
-  \item Happiness is not affected by external factors, such as the grades of peers.
-  \item Students can communicate with their peers.
-  \item Students are not perfect graders.
-  \item There is no such thing as partial-grading. That is to say, students either grade or do not grade. There is no middle ground.
-  \item Students can report their level of uncertainty when they grade. Let this factor be equal to U.
-  \item More effort spent in grading lowers uncertainty.
-  \item When a student assigns a grade G, the chance of the grade being N off from the actual grade is proportional to U.
+\item Let H be a function of a student's grade, returning a student's happiness, such that a grade of zero yields zero happiness ($H(0)=0$). \newline \textit{Happiness is an arbitrary numerical unit.}
+\item Students want to maximize their happiness.
+\item Grading an assignment costs 1 (one) happiness.
+\item Happiness is not affected by external factors, such as the grades of peers.
+\item Students can communicate with their peers.
+\item Students are not perfect graders.
+\item There is no such thing as partial-grading. Students either grade or do not grade.
+\item Students can report their level of uncertainty (U) when they grade.
+\item More effort spent in grading lowers uncertainty.
+\item The chance of a student-assigned grade G being N off from the actual grade is proportional to U.
 \end{enumerate}
 
-With a student model in place, it is now possible to simulate student behavior with game theory, in order to eventually determine the effectiveness of various mechanisms when exposed to students. However, effectiveness needs to be quantified as well. This is addressed by the creation of a numerical benchmark.
+With a student model in place, it is now possible to simulate student behavior with game theory.
 
 \section{Benchmark}
-
-To compare mechanisms, we created a numerical benchmark (objective function) where a lower score is better. The score is computed by adding the highest possible error in student grading to the most work done by any person. Mathematically:
+In order to eventually determine the effectiveness of various mechanisms, as well as to compare mechanisms, we created a numerical benchmark (objective function) where a lower score is better. The score is computed by adding the highest possible error in student grading to the most work done by any person. Mathematically:
 
 $\max_{i \ge 1} \{|H(g_i)-H(o_i)|\} + \max_{i \ge 1} \{w_i\}$
 
-where $w_i$ is the work done or number of assignments graded by the $i$th person, $g_i$ is the grade given by student grader on the $i$th assignment, and $o_i$ is the accurate grade that would have been given by the professor on the $i$th assignment. $H$ is the happiness function defined in the \textit{Models and Assumptions}~section.
+where $w_i$ is the work done (assignments graded) by the $i$th person, $g_i$ is the grade given by student grader on the $i$th assignment, and $o_i$ is the accurate ``objective'' grade that would have been given by the professor on the $i$th assignment. $H$ is the happiness function defined in the \textit{Models and Assumptions}~section.
 
-Creating a benchmark now allows various mechanisms to be brainstormed with mechanism design and subsequently tested.
 \section{Mechanisms}
 \subsection{Calibration Mechanism}
+
+The Calibration mechanism, described visually in Figure~\ref{fig:calibration},achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
 
 \begin{figure}
   \centering
@@ -142,18 +141,7 @@ Creating a benchmark now allows various mechanisms to be brainstormed with mecha
   \label{fig:calibration}
 \end{figure}
 
-The Calibration mechanism is described visually in Figure~\ref{fig:calibration}. It achieves a low benchmark score of 4, consisting of a 2 in max work done and 2 in max error in grade.
-
-We tested and verified the Calibration mechanism through an anonymous crowdsourced experiment. We wrote a program that presented participants with two sets of randomly generated orange and blue colored objects. Each set represented an assignment, and ``grading'' an assignment involved counting the number of orange objects in each set. After observing the set for a randomly chosen amount of time, participants were asked to input the number of orange objects they thought they saw in each set. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set.
-
-The results of this experiment can be seen in Figure~\ref{fig:error-calibration}, where the maximum error made in grading both calibrated and uncalibrated sets is plotted against the error made only on the calibrated set. The grader's performance on the Calibrated set is shown to be a general indication of the grader's performance overall. Another correlation is evident in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. Together, these verify that the Calibration mechanism indeed works.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth]{Error-Calibration-Graph.eps}
-  \caption{Max error vs Calibrated error}
-  \label{fig:error-calibration}
-\end{figure}
+We tested and verified the Calibration mechanism through an anonymous crowd-sourced experiment. We wrote a program that presented participants with two sets of randomly generated orange and blue colored objects. Each set represented an assignment, and ``grading'' an assignment involved counting the number of orange objects in each set. After observing the set for a randomly chosen amount of time, participants were asked to input the number of orange objects they thought they saw in each set. Initially unknown to the participant, one set is ``calibrated'' and will be used to reward the participant based on the accuracy of the grading. This reward, awarded for accurately grading the Calibrated set, is synonymous to the punishment administered by the professor upon improperly grading the Calibrated set.
 
 \begin{figure}
   \centering
@@ -162,10 +150,10 @@ The results of this experiment can be seen in Figure~\ref{fig:error-calibration}
   \label{fig:reward-error}
 \end{figure}
 
-Putting two parts together, a grader's overall error can be estimated from performance on the Calibrated set. By rewarding graders based low errors on the Calibrated set, more accurate grades for the uncalibrated set are likely to be attained. Accuracy of grades on the uncalibrated set is one of the goals for the Calibration mechanism, and the data suggests that the mechanism works in practice.
+The results of this experiment can be seen in Figure~\ref{fig:reward-error}, where grading error is plotted against relative magnitude of reward. This shows that a higher reward correlates to lower error. As the reward is administered based on the grader's performance on the Calibrated set, the correlation implies that the graders who perform well on the Calibrated set also perform well on the non-calibrated set. This verifies that the Calibration mechanism indeed works.
 
 \subsection{Improved Calibration Mechanism}
-Originally designed with the assumption that students cannot communicate, the Calibration mechanism quickly breaks when student conspire to reveal the calibrated assignment to circumvent grading. The Improved Calibration mechanism mitigates this issue by introducing multiple calibrated papers at the expense of more work, raising the objective score. However, since the work created by this mechanism does not scale well with class size, a better mechanism was developed: the Deduction mechanism.
+Originally designed with the assumption that students cannot communicate, the Calibration mechanism quickly breaks when student conspire to reveal the calibrated assignment to circumvent grading. The Improved Calibration mechanism mitigates this issue by introducing multiple calibrated papers at the expense of more work, raising the objective score. However, since the work created by this mechanism does not scale well with class size, the Deduction mechanism was developed.
 
 \subsection{Deduction Mechanism}
 
@@ -210,14 +198,13 @@ Overall, our Calibration and Deduction mechanisms vastly outperform existing sol
 % TODO: Prep for Blind Review by removing authors
 
 \section{Conclusion}
-An efficient and accurate solution is needed to grade the large number of assignments in MOOCs. In this paper, a student model was first created - a set of assumptions that approximate the realistic behavior of students. Based on this model, various grading mechanisms were developed: Calibration, Improved Calibration, and Deduction. These mechanisms incentivize students to grade accurately and efficiently as proven by game theory. The Calibration mechanism was tested with a croudsourced experiment, showing that it could work in practice. The student model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions to more realistic scenarios. Mechanism efficiency can be measured in terms of benchmark defined in this paper. The benchmark is a numerical score encompassing both the accuracy of grades and the effort spent by any one person. The inclusion of effort spent by any one person in the benchmark enables the grading system scalability to be taken into account. To the best of our knowledge, these are the first game-theory-based peer-grading mechanisms.
+In this paper, a student model was first created - a set of assumptions that approximate the realistic behavior of students. Based on this model, various grading mechanisms were developed: Calibration, Improved Calibration, and Deduction. These mechanisms incentivize students to grade accurately and efficiently as proven by game theory. The Calibration mechanism was tested with a crowd-sourced experiment, showing that it could work in practice. The student model can easily be reused and improved upon by future researchers who wish to develop more efficient solutions to more realistic scenarios. Mechanism efficiency can be measured in terms of benchmark defined in this paper. The benchmark is a numerical score encompassing both the accuracy of grades and the effort spent by any one person. The inclusion of effort spent by any one person in the benchmark enables the grading system scalability to be taken into account. To the best of our knowledge, these are the first game-theory-based peer-grading mechanisms.
 
 \section{Future Work}
-As we consider how to generate accurate grades from incompetent graders, our model will require more realistic assumptions, which in turn may create more complex mechanisms.
-Eventually, we would like to see new mechanisms based off of our model or our existing mechanisms implemented in MOOCs such as EdX or Coursera.
+The further improvement and development of mechanisms may involve adding more realistic assumptions to the student model, which in turn may require more complex mechanisms. For example, a more complex mechanism may be required to generate accurate grades from incompetent graders. Of course, more testing and validation of mechanisms with crowd-sourced experiments is necessary. Eventually, new mechanisms based off the student model or existing mechanisms could be implemented in commercial MOOCs such as EdX or Coursera.
 
 \section{Acknowledgments}
-We would like to thank MIT and the MIT PRIMES program for providing the research opportunity as well as our parents and mentors for their support. Of course, none of this is possible without the original idea proposed by our advisor, Constantinos Daskalakis.
+We would like to thank MIT and the MIT PRIMES program for providing the research opportunity, as well as our parents for their support. Of course, none of this is possible without the original idea proposed by our advisor, Constantinos Daskalakis.
 
 \balance
 \bibliographystyle{acm-sigchi}
